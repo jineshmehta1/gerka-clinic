@@ -189,61 +189,22 @@ export default function BookDemoPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-white via-purple-50/30 to-blue-50/30">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-5xl lg:text-6xl font-black mb-6">
+      <section className="pt-24 pb-16 md:pt-32 md:pb-20 bg-gradient-to-br from-white via-purple-50/30 to-blue-50/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
             Book Your{" "}
             <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
               FREE Demo Class
             </span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
-            Experience Kamesh Choudhary's revolutionary teaching methodology firsthand. Get personalized guidance, skill
-            assessment, and a customized learning plan - absolutely free!
-          </p>
-
-          {/* Demo Benefits */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-12">
-            {benefits.map((benefit, index) => (
-              <Card
-                key={index}
-                className="bg-white/80 backdrop-blur-sm shadow-xl border-0 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
-              >
-                <CardContent className="p-6 text-center">
-                  <div
-                    className={`w-16 h-16 bg-gradient-to-br ${benefit.gradient} rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg`}
-                  >
-                    <benefit.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-800 mb-2">{benefit.title}</h3>
-                  <p className="text-sm text-gray-600">{benefit.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          {/* Value Proposition */}
-          <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-2xl p-8 max-w-4xl mx-auto">
-            <div className="flex items-center justify-center space-x-4 mb-4">
-              <Star className="w-8 h-8 fill-white" />
-              <span className="text-2xl font-black">100% FREE • No Commitment • Instant Value</span>
-            </div>
-            <p className="text-xl">
-              Worth ₹2,000 - Get personalized chess assessment, meet our founder, and receive a custom learning plan
-              tailored just for you!
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Booking Form Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-6">
+            {/* Booking Form Section */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Form */}
             <div className="lg:col-span-2">
               <div className="mb-8">
-                <h2 className="text-4xl font-black text-gray-800 mb-4">
+                <h2 className="text-3xl sm:text-4xl font-black text-gray-800 mb-4">
                   Book Your Demo in{" "}
                   <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
                     3 Easy Steps
@@ -251,11 +212,11 @@ export default function BookDemoPage() {
                 </h2>
 
                 {/* Progress Bar */}
-                <div className="flex items-center space-x-4 mb-8">
+                <div className="flex items-center justify-between mb-8">
                   {[1, 2, 3].map((step) => (
-                    <div key={step} className="flex items-center">
+                    <div key={step} className="flex items-center flex-1">
                       <div
-                        className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm ${
+                        className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-sm ${
                           currentStep >= step
                             ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white"
                             : "bg-gray-200 text-gray-500"
@@ -265,7 +226,7 @@ export default function BookDemoPage() {
                       </div>
                       {step < 3 && (
                         <div
-                          className={`w-16 h-1 mx-2 ${
+                          className={`flex-1 h-1 mx-2 ${
                             currentStep > step ? "bg-gradient-to-r from-purple-600 to-blue-600" : "bg-gray-200"
                           }`}
                         />
@@ -276,7 +237,7 @@ export default function BookDemoPage() {
               </div>
 
               <Card className="shadow-2xl border-0 bg-gradient-to-br from-white to-purple-50/30">
-                <CardContent className="p-10">
+                <CardContent className="p-6 sm:p-10">
                   {error && (
                     <div className="mb-6 p-4 bg-red-50 text-red-600 rounded-xl">
                       {error}
@@ -296,11 +257,11 @@ export default function BookDemoPage() {
                     {/* Step 1: Basic Information */}
                     {currentStep === 1 && (
                       <div className="space-y-6">
-                        <h3 className="text-2xl font-bold text-gray-800 mb-6">Step 1: Basic Information</h3>
+                        <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-6">Step 1: Basic Information</h3>
 
-                        <div className="grid md:grid-cols-2 gap-6">
+                        <div className="grid sm:grid-cols-2 gap-6">
                           <div>
-                            <label htmlFor="studentName" className="block text-sm font-bold text-gray-800 mb-3">
+                            <label htmlFor="studentName" className="block text-sm font-bold text-gray-800 mb-2">
                               Student Name *
                             </label>
                             <Input
@@ -310,12 +271,12 @@ export default function BookDemoPage() {
                               required
                               value={formData.studentName}
                               onChange={handleChange}
-                              className="border-2 border-gray-200 focus:border-purple-600 focus:ring-purple-600 rounded-xl py-3 px-4 text-lg"
+                              className="border-2 border-gray-200 focus:border-purple-600 focus:ring-purple-600 rounded-xl py-3 px-4 text-base"
                               placeholder="Enter student's name"
                             />
                           </div>
                           <div>
-                            <label htmlFor="parentName" className="block text-sm font-bold text-gray-800 mb-3">
+                            <label htmlFor="parentName" className="block text-sm font-bold text-gray-800 mb-2">
                               Parent/Guardian Name *
                             </label>
                             <Input
@@ -325,15 +286,15 @@ export default function BookDemoPage() {
                               required
                               value={formData.parentName}
                               onChange={handleChange}
-                              className="border-2 border-gray-200 focus:border-purple-600 focus:ring-purple-600 rounded-xl py-3 px-4 text-lg"
+                              className="border-2 border-gray-200 focus:border-purple-600 focus:ring-purple-600 rounded-xl py-3 px-4 text-base"
                               placeholder="Enter parent's name"
                             />
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6">
+                        <div className="grid sm:grid-cols-2 gap-6">
                           <div>
-                            <label htmlFor="email" className="block text-sm font-bold text-gray-800 mb-3">
+                            <label htmlFor="email" className="block text-sm font-bold text-gray-800 mb-2">
                               Email Address *
                             </label>
                             <Input
@@ -343,12 +304,12 @@ export default function BookDemoPage() {
                               required
                               value={formData.email}
                               onChange={handleChange}
-                              className="border-2 border-gray-200 focus:border-purple-600 focus:ring-purple-600 rounded-xl py-3 px-4 text-lg"
+                              className="border-2 border-gray-200 focus:border-purple-600 focus:ring-purple-600 rounded-xl py-3 px-4 text-base"
                               placeholder="Enter email address"
                             />
                           </div>
                           <div>
-                            <label htmlFor="phone" className="block text-sm font-bold text-gray-800 mb-3">
+                            <label htmlFor="phone" className="block text-sm font-bold text-gray-800 mb-2">
                               Phone Number *
                             </label>
                             <Input
@@ -358,15 +319,15 @@ export default function BookDemoPage() {
                               required
                               value={formData.phone}
                               onChange={handleChange}
-                              className="border-2 border-gray-200 focus:border-purple-600 focus:ring-purple-600 rounded-xl py-3 px-4 text-lg"
+                              className="border-2 border-gray-200 focus:border-purple-600 focus:ring-purple-600 rounded-xl py-3 px-4 text-base"
                               placeholder="Enter phone number"
                             />
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6">
+                        <div className="grid sm:grid-cols-2 gap-6">
                           <div>
-                            <label htmlFor="age" className="block text-sm font-bold text-gray-800 mb-3">
+                            <label htmlFor="age" className="block text-sm font-bold text-gray-800 mb-2">
                               Student Age *
                             </label>
                             <Input
@@ -376,12 +337,12 @@ export default function BookDemoPage() {
                               required
                               value={formData.age}
                               onChange={handleChange}
-                              className="border-2 border-gray-200 focus:border-purple-600 focus:ring-purple-600 rounded-xl py-3 px-4 text-lg"
+                              className="border-2 border-gray-200 focus:border-purple-600 focus:ring-purple-600 rounded-xl py-3 px-4 text-base"
                               placeholder="Enter age"
                             />
                           </div>
                           <div>
-                            <label htmlFor="experience" className="block text-sm font-bold text-gray-800 mb-3">
+                            <label htmlFor="experience" className="block text-sm font-bold text-gray-800 mb-2">
                               Chess Experience *
                             </label>
                             <select
@@ -390,7 +351,7 @@ export default function BookDemoPage() {
                               required
                               value={formData.experience}
                               onChange={handleChange}
-                              className="w-full border-2 border-gray-200 focus:border-purple-600 focus:ring-purple-600 rounded-xl py-3 px-4 text-lg bg-white"
+                              className="w-full border-2 border-gray-200 focus:border-purple-600 focus:ring-purple-600 rounded-xl py-3 px-4 text-base bg-white"
                             >
                               <option value="">Select experience level</option>
                               <option value="complete-beginner">Complete Beginner</option>
@@ -406,13 +367,13 @@ export default function BookDemoPage() {
                     {/* Step 2: Program & Schedule */}
                     {currentStep === 2 && (
                       <div className="space-y-6">
-                        <h3 className="text-2xl font-bold text-gray-800 mb-6">
+                        <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-6">
                           Step 2: Program & Schedule Preferences
                         </h3>
 
                         <div>
                           <label className="block text-sm font-bold text-gray-800 mb-4">Interested Program *</label>
-                          <div className="grid md:grid-cols-2 gap-4">
+                          <div className="grid sm:grid-cols-2 gap-4">
                             {programs.map((program) => (
                               <div
                                 key={program.id}
@@ -445,9 +406,9 @@ export default function BookDemoPage() {
                           </div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-6">
+                        <div className="grid sm:grid-cols-2 gap-6">
                           <div>
-                            <label htmlFor="preferredDay" className="block text-sm font-bold text-gray-800 mb-3">
+                            <label htmlFor="preferredDay" className="block text-sm font-bold text-gray-800 mb-2">
                               Preferred Day *
                             </label>
                             <select
@@ -456,7 +417,7 @@ export default function BookDemoPage() {
                               required
                               value={formData.preferredDay}
                               onChange={handleChange}
-                              className="w-full border-2 border-gray-200 focus:border-purple-600 focus:ring-purple-600 rounded-xl py-3 px-4 text-lg bg-white"
+                              className="w-full border-2 border-gray-200 focus:border-purple-600 focus:ring-purple-600 rounded-xl py-3 px-4 text-base bg-white"
                             >
                               <option value="">Select preferred day</option>
                               <option value="monday">Monday</option>
@@ -469,7 +430,7 @@ export default function BookDemoPage() {
                             </select>
                           </div>
                           <div>
-                            <label htmlFor="preferredTime" className="block text-sm font-bold text-gray-800 mb-3">
+                            <label htmlFor="preferredTime" className="block text-sm font-bold text-gray-800 mb-2">
                               Preferred Time *
                             </label>
                             <select
@@ -478,7 +439,7 @@ export default function BookDemoPage() {
                               required
                               value={formData.preferredTime}
                               onChange={handleChange}
-                              className="w-full border-2 border-gray-200 focus:border-purple-600 focus:ring-purple-600 rounded-xl py-3 px-4 text-lg bg-white"
+                              className="w-full border-2 border-gray-200 focus:border-purple-600 focus:ring-purple-600 rounded-xl py-3 px-4 text-base bg-white"
                             >
                               <option value="">Select preferred time</option>
                               {timeSlots.map((slot) => (
@@ -492,9 +453,9 @@ export default function BookDemoPage() {
 
                         <div>
                           <label className="block text-sm font-bold text-gray-800 mb-4">Session Type *</label>
-                          <div className="grid md:grid-cols-2 gap-4">
+                          <div className="grid sm:grid-cols-2 gap-4">
                             <div
-                              className={`p-6 border-2 rounded-xl cursor-pointer transition-all duration-300 ${
+                              className={`p-4 sm:p-6 border-2 rounded-xl cursor-pointer transition-all duration-300 ${
                                 formData.sessionType === "online"
                                   ? "border-purple-600 bg-purple-50"
                                   : "border-gray-200 hover:border-purple-300"
@@ -513,12 +474,12 @@ export default function BookDemoPage() {
                                 <Video className="w-6 h-6 text-purple-600" />
                                 <div>
                                   <h4 className="font-bold text-gray-800">Online Demo</h4>
-                                  <p className="text-sm text-gray-600">Join from anywhere via video call</p>
+                                  <p className="text-sm text-gray-600">Join from anywhere</p>
                                 </div>
                               </div>
                             </div>
                             <div
-                              className={`p-6 border-2 rounded-xl cursor-pointer transition-all duration-300 ${
+                              className={`p-4 sm:p-6 border-2 rounded-xl cursor-pointer transition-all duration-300 ${
                                 formData.sessionType === "offline"
                                   ? "border-purple-600 bg-purple-50"
                                   : "border-gray-200 hover:border-purple-300"
@@ -537,7 +498,7 @@ export default function BookDemoPage() {
                                 <Users className="w-6 h-6 text-purple-600" />
                                 <div>
                                   <h4 className="font-bold text-gray-800">In-Person Demo</h4>
-                                  <p className="text-sm text-gray-600">Visit our academy in New York</p>
+                                  <p className="text-sm text-gray-600">Visit our academy</p>
                                 </div>
                               </div>
                             </div>
@@ -549,10 +510,10 @@ export default function BookDemoPage() {
                     {/* Step 3: Goals & Questions */}
                     {currentStep === 3 && (
                       <div className="space-y-6">
-                        <h3 className="text-2xl font-bold text-gray-800 mb-6">Step 3: Goals & Questions</h3>
+                        <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-6">Step 3: Goals & Questions</h3>
 
                         <div>
-                          <label htmlFor="goals" className="block text-sm font-bold text-gray-800 mb-3">
+                          <label htmlFor="goals" className="block text-sm font-bold text-gray-800 mb-2">
                             Chess Goals & Expectations
                           </label>
                           <Textarea
@@ -561,13 +522,13 @@ export default function BookDemoPage() {
                             rows={4}
                             value={formData.goals}
                             onChange={handleChange}
-                            className="border-2 border-gray-200 focus:border-purple-600 focus:ring-purple-600 rounded-xl py-3 px-4 text-lg"
-                            placeholder="What do you hope to achieve through chess? (e.g., tournament play, skill improvement, fun learning, etc.)"
+                            className="border-2 border-gray-200 focus:border-purple-600 focus:ring-purple-600 rounded-xl py-3 px-4 text-base"
+                            placeholder="What do you hope to achieve through chess?"
                           />
                         </div>
 
                         <div>
-                          <label htmlFor="questions" className="block text-sm font-bold text-gray-800 mb-3">
+                          <label htmlFor="questions" className="block text-sm font-bold text-gray-800 mb-2">
                             Questions for Kamesh Choudhary
                           </label>
                           <Textarea
@@ -576,14 +537,14 @@ export default function BookDemoPage() {
                             rows={4}
                             value={formData.questions}
                             onChange={handleChange}
-                            className="border-2 border-gray-200 focus:border-purple-600 focus:ring-purple-600 rounded-xl py-3 px-4 text-lg"
-                            placeholder="Any specific questions about our programs, teaching methodology, or chess learning in general?"
+                            className="border-2 border-gray-200 focus:border-purple-600 focus:ring-purple-600 rounded-xl py-3 px-4 text-base"
+                            placeholder="Any specific questions for our team?"
                           />
                         </div>
 
                         {/* Summary */}
                         <Card className="bg-gradient-to-br from-purple-50 to-blue-50 border-2 border-purple-200">
-                          <CardContent className="p-6">
+                          <CardContent className="p-4 sm:p-6">
                             <h4 className="text-lg font-bold text-gray-800 mb-4">Demo Session Summary</h4>
                             <div className="space-y-2 text-sm">
                               <p>
@@ -616,16 +577,16 @@ export default function BookDemoPage() {
                           type="button"
                           onClick={() => setCurrentStep(currentStep - 1)}
                           variant="outline"
-                          className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 font-bold px-8 py-3 rounded-xl"
+                          className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 font-bold px-6 py-3 rounded-xl"
                           disabled={isSubmitting}
                         >
-                          Previous Step
+                          Previous
                         </Button>
                       )}
                       <Button
                         type="submit"
                         disabled={isSubmitting}
-                        className={`bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold px-8 py-3 rounded-xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 ${
+                        className={`bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold px-6 py-3 rounded-xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 ${
                           currentStep === 1 ? "ml-auto" : ""
                         }`}
                       >
@@ -648,8 +609,8 @@ export default function BookDemoPage() {
             <div className="space-y-8">
               {/* What to Expect */}
               <Card className="shadow-xl border-0 bg-gradient-to-br from-white to-purple-50/30">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-gray-800 mb-6">What to Expect</h3>
+                <CardContent className="p-6 sm:p-8">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-6">What to Expect</h3>
                   <div className="space-y-4">
                     {[
                       { icon: Users, text: "Personal meeting with Kamesh Choudhary" },
@@ -659,7 +620,7 @@ export default function BookDemoPage() {
                       { icon: Clock, text: "60-minute interactive session" },
                     ].map((item, index) => (
                       <div key={index} className="flex items-center space-x-3">
-                        <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center">
+                        <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
                           <item.icon className="w-4 h-4 text-white" />
                         </div>
                         <span className="text-gray-700">{item.text}</span>
@@ -671,7 +632,7 @@ export default function BookDemoPage() {
 
               {/* Testimonial */}
               <Card className="shadow-xl border-0 bg-gradient-to-br from-orange-50 to-red-50">
-                <CardContent className="p-8">
+                <CardContent className="p-6 sm:p-8">
                   <div className="flex items-center space-x-1 mb-4">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
@@ -697,7 +658,7 @@ export default function BookDemoPage() {
 
               {/* Contact Info */}
               <Card className="shadow-xl border-0 bg-gradient-to-br from-green-50 to-emerald-50">
-                <CardContent className="p-8">
+                <CardContent className="p-6 sm:p-8">
                   <h3 className="text-xl font-bold text-gray-800 mb-4">Need Help?</h3>
                   <div className="space-y-3">
                     <div className="flex items-center space-x-3">
@@ -719,45 +680,66 @@ export default function BookDemoPage() {
           </div>
         </div>
       </section>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+            Experience Kamesh Choudhary's revolutionary teaching methodology firsthand. Get personalized guidance, skill
+            assessment, and a customized learning plan - absolutely free!
+          </p>
+
+          {/* Demo Benefits */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-12">
+            {benefits.map((benefit, index) => (
+              <Card
+                key={index}
+                className="bg-white/80 backdrop-blur-sm shadow-xl border-0 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+              >
+                <CardContent className="p-6 text-center">
+                  <div
+                    className={`w-16 h-16 bg-gradient-to-br ${benefit.gradient} rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg`}
+                  >
+                    <benefit.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-800 mb-2">{benefit.title}</h3>
+                  <p className="text-sm text-gray-600">{benefit.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Value Proposition */}
+          <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto">
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4 mb-4">
+              <Star className="w-8 h-8 fill-white" />
+              <span className="text-xl sm:text-2xl font-black">100% FREE • No Commitment</span>
+            </div>
+            <p className="text-base sm:text-xl">
+              Worth ₹2,000 - Get personalized chess assessment, meet our founder, and receive a custom learning plan
+              tailored just for you!
+            </p>
+          </div>
+        </div>
+      </section>
+
 
       {/* Success Stories Preview */}
-      <section className="py-24 bg-gradient-to-br from-gray-50 to-purple-50/30">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl lg:text-6xl font-black mb-6">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-purple-50/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
               Join Our{" "}
               <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
                 Success Stories
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
               See what students achieve after their demo class with Kamesh Choudhary
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              {
-                name: "Emma Johnson",
-                age: 12,
-                achievement: "School Champion in 6 months",
-                image: "/placeholder.svg?height=200&width=200&text=Emma",
-                quote: "The demo class changed everything for me!",
-              },
-              {
-                name: "Alex Chen",
-                age: 10,
-                achievement: "State Qualifier in 8 months",
-                image: "/placeholder.svg?height=200&width=200&text=Alex",
-                quote: "Kamesh sir made chess so exciting!",
-              },
-              {
-                name: "Sofia Rodriguez",
-                age: 14,
-                achievement: "National Competitor in 1 year",
-                image: "/placeholder.svg?height=200&width=200&text=Sofia",
-                quote: "Best decision we ever made!",
-              },
+              { name: "Emma Johnson", age: 12, achievement: "School Champion in 6 months", image: "/placeholder.svg?height=200&width=200&text=Emma", quote: "The demo class changed everything for me!" },
+              { name: "Alex Chen", age: 10, achievement: "State Qualifier in 8 months", image: "/placeholder.svg?height=200&width=200&text=Alex", quote: "Kamesh sir made chess so exciting!" },
+              { name: "Sofia Rodriguez", age: 14, achievement: "National Competitor in 1 year", image: "/placeholder.svg?height=200&width=200&text=Sofia", quote: "Best decision we ever made!" },
             ].map((story, index) => (
               <Card
                 key={index}
@@ -780,30 +762,30 @@ export default function BookDemoPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/chess-pattern.svg')] opacity-5"></div>
-        <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
-          <h2 className="text-5xl lg:text-6xl font-black text-white mb-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center relative z-10">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-8">
             Don't Wait -{" "}
             <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
               Book Today!
             </span>
           </h2>
-          <p className="text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
             Limited demo slots available each week. Secure your spot and start your chess transformation journey with
             Kamesh Choudhary's proven methodology.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
             <Button
               onClick={() => setCurrentStep(1)}
-              className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold text-2xl px-12 py-6 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
+              className="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-5 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
             >
               <Calendar className="w-6 h-6 mr-2" />
               Book FREE Demo Now
             </Button>
             <Button
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-gray-900 font-bold text-2xl px-12 py-6 rounded-full bg-transparent transition-all duration-300"
+              className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-gray-900 font-bold text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-5 rounded-full bg-transparent transition-all duration-300"
             >
               Call: +91-9799253983
             </Button>
