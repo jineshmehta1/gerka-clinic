@@ -402,19 +402,35 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      {/* Fullscreen background video above hero section */}
-{/* START: Responsive Video Background Section */}
-<div className="relative flex items-center justify-center w-full h-screen max-h-[600px] sm:max-h-[700px] md:max-h-[800px] lg:max-h-[90vh] overflow-hidden">
+      // Make sure you have this import at the top of your file:
+import Link from 'next/link';
+
+// Inside your component's return statement:
+
+{/* START: Optimized Responsive Video Background Section */}
+<div className="relative flex items-center justify-center w-full h-screen max-h-[600px] sm:max-h-[700px] md:max-h-[800px] lg:max-h-[90vh] overflow-hidden bg-black">
   
   {/* The Video Player */}
   <video
-    src="/video.mp4" // IMPORTANT: Replace with your video file path
+    // 1. The Poster Image: THIS IS THE KEY TO PERCEIVED SPEED
+    // It's a lightweight image of the first frame of your video. It loads instantly.
+    // Create this by taking a screenshot of your video and saving it as an optimized JPG.
+    poster="/video-poster.jpg" // IMPORTANT: Replace with your poster image path
+
     autoPlay
     loop
     muted
-    playsInline // Essential for autoplay on mobile browsers
+    playsInline
+    // 2. Preload Hint: Tells the browser this video is important and to start loading it ASAP.
+    preload="auto"
     className="absolute top-0 left-0 w-full h-full object-cover"
-  />
+  >
+    {/* 3. Video Sources: Provide modern WebM first, then MP4 as a fallback. */}
+    {/* The browser will automatically pick the first format it supports. */}
+    <source src="/video.webm" type="video/webm" /> 
+    <source src="/video.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
 
   {/* Dark Overlay for Text Readability */}
   <div className="absolute top-0 left-0 w-full h-full bg-black/50" />
@@ -428,8 +444,7 @@ export default function HomePage() {
       Join our world-class training programs and unlock your strategic potential.
     </p>
     
-    {/* --- THIS IS THE CORRECTED BUTTON --- */}
-    <Link href="/book-demo"> {/* The Link component handles navigation */}
+    <Link href="/book-demo">
       <button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold text-lg px-8 py-4 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
         Book Your FREE Demo
       </button>
@@ -438,6 +453,7 @@ export default function HomePage() {
   </div>
 
 </div>
+{/* END: Optimized Responsive Video Background Section */}
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-white via-purple-50/30 to-blue-50/30 overflow-hidden pt-20 pb-16">
