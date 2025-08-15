@@ -31,7 +31,7 @@ export default function AboutPage() {
             </div>
             <div className="relative">
               <img
-                src="/genius-chess-academy.png"
+                src="https://i.ytimg.com/vi/QjWr47PTjqM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDxdE0HOIH9ToTDWDMvme-6AymzzA"
                 alt="Chess Academy"
                 className="rounded-3xl shadow-2xl"
               />

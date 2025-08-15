@@ -341,7 +341,7 @@ function ParentReviews() {
             >
               {reviews.map((review, index) => (
                 <div key={index} className="w-full flex-shrink-0 px-4">
-                  <Card className="bg-gradient-to-br from-white to-purple-50/30 shadow-2xl border-0 overflow-hidden">
+                  <Card className="bg-gradient-to-br from-purple-200 via-pink-200 to-blue-200 shadow-2xl border-0 overflow-hidden">
                     <CardContent className="p-12 text-center">
                       <div className="mb-8">
                         <Quote className="w-16 h-16 text-purple-300 mx-auto mb-6" />
@@ -404,7 +404,7 @@ export default function HomePage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center bg-gradient-to-br from-white via-purple-50/30 to-blue-50/30 overflow-hidden pt-32 pb-32">
+      <section className="relative min-h-screen flex items-center bg-gradient-to-br from-white via-purple-50/30 to-blue-50/30 overflow-hidden pt-12 pb-32">
         <ChessDecorations />
 
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center relative z-10">
@@ -420,7 +420,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: -30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="space-y-6"
+              className="space-y-0"
             >
               <h1 className="text-5xl lg:text-6xl xl:text-7xl font-black leading-tight">
                 <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent">
@@ -530,11 +530,11 @@ export default function HomePage() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="relative"
           >
-            <div className="relative">
+            <div className="relative -mt-16">
               {/* Main image */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Pravin_Thipsay.jpg/500px-Pravin_Thipsay.jpg"
+                  src="/pravin-sir.jpg"
                   alt="Pravin Mahadeo Thipsay"
                   className="w-full h-[700px] object-cover"
                 />

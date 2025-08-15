@@ -702,7 +702,7 @@ export default function BookDemoPage() {
                   <div className="space-y-3">
                     <div className="flex items-center space-x-3">
                       <MessageCircle className="w-5 h-5 text-green-600" />
-                      <span className="text-gray-700">WhatsApp: (555) 123-4567</span>
+                      <span className="text-gray-700">WhatsApp: +91-9799253983</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <Clock className="w-5 h-5 text-green-600" />
@@ -805,7 +805,7 @@ export default function BookDemoPage() {
               variant="outline"
               className="border-2 border-white text-white hover:bg-white hover:text-gray-900 font-bold text-2xl px-12 py-6 rounded-full bg-transparent transition-all duration-300"
             >
-              Call: (555) 123-CHESS
+              Call: +91-9799253983
             </Button>
           </div>
         </div>

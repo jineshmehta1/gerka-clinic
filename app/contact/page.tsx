@@ -326,11 +326,11 @@ export default function ContactPage() {
                       <div>
                         <h3 className="text-2xl font-black text-gray-800 mb-3">Call Us</h3>
                         <p className="text-gray-600 leading-relaxed">
-                          Main: (555) 123-CHESS
+                          Main: +91-9799253983
                           <br />
-                          WhatsApp: (555) 123-4567
+                          WhatsApp: +91-9799253983
                           <br />
-                          Emergency: (555) 123-9999
+                          Emergency: +91-9799253983
                         </p>
                         <p className="text-sm text-gray-500 mt-2">Available 9 AM - 8 PM EST • 7 days a week</p>
                       </div>
@@ -347,11 +347,11 @@ export default function ContactPage() {
                       <div>
                         <h3 className="text-2xl font-black text-gray-800 mb-3">Email Us</h3>
                         <p className="text-gray-600 leading-relaxed">
-                          General: info@geniuschess.com
+                          General: Geniuschessacademy12@gmail.com
                           <br />
-                          Admissions: admissions@geniuschess.com
+                          Admissions: Geniuschessacademy12@gmail.com
                           <br />
-                          Kamesh: kamesh@geniuschess.com
+                          Kamesh: Geniuschessacademy12@gmail.com
                         </p>
                         <p className="text-sm text-gray-500 mt-2">Response within 24 hours guaranteed</p>
                       </div>
@@ -371,10 +371,14 @@ export default function ContactPage() {
                           Get instant answers to your questions via WhatsApp. Perfect for quick inquiries, scheduling,
                           and urgent support.
                         </p>
-                        <Button className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-                          <MessageCircle className="w-5 h-5 mr-2" />
-                          Chat on WhatsApp
-                        </Button>
+                        <Button
+  onClick={() => window.open("https://wa.me/919799253983", "_blank", "noopener,noreferrer")}
+  className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+>
+  <MessageCircle className="w-5 h-5 mr-2" />
+  Chat on WhatsApp
+</Button>
+
                       </div>
                     </div>
                   </CardContent>
@@ -467,7 +471,7 @@ export default function ContactPage() {
               variant="outline"
               className="border-2 border-white text-white hover:bg-white hover:text-gray-900 font-bold text-2xl px-12 py-6 rounded-full bg-transparent transition-all duration-300"
             >
-              Call Now: (555) 123-CHESS
+              Call Now: +91-9799253983
             </Button>
           </div>
         </div>

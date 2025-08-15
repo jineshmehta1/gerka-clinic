@@ -113,11 +113,11 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-[#C9A227]" />
-                <p className="text-white/80">(555) 123-CHESS</p>
+                <p className="text-white/80">+91-9799253983</p>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-[#C9A227]" />
-                <p className="text-white/80">info@geniuschess.com</p>
+                <p className="text-white/80">Geniuschessacademy12@gmail.com</p>
               </div>
               <Button className="bg-[#25D366] hover:bg-[#20B858] text-white w-full">
                 <MessageCircle className="w-4 h-4 mr-2" />
