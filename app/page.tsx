@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
+import Link from "next/link" // Import the Link component
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { motion, useInView } from "framer-motion"
@@ -516,9 +517,11 @@ export default function HomePage() {
               transition={{ delay: 0.8, duration: 0.8 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
-              <Button className="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white text-base sm:text-lg font-bold px-6 py-3 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-                Start Your Chess Journey
-              </Button>
+              <Link href="/book-demo">
+                <Button className="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white text-base sm:text-lg font-bold px-6 py-3 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+                  Start Your Chess Journey
+                </Button>
+              </Link>
               <Button
                 variant="outline"
                 className="w-full sm:w-auto border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white text-base sm:text-lg font-bold px-6 py-3 rounded-full bg-transparent transition-all duration-300"
@@ -862,11 +865,14 @@ export default function HomePage() {
                     </ul>
 
                     <div className="text-center">
-                      <Button
-                        className={`w-full bg-gradient-to-r ${program.gradient} hover:opacity-90 text-white font-bold py-3 rounded-full transition-all duration-300`}
-                      >
-                        Enroll Now
-                      </Button>
+                      {/* THIS IS THE MODIFIED BUTTON */}
+                      <Link href="/book-demo">
+                        <Button
+                          className={`w-full bg-gradient-to-r ${program.gradient} hover:opacity-90 text-white font-bold py-3 rounded-full transition-all duration-300`}
+                        >
+                          Enroll Now
+                        </Button>
+                      </Link>
                     </div>
                   </CardContent>
                 </Card>
@@ -905,9 +911,11 @@ export default function HomePage() {
               <span className="font-bold text-orange-400">First lesson is completely FREE!</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
-              <Button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold text-base sm:text-xl px-8 py-4 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300">
-                Book Your FREE Demo Class
-              </Button>
+              <Link href="/book-demo">
+                <Button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold text-base sm:text-xl px-8 py-4 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300">
+                  Book Your FREE Demo Class
+                </Button>
+              </Link>
               <Button
                 variant="outline"
                 className="border-2 border-white text-white hover:bg-white hover:text-gray-900 font-bold text-base sm:text-xl px-8 py-4 rounded-full bg-transparent transition-all duration-300"
@@ -930,9 +938,11 @@ export default function HomePage() {
           animate={{ scale: [1, 1.05, 1] }}
           transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, repeatDelay: 3 }}
         >
-          <Button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold px-5 py-3 sm:px-6 sm:py-3 rounded-full shadow-2xl hover:shadow-3xl text-sm sm:text-base">
-            Book FREE Demo
-          </Button>
+          <Link href="/book-demo">
+            <Button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold px-5 py-3 sm:px-6 sm:py-3 rounded-full shadow-2xl hover:shadow-3xl text-sm sm:text-base">
+              Book FREE Demo
+            </Button>
+          </Link>
         </motion.div>
       </motion.div>
 
