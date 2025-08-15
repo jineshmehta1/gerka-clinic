@@ -402,6 +402,42 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
+      {/* Fullscreen background video above hero section */}
+{/* START: Responsive Video Background Section */}
+<div className="relative flex items-center justify-center w-full h-screen max-h-[600px] sm:max-h-[700px] md:max-h-[800px] lg:max-h-[90vh] overflow-hidden">
+  
+  {/* The Video Player */}
+  <video
+    src="/video.mp4" // IMPORTANT: Replace with your video file path
+    autoPlay
+    loop
+    muted
+    playsInline // Essential for autoplay on mobile browsers
+    className="absolute top-0 left-0 w-full h-full object-cover"
+  />
+
+  {/* Dark Overlay for Text Readability */}
+  <div className="absolute top-0 left-0 w-full h-full bg-black/50" />
+
+  {/* Your Content */}
+  <div className="relative z-10 text-center text-white p-4">
+    <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-4 leading-tight">
+      Become a Chess Grandmaster
+    </h1>
+    <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8">
+      Join our world-class training programs and unlock your strategic potential.
+    </p>
+    
+    {/* --- THIS IS THE CORRECTED BUTTON --- */}
+    <Link href="/book-demo"> {/* The Link component handles navigation */}
+      <button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold text-lg px-8 py-4 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+        Book Your FREE Demo
+      </button>
+    </Link>
+    
+  </div>
+
+</div>
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-white via-purple-50/30 to-blue-50/30 overflow-hidden pt-20 pb-16">
@@ -449,11 +485,12 @@ export default function HomePage() {
               className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-xl border border-gray-100"
             >
               <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
-                {/* Crown with years */}
+                
+                {/* THIS IS THE MODIFIED SVG SECTION */}
                 <div className="flex-shrink-0">
                   <motion.div
-                    animate={{ rotate: [0, 5, -5, 0] }}
-                    transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+                    animate={{ rotate: [-3, 3, -3] }} // A subtle "clash" or "face-off" animation
+                    transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
                   >
                     <svg viewBox="0 0 80 80" className="text-gradient w-16 h-16 sm:w-20 sm:h-20">
                       <defs>
@@ -463,8 +500,9 @@ export default function HomePage() {
                           <stop offset="100%" stopColor="#DC2626" />
                         </linearGradient>
                       </defs>
+                      {/* Fighting Kings SVG Path */}
                       <path
-                        d="M40 8 L45 20 L50 15 L55 25 L50 30 L45 25 L40 30 L35 25 L30 30 L25 25 L30 15 L35 20 Z M25 30 L55 30 L52 65 L28 65 Z"
+                        d="M25 12 L28 12 L28 15 L31 15 L31 18 L28 18 L28 30 L33 40 L33 65 L17 65 L17 40 L22 30 L22 18 L19 18 L19 15 L22 15 L22 12 Z M55 12 L58 12 L58 15 L61 15 L61 18 L58 18 L58 30 L63 40 L63 65 L47 65 L47 40 L52 30 L52 18 L49 18 L49 15 L52 15 L52 12 Z"
                         fill="url(#crownGradient)"
                       />
                     </svg>
