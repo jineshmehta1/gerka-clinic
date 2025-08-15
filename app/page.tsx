@@ -402,10 +402,8 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      // Make sure you have this import at the top of your file:
-import Link from 'next/link';
+      
 
-// Inside your component's return statement:
 
 {/* START: Optimized Responsive Video Background Section */}
 <div className="relative flex items-center justify-center w-full h-screen max-h-[600px] sm:max-h-[700px] md:max-h-[800px] lg:max-h-[90vh] overflow-hidden bg-black">
