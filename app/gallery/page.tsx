@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { X, Camera, Award, Users, Trophy } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
+import Link from "next/link"
+
 
 export default function GalleryPage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
@@ -275,15 +277,19 @@ export default function GalleryPage() {
             Join our community of champions and be part of our next gallery showcase
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+            <Link href = "/book-demo">
             <Button className="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-5 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300">
               Book Your FREE Demo Class
             </Button>
+            </Link>
+            <Link href = "/sucess-stories">
             <Button
               variant="outline"
               className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-gray-900 font-bold text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-5 rounded-full bg-transparent transition-all duration-300"
             >
               View Success Stories
             </Button>
+            </Link>
           </div>
         </div>
       </section>

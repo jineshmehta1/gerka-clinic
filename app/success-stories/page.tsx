@@ -5,6 +5,7 @@ import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 import { Trophy, TrendingUp, Calendar, Award, Target, Users, Heart } from "lucide-react"
 
 export default function SuccessStoriesPage() {
@@ -292,16 +293,20 @@ export default function SuccessStoriesPage() {
             Join our community of champions and start your transformation with our proven methodology today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+            <Link href = "/book-demo">
             <Button className="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-5 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300">
               <Calendar className="w-6 h-6 mr-2" />
               Book Your Free Demo
             </Button>
-            <Button
-              variant="outline"
-              className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-gray-900 font-bold text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-5 rounded-full bg-transparent transition-all duration-300"
-            >
-              View All Programs
-            </Button>
+            </Link>
+            <Link href="/programs">
+              <Button
+                variant="outline"
+                className="border-2 border-white text-white hover:bg-white hover:text-gray-900 font-bold text-base sm:text-xl px-8 py-4 rounded-full bg-transparent transition-all duration-300"
+              >
+                View All Programs
+              </Button>
+              </Link>
           </div>
         </div>
       </section>

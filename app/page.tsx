@@ -574,12 +574,14 @@ export default function HomePage() {
                   Start Your Chess Journey
                 </Button>
               </Link>
+              <Link href = "/sucess-stories">
               <Button
                 variant="outline"
                 className="w-full sm:w-auto border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white text-base sm:text-lg font-bold px-6 py-3 rounded-full bg-transparent transition-all duration-300"
               >
                 Watch Success Stories
               </Button>
+              </Link>
             </motion.div>
           </motion.div>
 
@@ -968,12 +970,14 @@ export default function HomePage() {
                   Book Your FREE Demo Class
                 </Button>
               </Link>
+              <Link href="/programs">
               <Button
                 variant="outline"
                 className="border-2 border-white text-white hover:bg-white hover:text-gray-900 font-bold text-base sm:text-xl px-8 py-4 rounded-full bg-transparent transition-all duration-300"
               >
                 View All Programs
               </Button>
+              </Link>
             </div>
           </motion.div>
         </div>

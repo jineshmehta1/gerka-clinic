@@ -116,10 +116,20 @@ export function Footer() {
                 <Mail className="w-4 h-4 text-[#C9A227]" />
                 <p className="text-white/80 break-all">Geniuschessacademy12@gmail.com</p>
               </div>
-              <Button className="bg-[#25D366] hover:bg-[#20B858] text-white w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
-                <MessageCircle className="w-4 h-4 mr-2" />
-                WhatsApp Us
+              <Button
+                asChild
+                className="bg-[#25D366] hover:bg-[#20B858] text-white w-full max-w-xs mx-auto sm:max-w-none sm:mx-0"
+              >
+                <a
+                  href="https://wa.me/919799253983?text=Hello%20Genius%20Chess%20Academy!"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <MessageCircle className="w-4 h-4 mr-2" />
+                  WhatsApp Us
+                </a>
               </Button>
+
             </div>
           </div>
         </div>
