@@ -12,10 +12,23 @@ export default function SuccessStoriesPage() {
   const stories = [
     {
       id: 1,
+      name: "Master Madvendra Pratap Sharma",
+      age: 10,
+      image: "student-1.jpg",
+      achievement: "Gold medal in Asian Youth Chess Championship 2022 (U-10) in Indonesia",
+      rating: "fide rating 2187",
+      timeframe: "2 year",
+      story:
+        "Candidate Master Madvendra Pratap Sharma (fide rating 2187), a shining talent is currently learning from our Genius Chess Academy (International School of Chess), he has achieved outstanding success at a very young age. He made India proud by winning the gold medal in Asian Youth Chess Championship 2022 (U-10) in Indonesia, where he became champion in all three formats – Rapid, Blitz and Classical. He also won the Under-9 National Chess Championship 2022 at Indore and the Under-11 National Chess Championship 2024 at Hyderabad. His vision is to become a Grand master.His journey is an inspiration for many young chess learners.",
+      quote: "I love how chess makes me think differently about problems. Every game is a new puzzle to solve!",
+      badges: ["National Gold medalist", "Mental Strength", "Academic Improvement"],
+      program: "Tournament Warrior",
+    },{
+      id: 1,
       name: "Anshul bangar",
       age: 21,
       image: "/anshulAcheivement.jpg",
-      achievement: "University Champion",
+      achievement: "School and University Nationals Champion",
       rating: "Beginner to 1800+",
       timeframe: "10 years",
       story:
@@ -25,31 +38,17 @@ export default function SuccessStoriesPage() {
       program: "Strategic Mastery",
     },
     {
-      id: 2,
-      name: "Alex Chen",
-      age: 10,
-      image: "https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/pete/phpkznm2I.jpeg",
-      achievement: "State Qualifier",
-      rating: "From 600 to 1400",
-      timeframe: "8 months",
-      story:
-        "Alex joined us with basic knowledge but lacked confidence. Our tournament preparation program and personalized coaching helped him develop technical skills and mental fortitude. His parents noticed improvements in his concentration and problem-solving abilities at school too. Alex now represents his state in national junior championships.",
-      quote: "I love how chess makes me think differently about problems. Every game is a new puzzle to solve!",
-      badges: ["State Qualifier", "Mental Strength", "Academic Improvement"],
-      program: "Tournament Warrior",
-    },
-    {
       id: 3,
-      name: "Sofia Rodriguez",
-      age: 14,
-      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Vaishali_in_2025_%28cropped%29.jpg/1200px-Vaishali_in_2025_%28cropped%29.jpg",
-      achievement: "National Competitor",
+      name: "Suhani Munet",
+      age: 18,
+      image: "/student-2.jpg",
+      achievement: "SGFI National Bronze Medalist (2023-24) and proudly representing India at the Chess Olympiad (2022)",
       rating: "From 800 to 1600",
-      timeframe: "12 months",
+      timeframe: "4 years",
       story:
-        "Sofia came to us as an intermediate player who had hit a plateau. Our Grandmaster Path program helped her break through by focusing on deep positional understanding and endgame technique. She's now one of the top junior players in her state and has her sights set on earning a national master title.",
+        "An accomplished International FIDE Rated Chess Player, [Name] has consistently showcased excellence on both national and international platforms. She is an SGFI National Bronze Medalist (2023–24) and proudly represented India at the Chess Olympiad in 2022. A 4-time State Chess Champion, she continues to demonstrate remarkable consistency, discipline, and determination in her journey. With every tournament, she not only strengthens her achievements but also inspires fellow players with her passion and commitment to the game.",
       quote: "Kamesh sir taught me that every position tells a story. Now I can read those stories and write my own!",
-      badges: ["National Competitor", "Rating Expert", "STEM Excellence"],
+      badges: ["National Medalist", "Rating Expert", "STEM Excellence"],
       program: "Grandmaster Path",
     },
     {

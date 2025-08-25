@@ -259,49 +259,31 @@ function ParentReviews() {
 
     const reviews = [
       {
-        name: "Priya Sharma",
-        child: "Arjun (Age 10)",
+        name: "Mrs Reena paliwal",
+        child: "Himadri Paliwal (Age 15)",
         rating: 5,
         review:
-          "Arjun has transformed completely! From a shy kid to a confident chess player who won his school championship. The instructors are amazing and really understand how to teach children.",
-        image: "/placeholder.svg?height=80&width=80&text=PS",
-        achievement: "School Champion",
+          "Our daughter, Himadri Paliwal, made us proud by becoming the SGFI State U-19 Champion and representing Rajasthan at the National SGFI. The academy identified her strengths, refined her skills, and gave her the confidence to excel. We’ve seen remarkable growth in her focus, consistency, and performance. We sincerely thank the coaches for their guidance and support.",
+        image: "/parent-1.jpg",
+        achievement: "SGFI State U-19 Champion",
       },
       {
-        name: "Rajesh Kumar",
-        child: "Ananya (Age 12)",
+        name: "Mr. Lalit & Mrs Renu munet",
+        child: "Suhani (Age 18)",
         rating: 5,
         review:
-          "Best decision we made for Ananya's development. Her analytical thinking has improved not just in chess but in academics too. She's now participating in state-level tournaments!",
-        image: "/placeholder.svg?height=80&width=80&text=RK",
-        achievement: "State Player",
+          "We are grateful to the academy for guiding our daughter, Suhani Munet, with constant support and quality coaching. With their dedication, she became an SGFI National Bronze Medalist (2023-24) and represented India at the Chess Olympiad (2022). Beyond achievements, we are proud to see her grow into a confident individual.",
+        image: "/parent-2.jpg",
+        achievement: "SGFI National Bronze Medalist (2023-24)",
       },
       {
-        name: "Meera Patel",
-        child: "Dev (Age 8)",
+        name: "Mr. Nilesh Bangar",
+        child: "Anshul Bangar (Age 21)",
         rating: 5,
         review:
-          "Dev was initially reluctant, but the way they teach here is magical. He now spends hours practicing and has developed such patience and focus. Highly recommend!",
-        image: "/placeholder.svg?height=80&width=80&text=MP",
-        achievement: "District Winner",
-      },
-      {
-        name: "Amit Singh",
-        child: "Kavya (Age 14)",
-        rating: 5,
-        review:
-          "Kavya's chess rating has improved from 800 to 1400 in just 8 months! The personalized attention and structured curriculum really works. She's now eyeing national tournaments.",
-        image: "/placeholder.svg?height=80&width=80&text=AS",
-        achievement: "Rating Expert",
-      },
-      {
-        name: "Sunita Gupta",
-        child: "Rohan (Age 11)",
-        rating: 5,
-        review:
-          "The online classes are so well conducted that Rohan never misses a session. His concentration and problem-solving skills have improved dramatically. Thank you team!",
-        image: "/placeholder.svg?height=80&width=80&text=SG",
-        achievement: "Online Champion",
+          "As parents, we are proud of our son, Anshul Bangar, for becoming a two-time West Zone Winner and competing in CBSE and University Nationals. More than the trophies, we value the discipline, confidence, and fighting spirit he has gained. We are truly grateful to the academy for its constant support and guidance in shaping his journey.",
+        image: "/parent-3.jpg",
+        achievement: "CBSE & University Nationals",
       },
     ]
 
