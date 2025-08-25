@@ -341,7 +341,8 @@ function ParentReviews() {
                           <img
                             src={review.image || "/placeholder.svg"}
                             alt={review.name}
-                            className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-4 border-purple-200"
+                            className="w-24 h-24 sm:w-40 sm:h-28 border-4 border-purple-200"
+
                           />
                           <div className="text-center sm:text-left">
                             <h4 className="text-lg sm:text-xl font-bold text-gray-800">{review.name}</h4>

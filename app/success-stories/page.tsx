@@ -34,7 +34,7 @@ export default function SuccessStoriesPage() {
       story:
         "Anshul started as a complete beginner. Through our innovative teaching methodology and dedicated practice, he developed a real passion for the game. His breakthrough came during our intermediate program. Now he's the champion of his college chess club and regularly competes in regional tournaments with confidence.",
       quote: "Chess taught me to think before I act, and now I use that strategy in everything I do!",
-      badges: ["Regional Finalist", "School Champion", "Rapid Improvement"],
+      badges: ["National Participant", "School & University Champion", "Rapid Improvement"],
       program: "Strategic Mastery",
     },
     {
