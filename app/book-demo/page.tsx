@@ -644,20 +644,20 @@ export default function BookDemoPage() {
                   </p>
                   <div className="flex items-center space-x-3">
                     <img
-                      src="/placeholder.svg?height=40&width=40&text=PS"
+                      src="/parent-1.jpg"
                       alt="Parent"
                       className="w-10 h-10 rounded-full"
                     />
                     <div>
-                      <p className="font-bold text-gray-800">Priya Sharma</p>
-                      <p className="text-sm text-gray-600">Parent of Arjun (Age 10)</p>
+                      <p className="font-bold text-gray-800">Mrs Reena paliwal</p>
+                      <p className="text-sm text-gray-600">Parent of Himadri </p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
               {/* Contact Info */}
-              <Card className="shadow-xl border-0 bg-gradient-to-br from-green-50 to-emerald-50">
+              {/* <Card className="shadow-xl border-0 bg-gradient-to-br from-green-50 to-emerald-50">
                 <CardContent className="p-6 sm:p-8">
                   <h3 className="text-xl font-bold text-gray-800 mb-4">Need Help?</h3>
                   <div className="space-y-3">
@@ -675,7 +675,7 @@ export default function BookDemoPage() {
                     Chat with Us
                   </Button>
                 </CardContent>
-              </Card>
+              </Card> */}
             </div>
           </div>
         </div>
@@ -737,9 +737,9 @@ export default function BookDemoPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { name: "Emma Johnson", age: 12, achievement: "School Champion in 6 months", image: "/placeholder.svg?height=200&width=200&text=Emma", quote: "The demo class changed everything for me!" },
-              { name: "Alex Chen", age: 10, achievement: "State Qualifier in 8 months", image: "/placeholder.svg?height=200&width=200&text=Alex", quote: "Kamesh sir made chess so exciting!" },
-              { name: "Sofia Rodriguez", age: 14, achievement: "National Competitor in 1 year", image: "/placeholder.svg?height=200&width=200&text=Sofia", quote: "Best decision we ever made!" },
+              { name: "Anshul Bangar", age: 21, achievement: "National Participant", image: "/anshulAcheivement.jpg", quote: "Kamesh sir made chess so exciting!" },
+              { name: "Master Madvendra Pratap Sharma", age: 10, achievement: "Gold medal in Asian Youth Chess Championship 2022 (U-10) in Indonesia", image: "/student-1.jpg", quote: "The demo class changed everything for me!" },
+              { name: "Suhani Munet", age: 17, achievement: "SGFI National Bronze Medalist (2023-24) and proudly representing India at the Chess Olympiad (2022)", image: "/student-2.jpg", quote: "Best decision we ever made!" },
             ].map((story, index) => (
               <Card
                 key={index}

@@ -298,7 +298,7 @@ export default function ContactPage() {
                       <div>
                         <h3 className="text-xl font-black text-gray-800 mb-2">Visit Us</h3>
                         <p className="text-gray-600 leading-relaxed">
-                          123 Chess Master Lane, New York, NY 10001
+                          near clocktower Badisadri, Chittorgarh
                         </p>
                       </div>
                     </div>
@@ -351,7 +351,7 @@ export default function ContactPage() {
               <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Us</span>
             </h2>
             <p className="text-lg sm:text-xl text-gray-600">
-              Located in the heart of New York, easily accessible by public transport
+              Located in the heart of Chittorgarh, easily accessible by public transport
             </p>
           </div>
           <Card className="shadow-2xl border-0 overflow-hidden">
@@ -359,7 +359,7 @@ export default function ContactPage() {
               <div className="text-center p-4">
                 <MapPin className="w-16 h-16 sm:w-20 sm:h-20 text-purple-600 mx-auto mb-6" />
                 <p className="text-xl sm:text-2xl font-black text-gray-800 mb-2">Interactive Map</p>
-                <p className="text-gray-600 text-base sm:text-lg">123 Chess Master Lane, New York, NY 10001</p>
+                <p className="text-gray-600 text-base sm:text-lg">Located at the heart of Chittorgarh</p>
                 <Button className="mt-6 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold px-6 py-3 rounded-xl">
                   Get Directions
                 </Button>
