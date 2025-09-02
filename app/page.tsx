@@ -692,7 +692,7 @@ export default function HomePage() {
           >
             <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl bg-black aspect-video">
               <iframe
-                src="https://youtu.be/ZjSDh6q0JSo?si=l0QXpwPwSz2JeYop"
+                src="https://www.youtube.com/embed/ZjSDh6q0JSo?si=L-CRR_fqPOnRVqFS"
                 title="Grand Master Introduction Video"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

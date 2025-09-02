@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Genius Chess Mastery Academy - Learn Chess from Grandmasters",
   description:
-    "Transform your chess game with world-class training from Grandmaster Alexander Smith. Join 5000+ successful students worldwide.",
+    "Transform your chess game with world-class training from Grandmaster Pravin Thipsay. Join 5000+ successful students worldwide.",
     generator: 'v0.dev'
 }
 
