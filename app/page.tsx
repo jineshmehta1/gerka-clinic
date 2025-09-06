@@ -253,131 +253,170 @@ function FAQSection() {
     )
   }
 
-// Parent Reviews Slider
 function ParentReviews() {
-    const [currentReview, setCurrentReview] = useState(0)
+  const [currentReview, setCurrentReview] = useState(0);
+  const reviewsRef = useRef<HTMLDivElement>(null);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
 
-    const reviews = [
-      {
-        name: "Mrs Reena paliwal",
-        child: "Himadri Paliwal (Age 15)",
-        rating: 5,
-        review:
-          "Our daughter, Himadri Paliwal, made us proud by becoming the SGFI State U-19 Champion and representing Rajasthan at the National SGFI. The academy identified her strengths, refined her skills, and gave her the confidence to excel. We’ve seen remarkable growth in her focus, consistency, and performance. We sincerely thank the coaches for their guidance and support.",
-        image: "/parent-1.jpg",
-        achievement: "SGFI State U-19 Champion",
-      },
-      {
-        name: "Mr. Lalit & Mrs Renu munet",
-        child: "Suhani (Age 18)",
-        rating: 5,
-        review:
-          "We are grateful to the academy for guiding our daughter, Suhani Munet, with constant support and quality coaching. With their dedication, she became an SGFI National Bronze Medalist (2023-24) and represented India at the Chess Olympiad (2022). Beyond achievements, we are proud to see her grow into a confident individual.",
-        image: "/parent-2.jpg",
-        achievement: "SGFI National Bronze Medalist (2023-24)",
-      },
-      {
-        name: "Mr. Nilesh Bangar",
-        child: "Anshul Bangar (Age 21)",
-        rating: 5,
-        review:
-          "As parents, we are proud of our son, Anshul Bangar, for becoming a two-time West Zone Winner and competing in CBSE and University Nationals. More than the trophies, we value the discipline, confidence, and fighting spirit he has gained. We are truly grateful to the academy for its constant support and guidance in shaping his journey.",
-        image: "/parent-3.jpg",
-        achievement: "CBSE & University Nationals",
-      },
-    ]
+  const reviews = [
+    {
+      name: "Mrs Reena paliwal",
+      child: "Himadri Paliwal (Age 15)",
+      rating: 5,
+      review:
+        "Our daughter, Himadri Paliwal, made us proud by becoming the SGFI State U-19 Champion and representing Rajasthan at the National SGFI. The academy identified her strengths, refined her skills, and gave her the confidence to excel. We’ve seen remarkable growth in her focus, consistency, and performance. We sincerely thank the coaches for their guidance and support.",
+      image: "/parent-1.jpg",
+      achievement: "SGFI State U-19 Champion",
+    },
+    {
+      name: "Mr. Lalit & Mrs Renu munet",
+      child: "Suhani (Age 18)",
+      rating: 5,
+      review:
+        "We are grateful to the academy for guiding our daughter, Suhani Munet, with constant support and quality coaching. With their dedication, she became an SGFI National Bronze Medalist (2023-24) and represented India at the Chess Olympiad (2022). Beyond achievements, we are proud to see her grow into a confident individual.",
+      image: "/parent-2.jpg",
+      achievement: "SGFI National Bronze Medalist (2023-24)",
+    },
+    {
+      name: "Mr. Nilesh Bangar",
+      child: "Anshul Bangar (Age 21)",
+      rating: 5,
+      review:
+        "As parents, we are proud of our son, Anshul Bangar, for becoming a two-time West Zone Winner and competing in CBSE and University Nationals. More than the trophies, we value the discipline, confidence, and fighting spirit he has gained. We are truly grateful to the academy for its constant support and guidance in shaping his journey.",
+      image: "/parent-3.jpg",
+      achievement: "CBSE & University Nationals",
+    },
+  ];
 
-    useEffect(() => {
-      const timer = setInterval(() => {
-        setCurrentReview((prev) => (prev + 1) % reviews.length)
-      }, 5000)
-      return () => clearInterval(timer)
-    }, [reviews.length])
+  // Auto-scroll effect
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentReview((prev) => (prev + 1) % reviews.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [reviews.length]);
 
-    return (
-      <section className="py-16 sm:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12 sm:mb-16"
+  // Handle touch start
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    setTouchStart(e.targetTouches[0].clientX);
+    setTouchEnd(null); // Reset touchEnd when starting a new touch
+  };
+
+  // Handle touch move
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  // Handle touch end
+  const handleTouchEnd = () => {
+    if (touchStart !== null && touchEnd !== null) {
+      const minSwipeDistance = 50; // Minimum distance for a swipe to register
+      const distance = touchStart - touchEnd;
+      if (Math.abs(distance) > minSwipeDistance) {
+        if (distance > 0) {
+          // Swipe left: go to next review
+          setCurrentReview((prev) => (prev + 1) % reviews.length);
+        } else {
+          // Swipe right: go to previous review
+          setCurrentReview((prev) => (prev - 1 + reviews.length) % reviews.length);
+        }
+      }
+    }
+    // Reset touch states
+    setTouchStart(null);
+    setTouchEnd(null);
+  };
+
+  return (
+    <section className="py-16 sm:py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-12 sm:mb-16"
+        >
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-4">
+            What{" "}
+            <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+              Parents Say
+            </span>
+          </h2>
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
+            Real testimonials from families who've seen incredible transformations
+          </p>
+        </motion.div>
+
+        <div className="relative max-w-4xl mx-auto">
+          <div
+            className="overflow-hidden touch-pan-x"
+            ref={reviewsRef}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-4">
-              What{" "}
-              <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
-                Parents Say
-              </span>
-            </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
-              Real testimonials from families who've seen incredible transformations
-            </p>
-          </motion.div>
+            <motion.div
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentReview * 100}%)` }}
+            >
+              {reviews.map((review, index) => (
+                <div key={index} className="w-full flex-shrink-0 px-2 sm:px-4">
+                  <Card className="bg-gradient-to-br from-purple-200 via-pink-200 to-blue-200 shadow-2xl border-0 overflow-hidden">
+                    <CardContent className="p-6 sm:p-12 text-center">
+                      <div className="mb-6 sm:mb-8">
+                        <Quote className="w-12 h-12 sm:w-16 sm:h-16 text-purple-300 mx-auto mb-4 sm:mb-6" />
+                        <p className="text-base sm:text-xl text-gray-700 leading-relaxed italic mb-6">
+                          "{review.review}"
+                        </p>
+                        <div className="flex justify-center mb-4 sm:mb-6">
+                          {[...Array(review.rating)].map((_, i) => (
+                            <Star key={i} className="w-5 h-5 sm:w-6 sm:h-6 fill-yellow-400 text-yellow-400" />
+                          ))}
+                        </div>
+                      </div>
 
-          <div className="relative max-w-4xl mx-auto">
-            <div className="overflow-hidden">
-              <motion.div
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${currentReview * 100}%)` }}
-              >
-                {reviews.map((review, index) => (
-                  <div key={index} className="w-full flex-shrink-0 px-2 sm:px-4">
-                    <Card className="bg-gradient-to-br from-purple-200 via-pink-200 to-blue-200 shadow-2xl border-0 overflow-hidden">
-                      <CardContent className="p-6 sm:p-12 text-center">
-                        <div className="mb-6 sm:mb-8">
-                          <Quote className="w-12 h-12 sm:w-16 sm:h-16 text-purple-300 mx-auto mb-4 sm:mb-6" />
-                          <p className="text-base sm:text-xl text-gray-700 leading-relaxed italic mb-6">
-                            "{review.review}"
-                          </p>
-                          <div className="flex justify-center mb-4 sm:mb-6">
-                            {[...Array(review.rating)].map((_, i) => (
-                              <Star key={i} className="w-5 h-5 sm:w-6 sm:h-6 fill-yellow-400 text-yellow-400" />
-                            ))}
+                      <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                        <img
+                          src={review.image || "/placeholder.svg"}
+                          alt={review.name}
+                          className="w-24 h-24 sm:w-40 sm:h-28 border-4 border-purple-200"
+                        />
+                        <div className="text-center sm:text-left">
+                          <h4 className="text-lg sm:text-xl font-bold text-gray-800">{review.name}</h4>
+                          <p className="text-gray-600 mb-2">Parent of {review.child}</p>
+                          <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs sm:text-sm px-3 py-1 rounded-full inline-block">
+                            {review.achievement}
                           </div>
                         </div>
-
-                        <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-                          <img
-                            src={review.image || "/placeholder.svg"}
-                            alt={review.name}
-                            className="w-24 h-24 sm:w-40 sm:h-28 border-4 border-purple-200"
-
-                          />
-                          <div className="text-center sm:text-left">
-                            <h4 className="text-lg sm:text-xl font-bold text-gray-800">{review.name}</h4>
-                            <p className="text-gray-600 mb-2">Parent of {review.child}</p>
-                            <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs sm:text-sm px-3 py-1 rounded-full inline-block">
-                              {review.achievement}
-                            </div>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                ))}
-              </motion.div>
-            </div>
-
-            {/* Navigation dots */}
-            <div className="flex justify-center mt-6 sm:mt-8 space-x-3">
-              {reviews.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentReview(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    currentReview === index
-                      ? "bg-gradient-to-r from-purple-600 to-blue-600 w-6 sm:w-8"
-                      : "bg-gray-300 hover:bg-gray-400"
-                  }`}
-                />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
               ))}
-            </div>
+            </motion.div>
+          </div>
+
+          {/* Navigation dots */}
+          <div className="flex justify-center mt-6 sm:mt-8 space-x-3">
+            {reviews.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentReview(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  currentReview === index
+                    ? "bg-gradient-to-r from-purple-600 to-blue-600 w-6 sm:w-8"
+                    : "bg-gray-300 hover:bg-gray-400"
+                }`}
+              />
+            ))}
           </div>
         </div>
-      </section>
-    )
-  }
+      </div>
+    </section>
+  );
+}
 
 export default function HomePage() {
   const [isVideoOpen, setIsVideoOpen] = useState(false)
@@ -636,10 +675,10 @@ export default function HomePage() {
             className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 text-center"
           >
             {[
-              { number: 5000, suffix: "+", label: "Students Trained", icon: Users },
-              { number: 250000, suffix: "+", label: "Training Hours", icon: Clock },
-              { number: 45, suffix: "+", label: "Countries Reached", icon: Globe },
-              { number: 500, suffix: "+", label: "Champions Created", icon: Trophy },
+              { number: 1500, suffix: "+", label: "Students Trained", icon: Users },
+              { number: 50000, suffix: "+", label: "Training Hours", icon: Clock },
+              { number: 10, suffix: "+", label: "Countries Reached", icon: Globe },
+              { number: 50, suffix: "+", label: "Champions Created", icon: Trophy },
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -717,6 +756,47 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Success Stories Preview */}
+      <section className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-purple-50/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
+              Join Our{" "}
+              <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+                Success Stories
+              </span>
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+              See what students achieve after their demo class with Kamesh Choudhary
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { name: "Anshul Bangar", age: 21, achievement: "National Participant", image: "/anshulAcheivement.jpg", quote: "Kamesh sir made chess so exciting!" },
+              { name: "Master Madvendra Pratap Sharma", age: 10, achievement: "Gold medal in Asian Youth Chess Championship 2022 (U-10) in Indonesia", image: "/student-1.jpg", quote: "The demo class changed everything for me!" },
+              { name: "Suhani Munet", age: 17, achievement: "SGFI National Bronze Medalist (2023-24) and proudly representing India at the Chess Olympiad (2022)", image: "/student-2.jpg", quote: "Best decision we ever made!" },
+            ].map((story, index) => (
+              <Card
+                key={index}
+                className="bg-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-0"
+              >
+                <CardContent className="p-8 text-center">
+                  <img
+                    src={story.image || "/placeholder.svg"}
+                    alt={story.name}
+                    className="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-purple-200"
+                  />
+                  <h3 className="text-xl font-bold text-gray-800 mb-2">{story.name}</h3>
+                  <p className="text-gray-600 mb-4">{story.achievement}</p>
+                  <p className="text-gray-700 italic">"{story.quote}"</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us Section */}
       <section className="py-16 sm:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -760,8 +840,8 @@ export default function HomePage() {
               },
               {
                 icon: Trophy,
-                title: "Tournament Success",
-                description: "Our students regularly win local, national, and international competitions",
+                title: "Weekly Tournament",
+                description: "We conduct competitive tournaments every sunday",
                 gradient: "from-yellow-500 to-orange-500",
               },
               {
@@ -984,6 +1064,37 @@ export default function HomePage() {
           </Link>
         </motion.div>
       </motion.div>
+      {/* Floating WhatsApp Button */}
+<motion.div
+  initial={{ x: 100, opacity: 0 }}
+  animate={{ x: 0, opacity: 1 }}
+  transition={{ delay: 2, duration: 0.5 }}
+  className="fixed bottom-16 right-4 sm:bottom-20 sm:right-6 z-40"
+>
+  <motion.div
+    animate={{ scale: [1, 1.05, 1] }}
+    transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, repeatDelay: 3 }}
+  >
+    <a
+      href="https://wa.me/919799253983"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white font-bold px-5 py-3 sm:px-6 sm:py-3 rounded-full shadow-2xl hover:shadow-3xl text-sm sm:text-base flex items-center space-x-2"
+      aria-label="Contact on WhatsApp"
+    >
+      <svg
+        className="w-5 h-5"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <path d="M20.52 3.48A11.71 11.71 0 0012 0C5.37 0 .008 5.37 0 12a11.66 11.66 0 002 6L0 24l6-2a11.96 11.96 0 006 2c6.62 0 12-5.37 12-12 0-3.21-1.24-6.22-3.48-8.52zm-8.48 16.3a7.06 7.06 0 01-3.6-1l-.25-.15-2.1.56.56-2.03-.16-.26a7.06 7.06 0 011-3.56c.42-.73.95-1.22 1.48-1.4.12-.05.3-.1.6-.1.3 0 .5.04.7.1.17.06.7.27.85.32.1.04.17.07.26.11a.72.72 0 01.27.19.8.8 0 01.18.27c.03.1.09.2.1.3.02.1 0 .18 0 .3a.564.564 0 01-.12.35c-.07.1-.14.15-.2.22l-.14.17a1.66 1.66 0 01-.9.53c-.07 0-.15 0-.23-.04a.246.246 0 01-.1-.08.798.798 0 01-.12-.15c-.05-.1-.1-.2-.1-.35s0-.17.03-.25.05-.13.07-.14a.132.132 0 01.1-.04h.07a.52.52 0 01.4.18.528.528 0 01.18.4.519.519 0 01-.1.32.44.44 0 01-.22.2c-.02 0-.04 0-.07-.01s-.04 0-.05-.02c-.02-.02-.03-.05-.03-.07s0-.1.03-.14a.38.38 0 01.1-.14z" />
+      </svg>
+      <span>WhatsApp</span>
+    </a>
+  </motion.div>
+</motion.div>
+
 
       {/* Video Modal */}
       {isVideoOpen && (

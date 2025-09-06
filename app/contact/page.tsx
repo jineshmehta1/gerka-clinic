@@ -90,7 +90,7 @@ export default function ContactPage() {
               <CardContent className="p-6 text-center">
                 <Award className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-4 text-purple-600" />
                 <div className="text-2xl sm:text-3xl font-black bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-2">
-                  20+
+                  13+
                 </div>
                 <div className="text-gray-600 font-semibold text-sm sm:text-base">Years of Excellence</div>
               </CardContent>
@@ -99,7 +99,7 @@ export default function ContactPage() {
               <CardContent className="p-6 text-center">
                 <Users className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-4 text-orange-600" />
                 <div className="text-2xl sm:text-3xl font-black bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent mb-2">
-                  5000+
+                  1500+
                 </div>
                 <div className="text-gray-600 font-semibold text-sm sm:text-base">Happy Students</div>
               </CardContent>
@@ -108,7 +108,7 @@ export default function ContactPage() {
               <CardContent className="p-6 text-center">
                 <Trophy className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-4 text-green-600" />
                 <div className="text-2xl sm:text-3xl font-black bg-gradient-to-r from-green-500 to-emerald-500 bg-clip-text text-transparent mb-2">
-                  500+
+                  50+
                 </div>
                 <div className="text-gray-600 font-semibold text-sm sm:text-base">Champions Created</div>
               </CardContent>
@@ -298,7 +298,7 @@ export default function ContactPage() {
                       <div>
                         <h3 className="text-xl font-black text-gray-800 mb-2">Visit Us</h3>
                         <p className="text-gray-600 leading-relaxed">
-                          near clocktower Badisadri, Chittorgarh
+                          Ghanta ghar, barisadri, dist. chittorgarh Raj 312403
                         </p>
                       </div>
                     </div>
@@ -314,7 +314,7 @@ export default function ContactPage() {
                       <div>
                         <h3 className="text-xl font-black text-gray-800 mb-2">Call Us</h3>
                         <p className="text-gray-600 leading-relaxed">
-                          +91-9799253983
+                          +91-9799253983, +91-9636809800
                         </p>
                       </div>
                     </div>

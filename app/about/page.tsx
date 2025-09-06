@@ -73,7 +73,7 @@ export default function AboutPage() {
                 className="rounded-3xl shadow-2xl w-full"
               />
               <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 sm:p-6 rounded-2xl shadow-xl">
-                <div className="text-2xl sm:text-3xl font-bold">5000+</div>
+                <div className="text-2xl sm:text-3xl font-bold">3000+</div>
                 <div className="text-xs sm:text-sm">Lives Transformed</div>
               </div>
             </div>
@@ -245,12 +245,9 @@ export default function AboutPage() {
             
             <div className="space-y-16 md:space-y-0">
               {[
-                { year: "2024", title: "Academy Founded", description: "Kamesh Choudhary establishes Genius Chess Academy with a vision to transform chess education, starting with just 15 passionate students", gradient: "from-purple-500 to-blue-500" },
-                { year: "2024", title: "First Champions", description: "Our students achieve their first major victories in regional championships, validating our innovative teaching methodology", gradient: "from-blue-500 to-cyan-500" },
-                { year: "2025", title: "Digital Revolution", description: "Launched our online learning platform, making quality chess education accessible to students worldwide", gradient: "from-cyan-500 to-green-500" },
-                { year: "2025", title: "1000+ Students", description: "Reached 1000 students trained with 96% showing significant improvement, establishing ourselves as a premier chess institution", gradient: "from-green-500 to-yellow-500" },
-                { year: "2025", title: "Global Recognition", description: "Received international recognition for innovative online chess education during the pandemic", gradient: "from-yellow-500 to-orange-500" },
-                { year: "2025", title: "20 Years of Excellence", description: "Celebrating two decades of transforming lives, with over 5000 students and 500+ tournament winners", gradient: "from-orange-500 to-red-500" },
+                { year: "2012", title: "Academy Founded", description: "Kamesh Choudhary establishes Genius Chess Academy with a vision to transform chess education, starting with just 15 passionate students", gradient: "from-purple-500 to-blue-500" },
+                { year: "2019", title: "Major Victories", description: "Our students achieve their first major victories in regional championships, validating our innovative teaching methodology", gradient: "from-blue-500 to-cyan-500" },
+                { year: "2025", title: "13 Years of Excellence", description: "Celebrating years of transforming lives, with over 1500 students and 50+ tournament winners", gradient: "from-orange-500 to-red-500" },
               ].map((milestone, index) => (
                 <div key={index} className="md:grid md:grid-cols-2 md:gap-12 items-center md:mb-12">
                   {/* Year block */}

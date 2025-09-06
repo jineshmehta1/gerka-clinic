@@ -105,7 +105,7 @@ export function Footer() {
               <div className="flex items-start justify-center sm:justify-start space-x-3">
                 <MapPin className="w-4 h-4 text-[#C9A227] mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-white/80">123 Chess Master Lane, New York</p>
+                  <p className="text-white/80">Ghanta ghar, barisadri, dist. chittorgarh Raj 312403</p>
                 </div>
               </div>
               <div className="flex items-center justify-center sm:justify-start space-x-3">
@@ -136,7 +136,7 @@ export function Footer() {
 
         <div className="border-t border-white/20 mt-12 pt-8 text-center">
           <p className="text-white/60 text-xs sm:text-sm">
-            © 2024 Genius Chess Academy. All rights reserved.
+            © 2024 Genius Chess Academy (INTERNATIONAL SCHOOL OF CHESS). All rights reserved.
             <span className="hidden sm:inline"> |</span>
             <br className="sm:hidden" />
             <Link href="/privacy" className="hover:text-[#C9A227] sm:ml-1">

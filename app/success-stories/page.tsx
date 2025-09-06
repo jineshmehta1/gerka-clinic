@@ -24,11 +24,11 @@ export default function SuccessStoriesPage() {
       badges: ["National Gold medalist", "Mental Strength", "Academic Improvement"],
       program: "Tournament Warrior",
     },{
-      id: 1,
+      id: 2,
       name: "Anshul bangar",
       age: 21,
       image: "/anshulAcheivement.jpg",
-      achievement: "School and University Nationals Champion",
+      achievement: "School and University Nationals Participant",
       rating: "Beginner to 1800+",
       timeframe: "10 years",
       story:
@@ -51,50 +51,50 @@ export default function SuccessStoriesPage() {
       badges: ["National Medalist", "Rating Expert", "STEM Excellence"],
       program: "Grandmaster Path",
     },
-    {
-      id: 4,
-      name: "Michael Thompson",
-      age: 16,
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS20YiAa6KMXkNAMglfIrQpAK4TNV6WIve56MSI2ua0zGByCZ2Uilg2bize0oHg-MjzJxk&usqp=CAU",
-      achievement: "College Scholarship",
-      rating: "From 1000 to 1800",
-      timeframe: "18 months",
-      story:
-        "Michael's chess journey with us led to a college scholarship! His dedication to chess demonstrated the discipline and strategic thinking that colleges value. Chess has shaped his leadership skills, and he now captains his high school chess team while mentoring younger players.",
-      quote:
-        "Chess opened doors I never knew existed. It's not just a game - it's a life skill that changed everything!",
-      badges: ["College Scholarship", "Team Captain", "Mentor"],
-      program: "Private Coaching",
-    },
-    {
-      id: 5,
-      name: "Lily Wang",
-      age: 8,
-      image: "https://i.pinimg.com/736x/73/3f/00/733f00603c0aa1b5a28cfc3f29c87dc9.jpg",
-      achievement: "Youngest Regional Winner",
-      rating: "From 200 to 900",
-      timeframe: "10 months",
-      story:
-        "At just 8 years old, Lily became the youngest player ever to win her regional age group championship. Her natural talent combined with our nurturing Chess Foundations program helped her develop both tactical sharpness and emotional resilience. She's proof that age is just a number with passion and proper guidance.",
-      quote: "Chess is like magic! I can make my pieces dance and create beautiful patterns on the board!",
-      badges: ["Youngest Winner", "Natural Talent", "Emotional Growth"],
-      program: "Chess Foundations",
-    },
-    {
-      id: 6,
-      name: "David Kim",
-      age: 15,
-      image: "https://i.redd.it/male-chess-players-i-find-attractive-whos-the-best-looking-v0-8av4i8z823id1.jpg?width=640&format=pjpg&auto=webp&s=4c16bb49612e3355aab8283fc94ccd781a83ea6d",
-      achievement: "International Tournament",
-      rating: "From 1200 to 2000",
-      timeframe: "24 months",
-      story:
-        "David's two-year journey culminated in representing his country at an international youth championship. His transformation from a casual player to a serious competitor showcases what's possible with dedication and expert guidance. He's now considering a career in chess while maintaining excellent grades.",
-      quote:
-        "Every lesson taught me something new, not just about chess, but about myself and what I'm capable of achieving!",
-      badges: ["International Player", "Expert Rating", "Future Master"],
-      program: "Grandmaster Path",
-    },
+    // {
+    //   id: 4,
+    //   name: "Michael Thompson",
+    //   age: 16,
+    //   image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS20YiAa6KMXkNAMglfIrQpAK4TNV6WIve56MSI2ua0zGByCZ2Uilg2bize0oHg-MjzJxk&usqp=CAU",
+    //   achievement: "College Scholarship",
+    //   rating: "From 1000 to 1800",
+    //   timeframe: "18 months",
+    //   story:
+    //     "Michael's chess journey with us led to a college scholarship! His dedication to chess demonstrated the discipline and strategic thinking that colleges value. Chess has shaped his leadership skills, and he now captains his high school chess team while mentoring younger players.",
+    //   quote:
+    //     "Chess opened doors I never knew existed. It's not just a game - it's a life skill that changed everything!",
+    //   badges: ["College Scholarship", "Team Captain", "Mentor"],
+    //   program: "Private Coaching",
+    // },
+    // {
+    //   id: 5,
+    //   name: "Lily Wang",
+    //   age: 8,
+    //   image: "https://i.pinimg.com/736x/73/3f/00/733f00603c0aa1b5a28cfc3f29c87dc9.jpg",
+    //   achievement: "Youngest Regional Winner",
+    //   rating: "From 200 to 900",
+    //   timeframe: "10 months",
+    //   story:
+    //     "At just 8 years old, Lily became the youngest player ever to win her regional age group championship. Her natural talent combined with our nurturing Chess Foundations program helped her develop both tactical sharpness and emotional resilience. She's proof that age is just a number with passion and proper guidance.",
+    //   quote: "Chess is like magic! I can make my pieces dance and create beautiful patterns on the board!",
+    //   badges: ["Youngest Winner", "Natural Talent", "Emotional Growth"],
+    //   program: "Chess Foundations",
+    // },
+    // {
+    //   id: 6,
+    //   name: "David Kim",
+    //   age: 15,
+    //   image: "https://i.redd.it/male-chess-players-i-find-attractive-whos-the-best-looking-v0-8av4i8z823id1.jpg?width=640&format=pjpg&auto=webp&s=4c16bb49612e3355aab8283fc94ccd781a83ea6d",
+    //   achievement: "International Tournament",
+    //   rating: "From 1200 to 2000",
+    //   timeframe: "24 months",
+    //   story:
+    //     "David's two-year journey culminated in representing his country at an international youth championship. His transformation from a casual player to a serious competitor showcases what's possible with dedication and expert guidance. He's now considering a career in chess while maintaining excellent grades.",
+    //   quote:
+    //     "Every lesson taught me something new, not just about chess, but about myself and what I'm capable of achieving!",
+    //   badges: ["International Player", "Expert Rating", "Future Master"],
+    //   program: "Grandmaster Path",
+    // },
   ]
 
   return (
@@ -248,7 +248,7 @@ export default function SuccessStoriesPage() {
               <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">Succeed</span>
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              The key factors behind every success story at Genius Chess Academy
+              The key factors behind every success story at Genius Chess Academy (INTERNATIONAL SCHOOL OF CHESS)
             </p>
           </div>
 

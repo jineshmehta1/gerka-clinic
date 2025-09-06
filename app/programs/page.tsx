@@ -47,7 +47,7 @@ export default function ProgramsPage() {
         "Endgame fundamentals",
         "Tournament preparation",
         "Rating improvement focus",
-        "1-on-1 monthly sessions",
+        "Personal mentorship in grandmaster path",
       ],
       description:
         "For players with basic knowledge ready to take their game to the competitive level with structured tournament preparation.",
@@ -113,7 +113,7 @@ export default function ProgramsPage() {
         "Direct mentor access",
       ],
       description:
-        "One-on-one sessions tailored to your specific needs and goals with personalized attention from expert instructors.",
+        "Personal mentorship in grandmaster path tailored to your specific needs and goals with personalized attention from expert instructors.",
       gradient: "from-yellow-500 to-orange-500",
       popular: false,
     },
