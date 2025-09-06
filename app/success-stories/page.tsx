@@ -115,7 +115,7 @@ export default function SuccessStoriesPage() {
             <Card className="bg-white/80 backdrop-blur-sm shadow-xl border-0">
               <CardContent className="p-4 sm:p-6 text-center">
                 <div className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-2">
-                  5000+
+                  1500+
                 </div>
                 <div className="text-gray-600 font-semibold text-sm">Students Transformed</div>
               </CardContent>
@@ -123,7 +123,7 @@ export default function SuccessStoriesPage() {
             <Card className="bg-white/80 backdrop-blur-sm shadow-xl border-0">
               <CardContent className="p-4 sm:p-6 text-center">
                 <div className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent mb-2">
-                  500+
+                  50+
                 </div>
                 <div className="text-gray-600 font-semibold text-sm">Tournament Winners</div>
               </CardContent>
@@ -139,7 +139,7 @@ export default function SuccessStoriesPage() {
             <Card className="bg-white/80 backdrop-blur-sm shadow-xl border-0">
               <CardContent className="p-4 sm:p-6 text-center">
                 <div className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-yellow-500 to-orange-500 bg-clip-text text-transparent mb-2">
-                  20+
+                  13+
                 </div>
                 <div className="text-gray-600 font-semibold text-sm">Years Excellence</div>
               </CardContent>
