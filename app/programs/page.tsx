@@ -19,7 +19,7 @@ export default function ProgramsPage() {
       duration: "8 weeks",
       students: "Ages 6-12",
       rating: 4.9,
-      image: "https://chess-teacher.com/wp-content/uploads/2024/06/two-smart-little-children-boy-and-girl-developing-2023-11-27-05-31-10-utc-1024x697-1.webp",
+      image: "/foundation.webp",
       features: [
         "Learn basic piece movements",
         "Understanding the chessboard",
@@ -40,7 +40,7 @@ export default function ProgramsPage() {
       duration: "12 weeks",
       students: "Ages 10+",
       rating: 4.8,
-      image: "https://chessplus.net/wp-content/uploads/2020/07/canstockphoto52251449.jpg",
+      image: "/starategy.jpeg",
       features: [
         "Advanced tactics training",
         "Opening principles & theory",
@@ -61,7 +61,7 @@ export default function ProgramsPage() {
       duration: "16 weeks",
       students: "Serious Players",
       rating: 5.0,
-      image: "https://continuinged.utah.edu/_resources/images/_d1/youth/featured-images/power-chess.jpg",
+      image: "/gm.jpg",
       features: [
         "Complex strategic concepts",
         "Deep opening analysis",
@@ -82,7 +82,7 @@ export default function ProgramsPage() {
       duration: "10 weeks",
       students: "Ages 12+",
       rating: 4.9,
-      image: "https://miramarchessclub.org/wp-content/uploads/2025/02/1024x576-vCbVV5.tmp_.jpg",
+      image: "/tounament.webp",
       features: [
         "Time management skills",
         "Pressure handling techniques",
@@ -103,7 +103,7 @@ export default function ProgramsPage() {
       duration: "Flexible",
       students: "1-on-1",
       rating: 5.0,
-      image: "https://cdn.prod.website-files.com/63e14221fc6cfd479fa1b33b/647f7485f0cce9628f414ea5_chess-club.jpeg",
+      image: "/private.webp",
       features: [
         "Personalized curriculum",
         "Flexible scheduling",
@@ -124,7 +124,7 @@ export default function ProgramsPage() {
       duration: "6 weeks",
       students: "Families",
       rating: 4.8,
-      image: "https://previews.123rf.com/images/imagefactory2013/imagefactory20131308/imagefactory2013130801245/21399837-portrait-of-a-family-playing-chess.jpg",
+      image: "/family.webp",
       features: [
         "Learn together as a family",
         "Age-appropriate instruction",
