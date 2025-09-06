@@ -64,10 +64,10 @@ export function Navbar() {
                   <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
                     GENIUS
                   </span>
-                  <span className="text-gray-800 ml-1 sm:ml-2">CHESS</span>
+                  <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent ml-1 sm:ml-2">CHESS</span>
                 </h1>
-                <p className="hidden sm:block text-[10px] text-gray-500 tracking-widest font-medium leading-tight mt-0.5">
-                  MASTERY ACADEMY
+                <p className="hidden sm:block text-[10px] text-gray-900 tracking-widest font-medium leading-tight mt-0.5">
+                  Academy & International School of Chess
                 </p>
               </div>
             </Link>
