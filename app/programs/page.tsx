@@ -165,7 +165,7 @@ export default function ProgramsPage() {
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto mb-12">
             From complete beginners to advanced players, we have the perfect program to elevate your chess journey with
-            Kamesh Choudhary's proven methodology
+            Kamlesh Choudhary's proven methodology
           </p>
 
           {/* Filter Tabs */}
@@ -278,7 +278,7 @@ export default function ProgramsPage() {
               <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">Work</span>
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              Kamesh Choudhary's proven methodology ensures every student achieves their chess goals
+              Kamlesh Choudhary's proven methodology ensures every student achieves their chess goals
             </p>
           </div>
 
@@ -319,7 +319,7 @@ export default function ProgramsPage() {
             </span>
           </h2>
           <p className="text-lg sm:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Choose the perfect program for your skill level and start learning with Kamesh Choudhary's proven
+            Choose the perfect program for your skill level and start learning with Kamlesh Choudhary's proven
             methodology
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">

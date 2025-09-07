@@ -107,7 +107,7 @@ export default function BookDemoPage() {
   const benefits = [
     {
       icon: Trophy,
-      title: "Meet Kamesh Choudhary",
+      title: "Meet Kamlesh Choudhary",
       description: "Personal introduction from our founder and master instructor",
       gradient: "from-purple-500 to-blue-500",
     },
@@ -145,7 +145,7 @@ export default function BookDemoPage() {
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto mb-12">
-            Experience Kamesh Choudhary's revolutionary teaching methodology firsthand. Get personalized guidance, skill
+            Experience Kamlesh Choudhary's revolutionary teaching methodology firsthand. Get personalized guidance, skill
             assessment, and a customized learning plan - absolutely free!
           </p>
 
@@ -351,7 +351,7 @@ export default function BookDemoPage() {
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-6">What to Expect</h3>
                   <div className="space-y-4">
                     {[
-                      { icon: Users, text: "Personal meeting with Kamesh Choudhary" },
+                      { icon: Users, text: "Personal meeting with Kamlesh Choudhary" },
                       { icon: Target, text: "Comprehensive skill assessment" },
                       { icon: BookOpen, text: "Sample lesson with our methodology" },
                       { icon: Trophy, text: "Customized learning roadmap" },
@@ -377,7 +377,7 @@ export default function BookDemoPage() {
                     ))}
                   </div>
                   <p className="text-gray-700 italic mb-4">
-                    "The demo class was incredible! Kamesh sir immediately identified my daughter's strengths and gave
+                    "The demo class was incredible! Kamlesh sir immediately identified my daughter's strengths and gave
                     us a clear path forward. She's been excited about chess ever since!"
                   </p>
                   <div className="flex items-center space-x-3">
@@ -409,13 +409,13 @@ export default function BookDemoPage() {
               </span>
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              See what students achieve after their demo class with Kamesh Choudhary
+              See what students achieve after their demo class with Kamlesh Choudhary
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { name: "Anshul Bangar", age: 21, achievement: "National Participant", image: "/anshulAcheivement.jpg", quote: "Kamesh sir made chess so exciting!" },
+              { name: "Anshul Bangar", age: 21, achievement: "National Participant", image: "/anshulAcheivement.jpg", quote: "Kamlesh sir made chess so exciting!" },
               { name: "Master Madvendra Pratap Sharma", age: 10, achievement: "Gold medal in Asian Youth Chess Championship 2022 (U-10) in Indonesia", image: "/student-1.jpg", quote: "The demo class changed everything for me!" },
               { name: "Suhani Munet", age: 17, achievement: "SGFI National Bronze Medalist (2023-24) and proudly representing India at the Chess Olympiad (2022)", image: "/student-2.jpg", quote: "Best decision we ever made!" },
             ].map((story, index) => (
@@ -451,7 +451,7 @@ export default function BookDemoPage() {
           </h2>
           <p className="text-lg sm:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
             Limited demo slots available each week. Secure your spot and start your chess transformation journey with
-            Kamesh Choudhary's proven methodology.
+            Kamlesh Choudhary's proven methodology.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
             <Button

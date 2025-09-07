@@ -767,13 +767,13 @@ export default function HomePage() {
               </span>
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              See what students achieve after their demo class with Kamesh Choudhary
+              See what students achieve after their demo class with Kamlesh Choudhary
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { name: "Anshul Bangar", age: 21, achievement: "National Participant", image: "/anshulAcheivement.jpg", quote: "Kamesh sir made chess so exciting!" },
+              { name: "Anshul Bangar", age: 21, achievement: "National Participant", image: "/anshulAcheivement.jpg", quote: "Kamlesh sir made chess so exciting!" },
               { name: "Master Madvendra Pratap Sharma", age: 10, achievement: "Gold medal in Asian Youth Chess Championship 2022 (U-10) in Indonesia", image: "/student-1.jpg", quote: "The demo class changed everything for me!" },
               { name: "Suhani Munet", age: 17, achievement: "SGFI National Bronze Medalist (2023-24) and proudly representing India at the Chess Olympiad (2022)", image: "/student-2.jpg", quote: "Best decision we ever made!" },
             ].map((story, index) => (
@@ -1116,7 +1116,7 @@ export default function HomePage() {
               <div className="text-center text-white">
                 <Play className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 opacity-50" />
                 <p className="text-lg sm:text-xl">Video Player Placeholder</p>
-                <p className="text-sm opacity-70 mt-2">Kamesh Choudhary's Introduction Video</p>
+                <p className="text-sm opacity-70 mt-2">Kamlesh Choudhary's Introduction Video</p>
               </div>
             </div>
           </motion.div>

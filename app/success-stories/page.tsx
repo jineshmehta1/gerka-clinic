@@ -47,7 +47,7 @@ export default function SuccessStoriesPage() {
       timeframe: "4 years",
       story:
         "An accomplished International FIDE Rated Chess Player, [Name] has consistently showcased excellence on both national and international platforms. She is an SGFI National Bronze Medalist (2023–24) and proudly represented India at the Chess Olympiad in 2022. A 4-time State Chess Champion, she continues to demonstrate remarkable consistency, discipline, and determination in her journey. With every tournament, she not only strengthens her achievements but also inspires fellow players with her passion and commitment to the game.",
-      quote: "Kamesh sir taught me that every position tells a story. Now I can read those stories and write my own!",
+      quote: "Kamlesh sir taught me that every position tells a story. Now I can read those stories and write my own!",
       badges: ["National Medalist", "Rating Expert", "STEM Excellence"],
       program: "Grandmaster Path",
     },
@@ -255,7 +255,7 @@ export default function SuccessStoriesPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { icon: Target, title: "Personalized Approach", description: "Every student gets a customized learning path based on their unique strengths and goals", gradient: "from-purple-500 to-blue-500" },
-              { icon: Award, title: "Expert Mentorship", description: "Direct guidance from Kamesh Choudhary and experienced chess masters", gradient: "from-blue-500 to-cyan-500" },
+              { icon: Award, title: "Expert Mentorship", description: "Direct guidance from Kamlesh Choudhary and experienced chess masters", gradient: "from-blue-500 to-cyan-500" },
               { icon: Users, title: "Supportive Community", description: "A family-like environment where students motivate and learn from each other", gradient: "from-cyan-500 to-green-500" },
               { icon: Heart, title: "Holistic Development", description: "Focus on character building, confidence, and life skills beyond chess", gradient: "from-green-500 to-yellow-500" },
             ].map((factor, index) => (

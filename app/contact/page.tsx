@@ -81,7 +81,7 @@ export default function ContactPage() {
             <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Us</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto mb-12">
-            Ready to start your chess journey with Kamesh Choudhary's proven methodology? Get in touch with us today!
+            Ready to start your chess journey with Kamlesh Choudhary's proven methodology? Get in touch with us today!
           </p>
 
           {/* Quick Stats */}
