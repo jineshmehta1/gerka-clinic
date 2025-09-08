@@ -15,6 +15,31 @@ export default function GalleryPage() {
   const [activeFilter, setActiveFilter] = useState("all")
 
   const images = [
+    
+    {
+      id: 16,
+      src: "/magnus.jpg",
+      category: "academy",
+      title: "Magnus",
+      description: "Pravin thipsay sir with magnus carlson",
+      achievement: "Kings of chess",
+    },
+    {
+      id: 17,
+      src: "/gukesh.jpg",
+      category: "tournaments",
+      title: "Gukesh",
+      description: "Pravin thipsay sir sharing years of wisdom with gukesh",
+      achievement: "wizards of chess",
+    },
+    {
+      id: 18,
+      src: "/im2.jpg",
+      category: "acheivements",
+      title: "National awards",
+      description: "International Master Bhagyashree Thipsay Padma Shri and Arjuna Awardee",
+      achievement: "Certified Masters",
+    },
     {
       id: 1,
       src: "/gallery-1.jpg",
@@ -113,12 +138,28 @@ export default function GalleryPage() {
     },
     {
       id: 13,
+      src: "/im1.jpg",
+      category: "academy",
+      title: "Masters",
+      description: "International master Bhagyashree Thipsay",
+      achievement: "Masters",
+    },
+    {
+      id: 14,
+      src: "/imchess.jpg",
+      category: "academy",
+      title: "Bhagyashree Mam",
+      description: "Students learing from legends themselves.",
+      achievement: "International masters",
+    },
+    {
+      id: 15,
       src: "/gallery-14.jpg",
       category: "students",
       title: "Founder Guidence",
       description: "Students winning national tournaments after completing their chess mastery programs",
       achievement: "Certified Masters",
-    },
+    }
   ]
 
   const filters = [

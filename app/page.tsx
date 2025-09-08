@@ -637,7 +637,7 @@ export default function HomePage() {
                     <Trophy className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
                   </div>
                   <div>
-                    <div className="text-sm sm:text-lg font-bold text-gray-800">5000+</div>
+                    <div className="text-sm sm:text-lg font-bold text-gray-800">1500+</div>
                     <div className="text-xs sm:text-sm text-gray-600">Students</div>
                   </div>
                 </div>
@@ -654,7 +654,7 @@ export default function HomePage() {
                     <Award className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
                   </div>
                   <div>
-                    <div className="text-sm sm:text-lg font-bold text-gray-800">20+</div>
+                    <div className="text-sm sm:text-lg font-bold text-gray-800">50+</div>
                     <div className="text-xs sm:text-sm text-gray-600">Years Teaching</div>
                   </div>
                 </div>
@@ -663,6 +663,98 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
+<section className="relative bg-gradient-to-br from-white via-purple-50/30 to-blue-50/30 overflow-hidden py-4">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-8 items-center relative z-10">
+    {/* Left Side - Content */}
+    <motion.div
+      initial={{ opacity: 0, x: -50 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ delay: 0.4, duration: 0.8 }}
+      className="space-y-8 text-center lg:text-left"
+    >
+      {/* Achievement Timeline */}
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.6, duration: 0.8 }}
+        className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-xl border border-gray-100"
+      >
+        <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
+          <div className="flex-shrink-0">
+            <motion.div
+              animate={{ rotate: [-3, 3, -3] }}
+              transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+            >
+              <svg viewBox="0 0 80 80" className="text-gradient w-16 h-16 sm:w-20 sm:h-20">
+                <defs>
+                  <linearGradient id="crownGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#EC4899" />
+                    <stop offset="50%" stopColor="#F43F5E" />
+                    <stop offset="100%" stopColor="#BE123C" />
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M25 12 L28 12 L28 15 L31 15 L31 18 L28 18 L28 30 L33 40 L33 65 L17 65 L17 40 L22 30 L22 18 L19 18 L19 15 L22 15 L22 12 Z M55 12 L58 12 L58 15 L61 15 L61 18 L58 18 L58 30 L63 40 L63 65 L47 65 L47 40 L52 30 L52 18 L49 18 L49 15 L52 15 L52 12 Z"
+                  fill="url(#crownGradient2)"
+                />
+              </svg>
+            </motion.div>
+          </div>
+
+          <div className="space-y-4 text-center sm:text-left">
+            <div className="pt-4 border-t border-gray-200">
+              <p className="text-gray-700 font-semibold mb-1">Coached by</p>
+              <h2 className="text-xl sm:text-2xl font-black bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                Bhagyashree Thipsay
+              </h2>
+              <p className="text-sm sm:text-base text-gray-600 font-medium">International Master & Esteemed Coach</p>
+            </div>
+
+            <div className="grid grid-cols-1 xs:grid-cols-2 gap-4">
+              {[
+                { year: "1990", achievement: "Woman International Master Title" },
+                { year: "1986-88", achievement: "Multiple National Women's Champion" },
+                { year: "1991", achievement: "Asian Women's Chess Championship Medalist" },
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.8 + index * 0.1, duration: 0.5 }}
+                  className="text-center"
+                >
+                  <div className="text-lg sm:text-xl font-bold bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent">
+                    {item.year}
+                  </div>
+                  <div className="text-xs sm:text-sm text-gray-600 font-medium">{item.achievement}</div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </motion.div>
+
+    {/* Right Side - Image */}
+<motion.div
+  initial={{ opacity: 0, scale: 0.8 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ delay: 0.4, duration: 0.8 }}
+  className="relative w-full max-w-[300px] mx-auto"
+>
+  <div className="relative rounded-3xl overflow-hidden shadow-2xl w-full">
+    <img
+      src="/improfile.jpg"
+      alt="Bhagyashree Thipsay"
+      className="w-full h-auto object-cover"
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+  </div>
+</motion.div>
+
+
+  </div>
+</section>
 
       {/* Stats Section */}
       <section className="py-16 sm:py-20 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600">
