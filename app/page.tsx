@@ -864,30 +864,44 @@ export default function HomePage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { name: "Anshul Bangar", age: 21, achievement: "National Participant", image: "/anshulAcheivement.jpg", quote: "Kamlesh sir made chess so exciting!" },
-              { name: "Master Madvendra Pratap Sharma", age: 10, achievement: "Gold medal in Asian Youth Chess Championship 2022 (U-10) in Indonesia", image: "/student-1.jpg", quote: "The demo class changed everything for me!" },
-              { name: "Suhani Munet", age: 17, achievement: "SGFI National Bronze Medalist (2023-24) and proudly representing India at the Chess Olympiad (2022)", image: "/student-2.jpg", quote: "Best decision we ever made!" },
-            ].map((story, index) => (
-              <Card
-                key={index}
-                className="bg-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-0"
-              >
-                <CardContent className="p-8 text-center">
-                  <img
-                    src={story.image || "/placeholder.svg"}
-                    alt={story.name}
-                    className="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-purple-200"
-                  />
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">{story.name}</h3>
-                  <p className="text-gray-600 mb-4">{story.achievement}</p>
-                  <p className="text-gray-700 italic">"{story.quote}"</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+  {[
+    { // Umasankar Datta
+      name: "Umasankar Datta",
+      age: 16,
+      achievement: "Three Times State Champion",
+      image: "/uma.jpg",
+      quote: "Chess opened doors I never knew existed. It's not just a game - it's a life skill that changed everything!"
+    },
+    { name: "Candidate Master Madvendra Pratap Sharma", age: 10, achievement: "Gold medal in Asian Youth Chess Championship 2022 (U-10) in Indonesia", image: "/student-1.jpg", quote: "The demo class changed everything for me!" },
+    { name: "Suhani Munet", age: 17, achievement: "SGFI National Bronze Medalist (2023-24) and proudly representing India at the Chess Olympiad (2022)", image: "/student-2.jpg", quote: "Best decision we ever made!" },
+    { name: "Anshul Bangar", age: 21, achievement: "National Participant", image: "/anshulAcheivement.jpg", quote: "Kamlesh sir made chess so exciting!" },
+    { // Himadri Paliwal
+      name: "Himadri Paliwal",
+      age: 15,
+      achievement: "SGFI State U-19 Chess Champion (Kolkata)",
+      image: "/himadri.jpg",
+      quote: "Chess is like magic! I can make my pieces dance and create beautiful patterns on the board!"
+    }
+  ].map((story, index) => (
+    <Card
+      key={index}
+      className="bg-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-0"
+    >
+      <CardContent className="p-8 text-center">
+        <img
+          src={story.image || "/placeholder.svg"}
+          alt={story.name}
+          className="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-purple-200"
+        />
+        <h3 className="text-xl font-bold text-gray-800 mb-2">{story.name}</h3>
+        <p className="text-gray-600 mb-4">{story.achievement}</p>
+        <p className="text-gray-700 italic">"{story.quote}"</p>
+      </CardContent>
+    </Card>
+  ))}
+</div>
+</div>
+</section>
 
       {/* Why Choose Us Section */}
       <section className="py-16 sm:py-24 bg-gray-50">
