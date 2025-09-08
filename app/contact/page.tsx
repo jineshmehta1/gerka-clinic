@@ -343,31 +343,30 @@ export default function ContactPage() {
       </section>
 
       {/* Map Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-purple-50/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
-              Find{" "}
-              <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Us</span>
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600">
-              Located in the heart of Chittorgarh, easily accessible by public transport
-            </p>
-          </div>
-          <Card className="shadow-2xl border-0 overflow-hidden">
-            <div className="h-64 sm:h-96 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-              <div className="text-center p-4">
-                <MapPin className="w-16 h-16 sm:w-20 sm:h-20 text-purple-600 mx-auto mb-6" />
-                <p className="text-xl sm:text-2xl font-black text-gray-800 mb-2">Interactive Map</p>
-                <p className="text-gray-600 text-base sm:text-lg">Located at the heart of Chittorgarh</p>
-                <Button className="mt-6 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold px-6 py-3 rounded-xl">
-                  Get Directions
-                </Button>
-              </div>
-            </div>
-          </Card>
-        </div>
-      </section>
+<section className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-purple-50/30">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6">
+    <div className="text-center mb-12 md:mb-16">
+      <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
+        Find{" "}
+        <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Us</span>
+      </h2>
+      <p className="text-lg sm:text-xl text-gray-600">
+        Located in the heart of Chittorgarh, easily accessible by public transport
+      </p>
+    </div>
+    <Card className="shadow-2xl border-0 overflow-hidden">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3633.0717011787947!2d74.46891207513704!3d24.4135764782237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396646e61789b2ad%3A0x4901695dfda6ee64!2zQ2xvY2sgVG93ZXIsIOCkmOCkguCkn-CkvuCkmOCksA!5e0!3m2!1sen!2sin!4v1757354300659!5m2!1sen!2sin"
+        width="100%"
+        height="450"
+        style={{ border: 0 }}
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        title="Location Map"
+      ></iframe>
+    </Card>
+  </div>
+</section>
 
       {/* Final CTA */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 relative overflow-hidden">
