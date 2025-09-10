@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   // Primary Title for this page, with a template for other pages
   title: {
-    default: "Genius Chess Academy (INTERNATIONAL SCHOOL OF CHESS) - Learn Chess from Grandmaster Pravin Thipsay",
+    default: "Genius Chess Academy - Learn Chess from Grandmaster Pravin Thipsay",
     template: "%s | Genius Chess Academy", // Use this for dynamic titles on sub-pages
   },
   // Highly optimized and keyword-rich description
