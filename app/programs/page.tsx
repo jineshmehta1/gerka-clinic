@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
+import { Footer } from "@/components/footer"
 import { Clock, Users, Trophy, Star, Calendar, CheckCircle, Award, BookOpen } from "lucide-react"
 
 export default function ProgramsPage() {
@@ -337,6 +338,7 @@ export default function ProgramsPage() {
           </div>
         </div>
       </section>
+      <Footer/>
     </div>
   )
 }
