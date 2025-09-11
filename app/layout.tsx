@@ -107,18 +107,6 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         {/* Navigation Menu - Updated with all sitemap pages */}
-        <nav>
-          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', gap: '20px' }}>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/courses">Courses</a></li> {/* Replaced /programs */}
-            <li><a href="/gallery">Gallery</a></li>
-            <li><a href="/success-stories">Success Stories</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/book-demo">Book Demo</a></li>
-            <li><a href="/classes">Classes</a></li>
-          </ul>
-        </nav>
         {/* Main content area */}
         {children}
         {/* Footer - Shown on all pages */}
