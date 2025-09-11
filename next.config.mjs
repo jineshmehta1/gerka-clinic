@@ -1,3 +1,4 @@
+// next.config.mjs
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
@@ -9,6 +10,16 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-}
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        destination: 'https://www.thegeniuschessacademy.com/:path*',
+        permanent: true,
+        basePath: false,
+      },
+    ];
+  },
+};
 
-export default nextConfig
+export default nextConfig;
