@@ -26,6 +26,7 @@ export function Footer() {
               Transform your chess game with personalized coaching from a Grandmaster.
             </p>
             <div className="flex space-x-4">
+              <Link href="https://www.facebook.com/share/1CrebozWXz/" className="text-white/80 hover:text-[#C9A227] transition-colors">
               <Button
                 size="icon"
                 variant="outline"
@@ -33,6 +34,8 @@ export function Footer() {
               >
                 <Facebook className="w-4 h-4" />
               </Button>
+              </Link>
+              <Link href="https://www.instagram.com/geniuschessacademy2025?utm_source=qr&igsh=MWJybzBnejRwN3VyMw==" className="text-white/80 hover:text-[#C9A227] transition-colors">
               <Button
                 size="icon"
                 variant="outline"
@@ -40,6 +43,8 @@ export function Footer() {
               >
                 <Instagram className="w-4 h-4" />
               </Button>
+              </Link>
+              <Link href="https://youtube.com/@geniuschessacademy?si=ejNj6kL3k9asYnBK" className="text-white/80 hover:text-[#C9A227] transition-colors">
               <Button
                 size="icon"
                 variant="outline"
@@ -47,6 +52,7 @@ export function Footer() {
               >
                 <Youtube className="w-4 h-4" />
               </Button>
+              </Link>
             </div>
           </div>
 
@@ -136,7 +142,7 @@ export function Footer() {
 
         <div className="border-t border-white/20 mt-12 pt-8 text-center">
           <p className="text-white/60 text-xs sm:text-sm">
-            © 2024 Genius Chess Academy (INTERNATIONAL SCHOOL OF CHESS). All rights reserved.
+            © 2025 Genius Chess Academy (INTERNATIONAL SCHOOL OF CHESS). All rights reserved.
             <span className="hidden sm:inline"> |</span>
             <br className="sm:hidden" />
             <Link href="/privacy" className="hover:text-[#C9A227] sm:ml-1">
