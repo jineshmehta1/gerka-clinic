@@ -58,6 +58,51 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "EducationalOrganization",
+                "name": "Genius Chess Academy",
+                "url": "https://www.thegeniuschessacademy.com",
+                "logo": "https://www.thegeniuschessacademy.com/genius.png",
+                "description": "World-class chess training academy led by Grandmaster Pravin Thipsay.",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "Sector 3",
+                  "addressLocality": "Udaipur",
+                  "addressRegion": "Rajasthan",
+                  "postalCode": "313001",
+                  "addressCountry": "IN"
+                },
+                "contactPoint": {
+                  "@type": "ContactPoint",
+                  "telephone": "+91-9636809800",
+                  "email": "geniuschessacademy12@gmail.com"
+                },
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "4.9",
+                  "reviewCount": "250"
+                }
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Grandmaster Pravin Thipsay",
+                "jobTitle": "Head Coach",
+                "url": "https://www.thegeniuschessacademy.com",
+                "sameAs": [
+                  "https://en.wikipedia.org/wiki/Pravin_Thipsay",
+                  "https://ratings.fide.com/profile/5001499"
+                ]
+              }
+            ])
+          }}
+        />
       </head>
       <body className={inter.className}>
         {children}
