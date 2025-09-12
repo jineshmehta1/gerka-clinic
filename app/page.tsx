@@ -524,7 +524,7 @@ export default function HomePage() {
             <div className="absolute top-0 left-0 w-full h-full bg-black/50" />
             <div className="relative z-10 text-center text-white p-4">
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-4 leading-tight">
-                Become a Chess Grandmaster
+                Join Genius Chess Academy
               </h1>
               <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8">
                 Join our world-class chess training programs to unlock your strategic potential.
@@ -556,7 +556,7 @@ export default function HomePage() {
                   transition={{ delay: 0.2, duration: 0.8 }}
                   className="space-y-4"
                 >
-                  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight">
+                  <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight">
                     <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent">
                       Master Chess
                     </span>
@@ -566,7 +566,7 @@ export default function HomePage() {
                     <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
                       Grandmaster!
                     </span>
-                  </h1>
+                  </h2>
                   <p className="text-base sm:text-lg lg:text-xl text-gray-600 font-medium leading-relaxed max-w-xl mx-auto lg:mx-0">
                     Transform your chess journey with world-class training, proven strategies, and personalized coaching from expert instructors.
                   </p>
