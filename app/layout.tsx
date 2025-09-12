@@ -8,17 +8,23 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: {
-    default: 'Genius Chess Academy - Learn Chess from Grandmaster Pravin Thipsay',
-    template: '%s | Genius Chess Academy',
+    // Strengthened default title to include "the Genius Chess Academy" explicitly
+    default: 'The Genius Chess Academy - Learn Chess from Grandmaster Pravin Thipsay',
+    // Template also subtly reinforces "the Genius Chess Academy"
+    template: '%s | The Genius Chess Academy',
   },
   description:
-    'Master chess with Genius Chess Academy. Learn from Grandmaster Pravin Thipsay with online and offline training.',
+    // Enhanced description to include "the Genius Chess Academy" and related terms
+    'Master chess with The Genius Chess Academy. Learn from Grandmaster Pravin Thipsay with online and offline training at Genius Chess Academy.',
   keywords: [
+    'The Genius Chess Academy', // Added "The Genius Chess Academy"
     'Genius Chess Academy',
     'Grandmaster Pravin Thipsay',
     'learn chess',
     'online chess lessons',
     'offline chess training',
+    'chess academy', // Added a more general relevant keyword
+    'chess training', // Added another general relevant keyword
   ],
   metadataBase: new URL('https://www.thegeniuschessacademy.com'),
   alternates: {
@@ -67,7 +73,7 @@ export default function RootLayout({
               {
                 '@context': 'https://schema.org',
                 '@type': 'EducationalOrganization',
-                name: 'Genius Chess Academy',
+                name: 'The Genius Chess Academy', // Updated schema name
                 url: 'https://www.thegeniuschessacademy.com',
                 logo: 'https://www.thegeniuschessacademy.com/genius.png',
                 description: 'World-class chess training academy led by Grandmaster Pravin Thipsay.',
@@ -111,7 +117,7 @@ export default function RootLayout({
         {children}
         {/* Footer - Shown on all pages */}
         <footer style={{ marginTop: '20px', textAlign: 'center' }}>
-          <p>&copy; {new Date().getFullYear()} Genius Chess Academy. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} The Genius Chess Academy. All rights reserved.</p>
         </footer>
       </body>
     </html>
