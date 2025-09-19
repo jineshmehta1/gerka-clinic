@@ -85,7 +85,7 @@ export default function RootLayout({
                 address: {
                   '@type': 'PostalAddress',
                   streetAddress: 'Sector 3',
-                  addressLocality: 'Udaipur',
+                  addressLocality: 'Udaipur, jaipur',
                   addressRegion: 'Rajasthan',
                   postalCode: '313001',
                   addressCountry: 'IN',
