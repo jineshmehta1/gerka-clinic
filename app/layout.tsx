@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: '%s | The Genius Chess Academy',
   },
   description:
-    'Master chess with The Genius Chess Academy. Learn from Grandmaster Pravin Thipsay with online and offline training at Genius Chess Academy.',
+    'Master chess with The Genius Chess Academy. Learn from Grandmaster Pravin Thipsay with online and offline training at The Genius Chess Academy.',
   keywords: [
     'The Genius Chess Academy',
     'Genius Chess Academy',

@@ -19,7 +19,7 @@ export default function AboutPage() {
             <div className="text-center lg:text-left">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
                 <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                  About Genius
+                  About The Genius
                 </span>
                 <br />
                 <span className="text-gray-800">Chess Academy</span>
