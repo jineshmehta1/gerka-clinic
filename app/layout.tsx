@@ -1,4 +1,4 @@
-// app/layout.tsx (or wherever RootLayout is defined)
+// app/layout.tsx
 import type React from 'react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -8,23 +8,20 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: {
-    // Strengthened default title to include "the Genius Chess Academy" explicitly
     default: 'The Genius Chess Academy - Learn Chess from Grandmaster Pravin Thipsay',
-    // Template also subtly reinforces "the Genius Chess Academy"
     template: '%s | The Genius Chess Academy',
   },
   description:
-    // Enhanced description to include "the Genius Chess Academy" and related terms
     'Master chess with The Genius Chess Academy. Learn from Grandmaster Pravin Thipsay with online and offline training at Genius Chess Academy.',
   keywords: [
-    'The Genius Chess Academy', // Added "The Genius Chess Academy"
+    'The Genius Chess Academy',
     'Genius Chess Academy',
     'Grandmaster Pravin Thipsay',
     'learn chess',
     'online chess lessons',
     'offline chess training',
-    'chess academy', // Added a more general relevant keyword
-    'chess training', // Added another general relevant keyword
+    'chess academy',
+    'chess training',
   ],
   metadataBase: new URL('https://www.thegeniuschessacademy.com'),
   alternates: {
@@ -37,6 +34,22 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  openGraph: {
+    title: 'The Genius Chess Academy - Learn Chess from Grandmaster Pravin Thipsay',
+    description: 'World-class chess training academy led by GM Pravin Thipsay.',
+    url: 'https://www.thegeniuschessacademy.com',
+    siteName: 'The Genius Chess Academy',
+    images: [
+      {
+        url: 'https://www.thegeniuschessacademy.com/genius.png',
+        width: 800,
+        height: 600,
+        alt: 'The Genius Chess Academy Logo',
+      },
+    ],
+    locale: 'en_IN',
+    type: 'website',
+  },
   generator: 'Next.js',
 };
 
@@ -48,6 +61,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Favicons */}
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
@@ -56,6 +70,7 @@ export default function RootLayout({
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
 
+        {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -63,7 +78,7 @@ export default function RootLayout({
               {
                 '@context': 'https://schema.org',
                 '@type': 'EducationalOrganization',
-                name: 'The Genius Chess Academy', // Updated schema name
+                name: 'The Genius Chess Academy',
                 url: 'https://www.thegeniuschessacademy.com',
                 logo: 'https://www.thegeniuschessacademy.com/genius.png',
                 description: 'World-class chess training academy led by Grandmaster Pravin Thipsay.',
@@ -97,15 +112,34 @@ export default function RootLayout({
                   'https://ratings.fide.com/profile/5001499',
                 ],
               },
+              {
+                '@context': 'https://schema.org',
+                '@type': 'FAQPage',
+                mainEntity: [
+                  {
+                    '@type': 'Question',
+                    name: 'What is The Genius Chess Academy?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'The Genius Chess Academy is a world-class chess training institute led by Grandmaster Pravin Thipsay offering online and offline chess training.'
+                    }
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Who is the head coach of The Genius Chess Academy?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'The head coach is Grandmaster Pravin Thipsay, one of India’s top chess grandmasters.'
+                    }
+                  }
+                ]
+              }
             ]),
           }}
         />
       </head>
       <body className={inter.className}>
-        {/* Navigation Menu - Updated with all sitemap pages */}
-        {/* Main content area */}
         {children}
-        {/* Footer - Shown on all pages */}
         <footer style={{ marginTop: '20px', textAlign: 'center' }}>
           <p>&copy; {new Date().getFullYear()} The Genius Chess Academy. All rights reserved.</p>
         </footer>
