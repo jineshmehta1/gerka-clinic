@@ -19,7 +19,7 @@ export default function SuccessStoriesPage() {
       rating: "fide rating 2187",
       timeframe: "2 year",
       story:
-        "Candidate Master Madvendra Pratap Sharma (fide rating 2187), a shining talent is currently learning from our Genius Chess Academy (International School of Chess), he has achieved outstanding success at a very young age. He made India proud by winning the gold medal in Asian Youth Chess Championship 2022 (U-10) in Indonesia, where he became champion in all three formats – Rapid, Blitz and Classical. He also won the Under-9 National Chess Championship 2022 at Indore and the Under-11 National Chess Championship 2024 at Hyderabad. His vision is to become a Grand master.His journey is an inspiration for many young chess learners.",
+        "Candidate Master Madvendra Pratap Sharma (fide rating 2187), a shining talent is currently learning from our The Genius Chess Academy (International School of Chess), he has achieved outstanding success at a very young age. He made India proud by winning the gold medal in Asian Youth Chess Championship 2022 (U-10) in Indonesia, where he became champion in all three formats – Rapid, Blitz and Classical. He also won the Under-9 National Chess Championship 2022 at Indore and the Under-11 National Chess Championship 2024 at Hyderabad. His vision is to become a Grand master.His journey is an inspiration for many young chess learners.",
       quote: "I love how chess makes me think differently about problems. Every game is a new puzzle to solve!",
       badges: ["National Gold medalist", "Mental Strength", "Academic Improvement"],
       program: "Tournament Warrior",
@@ -248,7 +248,7 @@ export default function SuccessStoriesPage() {
               <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">Succeed</span>
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              The key factors behind every success story at Genius Chess Academy (INTERNATIONAL SCHOOL OF CHESS)
+              The key factors behind every success story at The Genius Chess Academy (INTERNATIONAL SCHOOL OF CHESS)
             </p>
           </div>
 

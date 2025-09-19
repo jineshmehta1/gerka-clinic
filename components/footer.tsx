@@ -18,7 +18,7 @@ export function Footer() {
                 <span className="text-white font-bold text-xl">♔</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-[#C9A227]">Genius Chess</h3>
+                <h3 className="text-xl font-bold text-[#C9A227]">The Genius Chess</h3>
                 <p className="text-sm opacity-70">Academy</p>
               </div>
             </div>
@@ -142,7 +142,7 @@ export function Footer() {
 
         <div className="border-t border-white/20 mt-12 pt-8 text-center">
           <p className="text-white/60 text-xs sm:text-sm">
-            © 2025 Genius Chess Academy (INTERNATIONAL SCHOOL OF CHESS). All rights reserved.
+            © 2025 The Genius Chess Academy (INTERNATIONAL SCHOOL OF CHESS). All rights reserved.
             <span className="hidden sm:inline"> |</span>
             <br className="sm:hidden" />
             <Link href="/privacy" className="hover:text-[#C9A227] sm:ml-1">

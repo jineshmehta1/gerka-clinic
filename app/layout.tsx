@@ -27,9 +27,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.thegeniuschessacademy.com',
   },
-  authors: [{ name: 'Genius Chess Academy', url: 'https://www.thegeniuschessacademy.com' }],
-  creator: 'Genius Chess Academy',
-  publisher: 'Genius Chess Academy',
+  authors: [{ name: 'The Genius Chess Academy', url: 'https://www.thegeniuschessacademy.com' }],
+  creator: 'The Genius Chess Academy',
+  publisher: 'The Genius Chess Academy',
   robots: {
     index: true,
     follow: true,

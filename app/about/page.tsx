@@ -61,7 +61,7 @@ export default function AboutPage() {
               </span>
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-              The visionary behind Genius Chess Academy's revolutionary teaching methodology
+              The visionary behind The Genius Chess Academy's revolutionary teaching methodology
             </p>
           </div>
 
@@ -90,7 +90,7 @@ export default function AboutPage() {
               </h3>
               <div className="space-y-6 text-gray-700">
                 <p className="text-base sm:text-lg leading-relaxed">
-                  A passionate chess educator and visionary leader, Kamlesh Choudhary founded Genius Chess Academy with a
+                  A passionate chess educator and visionary leader, Kamlesh Choudhary founded The Genius Chess Academy with a
                   simple yet powerful belief: every child has the potential to excel in chess and life.
                 </p>
                 <p className="text-base sm:text-lg leading-relaxed">
@@ -246,7 +246,7 @@ export default function AboutPage() {
             
             <div className="space-y-16 md:space-y-0">
               {[
-                { year: "2012", title: "Academy Founded", description: "Kamlesh Choudhary establishes Genius Chess Academy with a vision to transform chess education, starting with just 15 passionate students", gradient: "from-purple-500 to-blue-500" },
+                { year: "2012", title: "Academy Founded", description: "Kamlesh Choudhary establishes The Genius Chess Academy with a vision to transform chess education, starting with just 15 passionate students", gradient: "from-purple-500 to-blue-500" },
                 { year: "2019", title: "Major Victories", description: "Our students achieve their first major victories in regional championships, validating our innovative teaching methodology", gradient: "from-blue-500 to-cyan-500" },
                 { year: "2025", title: "13 Years of Excellence", description: "Celebrating years of transforming lives, with over 1500 students and 50+ tournament winners", gradient: "from-orange-500 to-red-500" },
               ].map((milestone, index) => (
@@ -278,7 +278,7 @@ export default function AboutPage() {
               <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">Values</span>
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-              The principles that guide everything we do at Genius Chess Academy
+              The principles that guide everything we do at The Genius Chess Academy
             </p>
           </div>
 
