@@ -416,7 +416,7 @@ export default function HomePage() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "The Genius Chess Academy",
+    name: "The Genius Chess Academy (International School of Chess)",
     url: "https://www.thegeniuschessacademy.com",
     logo: "/genius.png",
     description: "World-class chess training programs led by Grandmaster Pravin Mahadeo Thipsay and International Master Bhagyashree Thipsay, offering personalized coaching for all ages and skill levels.",
@@ -480,10 +480,10 @@ export default function HomePage() {
           name="keywords"
           content="chess academy, chess coaching, learn chess, grandmaster training, Pravin Thipsay, Bhagyashree Thipsay, chess classes online, chess for kids, chess tournaments"
         />
-        <meta name="author" content="The Genius Chess Academy" />
+        <meta name="author" content="The Genius Chess Academy (International School of Chess)" />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:title" content="The Genius Chess Academy | World-Class Chess Training" />
+        <meta property="og:title" content="The Genius Chess Academy (International School of Chess) | World-Class Chess Training" />
         <meta
           property="og:description"
           content="Master chess with personalized coaching from Grandmaster Pravin Thipsay and International Master Bhagyashree Thipsay. Join our programs for all skill levels."
@@ -492,7 +492,7 @@ export default function HomePage() {
         <meta property="og:url" content="https://www.thegeniuschessacademy.com" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="The Genius Chess Academy | Expert Chess Coaching" />
+        <meta name="twitter:title" content="The Genius Chess Academy (International School of Chess) | Expert Chess Coaching" />
         <meta
           name="twitter:description"
           content="Learn chess from Grandmaster Pravin Thipsay and International Master Bhagyashree Thipsay. Join our world-class programs today!"

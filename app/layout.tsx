@@ -8,12 +8,13 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: {
-    default: 'The Genius Chess Academy - Learn Chess from Grandmaster Pravin Thipsay',
-    template: '%s | The Genius Chess Academy',
+    default: 'The Genius Chess Academy (International School of Chess) - Learn Chess from Grandmaster Pravin Thipsay',
+    template: '%s | The Genius Chess Academy (International School of Chess)',
   },
   description:
-    'Master chess with The Genius Chess Academy. Learn from Grandmaster Pravin Thipsay with online and offline training at The Genius Chess Academy.',
+    'Master chess with The Genius Chess Academy (International School of Chess). Learn from Grandmaster Pravin Thipsay with online and offline training at The Genius Chess Academy (International School of Chess).',
   keywords: [
+    'The Genius Chess Academy (International School of Chess)',
     'The Genius Chess Academy',
     'Genius Chess Academy',
     'Grandmaster Pravin Thipsay',
@@ -78,7 +79,7 @@ export default function RootLayout({
               {
                 '@context': 'https://schema.org',
                 '@type': 'EducationalOrganization',
-                name: 'The Genius Chess Academy',
+                name: 'The Genius Chess Academy (International School of Chess)',
                 url: 'https://www.thegeniuschessacademy.com',
                 logo: 'https://www.thegeniuschessacademy.com/genius.png',
                 description: 'World-class chess training academy led by Grandmaster Pravin Thipsay.',
@@ -141,7 +142,7 @@ export default function RootLayout({
       <body className={inter.className}>
         {children}
         <footer style={{ marginTop: '20px', textAlign: 'center' }}>
-          <p>&copy; {new Date().getFullYear()} The Genius Chess Academy. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Genius Chess Academy (International School of Chess). All rights reserved.</p>
         </footer>
       </body>
     </html>
