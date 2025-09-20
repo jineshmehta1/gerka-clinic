@@ -14,9 +14,11 @@ export const metadata: Metadata = {
   description:
     'Master chess with Genius Chess Academy (International School of Chess). Learn from Grandmaster Pravin Thipsay with online and offline training at Genius Chess Academy (International School of Chess).',
   keywords: [
-    'Genius Chess Academy (International School of Chess)',
+    'Genius Chess Academy International School of Chess',
     'Genius Chess Academy',
     'Genius Chess Academy',
+    'International school of chess',
+    'Chess Udaipur',
     'Grandmaster Pravin Thipsay',
     'learn chess',
     'online chess lessons',
