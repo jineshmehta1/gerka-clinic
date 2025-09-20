@@ -54,7 +54,7 @@ export function Navbar() {
               <div className="relative flex items-center">
                 <img
                   src="/genius.png"
-                  alt="The Genius Chess Academy Logo"
+                  alt="Genius Chess Academy Logo"
                   className="h-12 sm:h-14 w-auto object-contain"
                 />
               </div>
@@ -62,7 +62,7 @@ export function Navbar() {
                 {/* THIS IS THE CORRECTED LINE */}
                 <h1 className="text-xl sm:text-2xl font-black tracking-tight leading-tight whitespace-nowrap">
                   <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                    The GENIUS
+                    GENIUS
                   </span>
                   <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent ml-1 sm:ml-2">CHESS</span>
                 </h1>

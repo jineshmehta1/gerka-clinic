@@ -8,14 +8,14 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: {
-    default: 'The Genius Chess Academy (International School of Chess) - Learn Chess from Grandmaster Pravin Thipsay',
-    template: '%s | The Genius Chess Academy (International School of Chess)',
+    default: 'Genius Chess Academy (International School of Chess) - Learn Chess from Grandmaster Pravin Thipsay',
+    template: '%s | Genius Chess Academy (International School of Chess)',
   },
   description:
-    'Master chess with The Genius Chess Academy (International School of Chess). Learn from Grandmaster Pravin Thipsay with online and offline training at The Genius Chess Academy (International School of Chess).',
+    'Master chess with Genius Chess Academy (International School of Chess). Learn from Grandmaster Pravin Thipsay with online and offline training at Genius Chess Academy (International School of Chess).',
   keywords: [
-    'The Genius Chess Academy (International School of Chess)',
-    'The Genius Chess Academy',
+    'Genius Chess Academy (International School of Chess)',
+    'Genius Chess Academy',
     'Genius Chess Academy',
     'Grandmaster Pravin Thipsay',
     'learn chess',
@@ -28,24 +28,24 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.thegeniuschessacademy.com',
   },
-  authors: [{ name: 'The Genius Chess Academy', url: 'https://www.thegeniuschessacademy.com' }],
-  creator: 'The Genius Chess Academy',
-  publisher: 'The Genius Chess Academy',
+  authors: [{ name: 'Genius Chess Academy', url: 'https://www.thegeniuschessacademy.com' }],
+  creator: 'Genius Chess Academy',
+  publisher: 'Genius Chess Academy',
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: 'The Genius Chess Academy - Learn Chess from Grandmaster Pravin Thipsay',
+    title: 'Genius Chess Academy - Learn Chess from Grandmaster Pravin Thipsay',
     description: 'World-class chess training academy led by GM Pravin Thipsay.',
     url: 'https://www.thegeniuschessacademy.com',
-    siteName: 'The Genius Chess Academy',
+    siteName: 'Genius Chess Academy',
     images: [
       {
         url: 'https://www.thegeniuschessacademy.com/genius.png',
         width: 800,
         height: 600,
-        alt: 'The Genius Chess Academy Logo',
+        alt: 'Genius Chess Academy Logo',
       },
     ],
     locale: 'en_IN',
@@ -79,7 +79,7 @@ export default function RootLayout({
               {
                 '@context': 'https://schema.org',
                 '@type': 'EducationalOrganization',
-                name: 'The Genius Chess Academy (International School of Chess)',
+                name: 'Genius Chess Academy (International School of Chess)',
                 url: 'https://www.thegeniuschessacademy.com',
                 logo: 'https://www.thegeniuschessacademy.com/genius.png',
                 description: 'World-class chess training academy led by Grandmaster Pravin Thipsay.',
@@ -119,15 +119,15 @@ export default function RootLayout({
                 mainEntity: [
                   {
                     '@type': 'Question',
-                    name: 'What is The Genius Chess Academy?',
+                    name: 'What is Genius Chess Academy?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'The Genius Chess Academy is a world-class chess training institute led by Grandmaster Pravin Thipsay offering online and offline chess training.'
+                      text: 'Genius Chess Academy is a world-class chess training institute led by Grandmaster Pravin Thipsay offering online and offline chess training.'
                     }
                   },
                   {
                     '@type': 'Question',
-                    name: 'Who is the head coach of The Genius Chess Academy?',
+                    name: 'Who is the head coach of Genius Chess Academy?',
                     acceptedAnswer: {
                       '@type': 'Answer',
                       text: 'The head coach is Grandmaster Pravin Thipsay, one of India’s top chess grandmasters.'

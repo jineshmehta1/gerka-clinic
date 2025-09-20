@@ -416,7 +416,7 @@ export default function HomePage() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "The Genius Chess Academy (International School of Chess)",
+    name: "Genius Chess Academy (International School of Chess)",
     url: "https://www.thegeniuschessacademy.com",
     logo: "/genius.png",
     description: "World-class chess training programs led by Grandmaster Pravin Mahadeo Thipsay and International Master Bhagyashree Thipsay, offering personalized coaching for all ages and skill levels.",
@@ -471,19 +471,19 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title>The Genius Chess Academy | World-Class Chess Training with Grandmaster Pravin Thipsay</title>
+        <title>Genius Chess Academy | World-Class Chess Training with Grandmaster Pravin Thipsay</title>
         <meta
           name="description"
-          content="Join The Genius Chess Academy for expert chess coaching by Grandmaster Pravin Mahadeo Thipsay and International Master Bhagyashree Thipsay. Learn chess from beginner to advanced levels with personalized training programs."
+          content="Join Genius Chess Academy for expert chess coaching by Grandmaster Pravin Mahadeo Thipsay and International Master Bhagyashree Thipsay. Learn chess from beginner to advanced levels with personalized training programs."
         />
         <meta
           name="keywords"
           content="chess academy, chess coaching, learn chess, grandmaster training, Pravin Thipsay, Bhagyashree Thipsay, chess classes online, chess for kids, chess tournaments"
         />
-        <meta name="author" content="The Genius Chess Academy (International School of Chess)" />
+        <meta name="author" content="Genius Chess Academy (International School of Chess)" />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:title" content="The Genius Chess Academy (International School of Chess) | World-Class Chess Training" />
+        <meta property="og:title" content="Genius Chess Academy (International School of Chess) | World-Class Chess Training" />
         <meta
           property="og:description"
           content="Master chess with personalized coaching from Grandmaster Pravin Thipsay and International Master Bhagyashree Thipsay. Join our programs for all skill levels."
@@ -492,7 +492,7 @@ export default function HomePage() {
         <meta property="og:url" content="https://www.thegeniuschessacademy.com" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="The Genius Chess Academy (International School of Chess) | Expert Chess Coaching" />
+        <meta name="twitter:title" content="Genius Chess Academy (International School of Chess) | Expert Chess Coaching" />
         <meta
           name="twitter:description"
           content="Learn chess from Grandmaster Pravin Thipsay and International Master Bhagyashree Thipsay. Join our world-class programs today!"
@@ -524,7 +524,7 @@ export default function HomePage() {
             <div className="absolute top-0 left-0 w-full h-full bg-black/50" />
             <div className="relative z-10 text-center text-white p-4">
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-4 leading-tight">
-                Join The Genius Chess Academy
+                Join Genius Chess Academy
               </h1>
               <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8">
                 Join our world-class chess training programs to unlock your strategic potential.
@@ -965,7 +965,7 @@ export default function HomePage() {
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-4">
                   Why Choose{" "}
                   <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                    The Genius Chess Academy?
+                    Genius Chess Academy?
                   </span>
                 </h2>
                 <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
@@ -1238,7 +1238,7 @@ export default function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white font-bold px-5 py-3 sm:px-6 sm:py-3 rounded-full shadow-2xl hover:shadow-3xl text-sm sm:text-base flex items-center space-x-2"
-                aria-label="Contact The Genius Chess Academy on WhatsApp"
+                aria-label="Contact Genius Chess Academy on WhatsApp"
               >
                 <svg
                   className="w-5 h-5"
