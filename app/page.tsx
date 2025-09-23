@@ -913,7 +913,7 @@ export default function HomePage() {
                   {
                     name: "Suhani Munet",
                     age: 17,
-                    achievement: "SGFI National Bronze Medalist (2023-24) and Chess Olympiad Participant (2022)",
+                    achievement: "SGFI National Bronze Medalist (2023-24) and Chess Olympiad Attendee (2022)",
                     image: "/student-2.jpg",
                     quote: "Best decision we ever made!",
                   },
@@ -927,7 +927,7 @@ export default function HomePage() {
                   {
                     name: "Himadri Paliwal",
                     age: 15,
-                    achievement: "SGFI State U-19 Chess Champion (Kolkata)",
+                    achievement: "SGFI State U-19 Chess Champion (Kota) and National Participant (Kolkata)",
                     image: "/himadri.jpg",
                     quote: "Chess is like magic! I can make my pieces dance and create beautiful patterns on the board!",
                   },
