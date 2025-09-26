@@ -42,11 +42,11 @@ export default function SuccessStoriesPage() {
       name: "Suhani Munet",
       age: 18,
       image: "/student-2.jpg",
-      achievement: "SGFI National Bronze Medalist (2023-24) and proudly representing India at the Chess Olympiad (2022)",
+      achievement: "SGFI National Bronze Medalist (2023-24) and proudly attended Chess Olympiad (2022) with india",
       rating: "From 800 to 1600",
       timeframe: "4 years",
       story:
-        "An accomplished International FIDE Rated Chess Player, [Name] has consistently showcased excellence on both national and international platforms. She is an SGFI National Bronze Medalist (2023–24) and proudly Joined India at the Chess Olympiad in 2022. A 4-time State Chess Champion, she continues to demonstrate remarkable consistency, discipline, and determination in her journey. With every tournament, she not only strengthens her achievements but also inspires fellow players with her passion and commitment to the game.",
+        "An accomplished International FIDE Rated Chess Player, Suhani has consistently showcased excellence on both national and international platforms. She is an SGFI National Bronze Medalist (2023–24) and proudly Joined India at the Chess Olympiad in 2022. A 4-time State Chess Champion, she continues to demonstrate remarkable consistency, discipline, and determination in her journey. With every tournament, she not only strengthens her achievements but also inspires fellow players with her passion and commitment to the game.",
       quote: "Kamlesh sir taught me that every position tells a story. Now I can read those stories and write my own!",
       badges: ["National Medalist", "Rating Expert", "STEM Excellence"],
       program: "Grandmaster Path",

@@ -291,7 +291,7 @@ function ParentReviews() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentReview((prev) => (prev + 1) % reviews.length)
-    }, 5000)
+    }, 12000)
     return () => clearInterval(timer)
   }, [reviews.length])
 
@@ -757,6 +757,8 @@ export default function HomePage() {
                           { year: "1990", achievement: "Woman International Master Title" },
                           { year: "1986-88", achievement: "Multiple National Women's Champion" },
                           { year: "1991", achievement: "Asian Women's Chess Championship Medalist" },
+                          { year: "1986", achievement: "Padma Shri Awarded" },
+                          { year: "1987", achievement: "Arjuna Award for contribution in chess" },
                         ].map((item, index) => (
                           <motion.div
                             key={index}
