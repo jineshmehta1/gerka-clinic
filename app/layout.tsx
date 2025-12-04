@@ -143,9 +143,6 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         {children}
-        <footer style={{ marginTop: '20px', textAlign: 'center' }}>
-          <p>&copy; {new Date().getFullYear()} Genius Chess Academy (International School of Chess). All rights reserved.</p>
-        </footer>
       </body>
     </html>
   );
