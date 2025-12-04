@@ -912,12 +912,12 @@ export default function HomePage() {
                     quote: "Chess opened doors I never knew existed. It’s a life skill that changed everything!",
                   },
                   {
-                    name: "Candidate Master Madvendra Pratap Sharma",
-                    age: 10,
-                    achievement: "Gold Medal in Asian Youth Chess Championship 2022 (U-10) in Indonesia",
-                    image: "/student-1.jpg",
-                    quote: "The demo class changed everything for me!",
-                  },
+  name: "Candidate Master Madhvendra Pratap Sharma",
+  age: 12,
+  achievement: "Gold Medalist in Asian Youth 2025 & Commonwealth Representative",
+  image: "/student-1.jpg",
+  quote: "The demo class changed everything for me!",
+},
                   {
                     name: "Suhani Munet",
                     age: 17,

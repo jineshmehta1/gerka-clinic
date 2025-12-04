@@ -173,7 +173,7 @@ export function AchievementShowcase() {
                 </div>
                 <div className="text-center sm:text-left">
                   <h4 className="text-xl font-bold text-gray-900 mb-2">
-                    Gold Medalist - Commonwealth Games
+                    Gold Medalist - Commonwealth Championship
                   </h4>
                   <div className="flex flex-wrap gap-3 justify-center sm:justify-start mb-3">
                     <span className="inline-flex items-center text-sm text-gray-600 bg-gray-100 px-3 py-1 rounded-full">

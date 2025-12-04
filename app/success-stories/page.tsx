@@ -11,19 +11,19 @@ import { Trophy, TrendingUp, Calendar, Award, Target, Users, Heart } from "lucid
 export default function SuccessStoriesPage() {
   const stories = [
     {
-      id: 1,
-      name: "Master Madvendra Pratap Sharma",
-      age: 10,
-      image: "student-1.jpg",
-      achievement: "Gold medal in Asian Youth Chess Championship 2022 (U-10) in Indonesia",
-      rating: "fide rating 2187",
-      timeframe: "2 year",
-      story:
-        "Candidate Master Madvendra Pratap Sharma (fide rating 2187), a shining talent is currently learning from our Genius Chess Academy (International School of Chess), he has achieved outstanding success at a very young age. He made India proud by winning the gold medal in Asian Youth Chess Championship 2022 (U-10) in Indonesia, where he became champion in all three formats – Rapid, Blitz and Classical. He also won the Under-9 National Chess Championship 2022 at Indore and the Under-11 National Chess Championship 2024 at Hyderabad. His vision is to become a Grand master.His journey is an inspiration for many young chess learners.",
-      quote: "I love how chess makes me think differently about problems. Every game is a new puzzle to solve!",
-      badges: ["National Gold medalist", "Mental Strength", "Academic Improvement"],
-      program: "Tournament Warrior",
-    },{
+  id: 1,
+  name: "Candidate Master Madhvendra Pratap Sharma",
+  age: 12,
+  image: "/student-1.jpg",
+  achievement: "Gold Medalist: Asian Youth & Commonwealth Chess Championships",
+  rating: "ELO 2229",
+  timeframe: "3 years",
+  story:
+    "Candidate Master Madhvendra Pratap Sharma (ELO 2229) is a shining talent from Genius Chess Academy who has achieved outstanding success on the world stage. He made India proud by securing Gold Medals at both the Asian Youth Chess Championship 2025 (Thailand) and the Commonwealth Chess Championship. Previously, he dominated the 2022 Asian Youth Championship in Indonesia, becoming champion in all three formats (Rapid, Blitz, Classical), and won National Championships in 2022 (Indore) and 2024 (Hyderabad). His vision is to become a Grandmaster, and his journey is an inspiration for chess learners everywhere.",
+  quote: "I love how chess makes me think differently about problems. Representing India and winning Gold is just the beginning!",
+  badges: ["Asian Games Gold", "Commonwealth Gold", "National Champion"],
+  program: "Grandmaster Path",
+},{
       id: 2,
       name: "Anshul bangar",
       age: 21,
