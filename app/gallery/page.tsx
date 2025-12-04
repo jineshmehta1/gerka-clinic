@@ -15,6 +15,54 @@ export default function GalleryPage() {
   const [activeFilter, setActiveFilter] = useState("all")
 
   const images = [
+    {
+      id: 16,
+      src: "/man-8.jpg",
+      category: "acheivements",
+      title: "Gold medalist",
+      description: "Asian Youth Chess Championship 2025 Gold Medalist",
+      achievement: "Kings of chess",
+    },
+    {
+      id: 16,
+      src: "/man-4.jpg",
+      category: "academy",
+      title: "Kamlesh sir",
+      description: "Kamlesh sir with CM Madhvendra Pratap Sharma",
+      achievement: "Kings of chess",
+    },
+    {
+      id: 16,
+      src: "/man-3.jpg",
+      category: "academy",
+      title: "Victory Parade",
+      description: "CM Madhvendra Pratap Sharma being honored in victory parade",
+      achievement: "Kings of chess",
+    },
+    {
+      id: 16,
+      src: "/man-9.jpg",
+      category: "academy",
+      title: "Gold Medalist",
+      description: "commonwealth games gold medalist with genius chess academy guidance",
+      achievement: "Kings of chess",
+    },
+    {
+      id: 16,
+      src: "/man-1.jpg",
+      category: "academy",
+      title: "Gold Medalist",
+      description: "CM Madhvendra Pratap Sharma",
+      achievement: "Kings of chess",
+    },
+    {
+      id: 16,
+      src: "/man-2.jpg",
+      category: "academy",
+      title: "Gold Medalist",
+      description: "CM Madhvendra Pratap Sharma",
+      achievement: "Kings of chess",
+    },
     
     {
       id: 16,

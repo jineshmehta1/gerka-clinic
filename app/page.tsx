@@ -24,6 +24,7 @@ import {
   Star,
   Quote,
 } from "lucide-react"
+import { AchievementShowcase } from "@/components/acheivement"
 
 // Animated Counter Component
 function AnimatedCounter({ end, duration = 2000, suffix = "" }: { end: number; duration?: number; suffix?: string }) {
@@ -833,6 +834,8 @@ export default function HomePage() {
               </motion.div>
             </div>
           </section>
+
+          <AchievementShowcase/>
 
           {/* GM Video Section */}
           <section className="py-16 sm:py-24 bg-white">
