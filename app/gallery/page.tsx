@@ -63,7 +63,22 @@ export default function GalleryPage() {
       description: "CM Madhvendra Pratap Sharma",
       achievement: "Kings of chess",
     },
-    
+    {
+      id: 16,
+      src: "/man-7.jpg",
+      category: "academy",
+      title: "Gold Medalist with Father and Coach",
+      description: "CM Madhvendra Pratap Sharma",
+      achievement: "Kings of chess",
+    },
+    {
+      id: 16,
+      src: "/man-10.jpg",
+      category: "academy",
+      title: "Gold Medalist with Coach Kamlesh Sir",
+      description: "CM Madhvendra Pratap Sharma",
+      achievement: "Kings of chess",
+    },
     {
       id: 16,
       src: "/magnus.jpg",

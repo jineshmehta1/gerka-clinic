@@ -99,7 +99,7 @@ export function AchievementShowcase() {
                     {/* ELO Badge */}
                     <div className="absolute -bottom-2 -right-2 bg-white px-3 py-1 rounded-full shadow-lg border border-gray-100 flex items-center gap-1">
                       <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
-                      <span className="font-bold text-gray-900">ELO 2229</span>
+                      <span className="font-bold text-gray-900">ELO 2273</span>
                     </div>
                   </div>
 
