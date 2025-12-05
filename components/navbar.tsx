@@ -48,16 +48,17 @@ export function Navbar() {
     <>
       <nav className="bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex items-center justify-between h-16 sm:h-20">
+          <div className="flex items-center justify-between h-16 sm:h-20 ">
             {/* Logo */}
-            <Link href="/" className="flex items-center space-x-2 sm:space-x-3">
-              <div className="relative flex items-center">
-                <img
-                  src="/genius.png"
-                  alt="Genius Chess Academy Logo"
-                  className="h-12 sm:h-14 w-auto object-contain"
-                />
-              </div>
+            <Link href="/" className="flex items-center space-x-2 sm:space-x-3 ">
+              <div className="relative flex items-center rounded-4xl overflow-hidden">
+  <img
+    src="/logo.jpg"
+    alt="Genius Chess Academy Logo"
+    className="h-15 sm:h-15 w-auto object-contain rounded-2xl"
+  />
+</div>
+
               <div className="flex flex-col justify-center">
                 {/* THIS IS THE CORRECTED LINE */}
                 <h1 className="text-xl sm:text-2xl font-black tracking-tight leading-tight whitespace-nowrap">
