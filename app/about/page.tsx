@@ -35,7 +35,7 @@ export default function AboutPage() {
             </div>
             <div className="relative mx-auto max-w-md lg:max-w-none">
               <img
-                src="https://i.ytimg.com/vi/QjWr47PTjqM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDxdE0HOIH9ToTDWDMvme-6AymzzA"
+                src="/program18.jpeg"
                 alt="Chess Academy"
                 className="rounded-3xl shadow-2xl w-full"
               />

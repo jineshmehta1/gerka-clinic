@@ -26,6 +26,7 @@ import {
 } from "lucide-react"
 import { AchievementShowcase } from "@/components/acheivement"
 import { SuccessMoments } from "@/components/moment"
+import MinisterFelicitation from "@/components/fali"
 
 // Animated Counter Component
 function AnimatedCounter({ end, duration = 2000, suffix = "" }: { end: number; duration?: number; suffix?: string }) {
@@ -710,6 +711,8 @@ export default function HomePage() {
             </div>
           </section>
 
+          
+
           {/* Bhagyashree Thipsay Section */}
           <section className="relative bg-gradient-to-br from-white via-purple-50/30 to-blue-50/30 overflow-hidden py-4">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-8 items-center relative z-10">
@@ -835,6 +838,8 @@ export default function HomePage() {
               </motion.div>
             </div>
           </section>
+
+          <MinisterFelicitation/>
 
           <AchievementShowcase/>
 
