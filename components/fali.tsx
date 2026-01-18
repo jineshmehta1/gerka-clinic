@@ -15,17 +15,17 @@ export default function MinisterFelicitation() {
   // 5 Photos mapped to a 3-column, 3-row Bento Grid
   const photos = [
     { 
-      src: "/program9.jpeg", 
+      src: "/program33.jpeg", 
       alt: "Main Ceremony", 
       className: "col-span-2 row-span-2" // Large main image
     },
     { 
-      src: "/program8.jpeg", 
+      src: "/program9.jpeg", 
       alt: "Minister Interaction", 
       className: "col-span-1 row-span-1" 
     },
     { 
-      src: "/program7.jpeg", // Replace with your actual path
+      src: "/program8.jpeg", // Replace with your actual path
       alt: "Ceremony Moment", 
       className: "col-span-1 row-span-1" 
     },
@@ -71,7 +71,7 @@ export default function MinisterFelicitation() {
             <div className="space-y-4 text-slate-600 text-base md:text-lg leading-relaxed">
               <p>
                 We are immensely proud to share that our star student, 
-                <span className="text-slate-900 font-bold"> Manvendra Pratap Singh</span>, 
+                <span className="text-slate-900 font-bold"> Madhvendra Pratap Sharma</span>, 
                 was recently facilitated in a prestigious program for his outstanding international chess achievements.
               </p>
               <div className="bg-white p-5 rounded-2xl border-l-4 border-blue-600 shadow-sm space-y-3">
@@ -94,7 +94,7 @@ export default function MinisterFelicitation() {
                 </div>
                 <div>
                   <p className="text-[10px] text-slate-400 font-bold uppercase tracking-tighter">Honoree</p>
-                  <p className="text-sm font-bold text-slate-900">Manvendra Pratap</p>
+                  <p className="text-sm font-bold text-slate-900">Madhvendra Pratap</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
