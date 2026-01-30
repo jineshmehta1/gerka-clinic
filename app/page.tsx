@@ -280,15 +280,6 @@ function ParentReviews() {
       image: "/parent-2.jpg",
       achievement: "SGFI National Bronze Medalist (2023-24)",
     },
-    {
-      name: "Mr. Nilesh Bangar",
-      child: "Anshul Bangar (Age 21)",
-      rating: 5,
-      review:
-        "Our son, Anshul, is a two-time West Zone Winner and competed in CBSE and University Nationals. The academy’s guidance instilled discipline, confidence, and a fighting spirit in him.",
-      image: "/parent-3.jpg",
-      achievement: "CBSE & University Nationals",
-    },
   ]
 
   useEffect(() => {
@@ -929,13 +920,6 @@ export default function HomePage() {
                     achievement: "SGFI National Bronze Medalist (2023-24) and Chess Olympiad Attendee (2022)",
                     image: "/student-2.jpg",
                     quote: "Best decision we ever made!",
-                  },
-                  {
-                    name: "Anshul Bangar",
-                    age: 21,
-                    achievement: "School and University Level National Participant",
-                    image: "/anshulAcheivement.jpg",
-                    quote: "Kamlesh sir made chess so exciting!",
                   },
                   {
                     name: "Himadri Paliwal",

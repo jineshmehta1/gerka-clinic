@@ -23,20 +23,7 @@ export default function SuccessStoriesPage() {
   quote: "I love how chess makes me think differently about problems. Representing India and winning Gold is just the beginning!",
   badges: ["Asian Games Gold", "Commonwealth Gold", "National Champion"],
   program: "Grandmaster Path",
-},{
-      id: 2,
-      name: "Anshul bangar",
-      age: 21,
-      image: "/anshulAcheivement.jpg",
-      achievement: "School and University Nationals Participant",
-      rating: "Beginner to 1800+",
-      timeframe: "10 years",
-      story:
-        "Anshul started as a complete beginner. Through our innovative teaching methodology and dedicated practice, he developed a real passion for the game. His breakthrough came during our intermediate program. Now he's the champion of his college chess club and regularly competes in regional tournaments with confidence.",
-      quote: "Chess taught me to think before I act, and now I use that strategy in everything I do!",
-      badges: ["National Participant", "School & University Champion", "Rapid Improvement"],
-      program: "Strategic Mastery",
-    },
+},
     {
       id: 3,
       name: "Suhani Munet",

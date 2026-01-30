@@ -157,13 +157,6 @@ export default function GalleryPage() {
       achievement: "Kings of chess",
     },{
       id: 16,
-      src: "/program21.jpeg",
-      category: "acheivements",
-      title: "Gold medalist",
-      description: "Asian Youth Chess Championship 2025 Gold Medalist",
-      achievement: "Kings of chess",
-    },{
-      id: 16,
       src: "/program22.jpeg",
       category: "acheivements",
       title: "Gold medalist",
@@ -370,14 +363,6 @@ export default function GalleryPage() {
       title: "National Amature Chess Championship 2024",
       description: "Our students celebrating their victory at the Regional Chess Championship 2024",
       achievement: "1st Place Regional",
-    },
-    {
-      id: 2,
-      src: "/gallery-2.jpg",
-      category: "tournaments",
-      title: "National School Chess Championship",
-      description: "Students got selected for Asian Games.",
-      achievement: "Master Class",
     },
     {
       id: 3,

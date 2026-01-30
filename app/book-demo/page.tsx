@@ -415,7 +415,6 @@ export default function BookDemoPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { name: "Anshul Bangar", age: 21, achievement: "National Participant", image: "/anshulAcheivement.jpg", quote: "Kamlesh sir made chess so exciting!" },
               { name: "Master Madvendra Pratap Sharma", age: 10, achievement: "Gold medal in Asian Youth Chess Championship 2022 (U-10) in Indonesia", image: "/student-1.jpg", quote: "The demo class changed everything for me!" },
               { name: "Suhani Munet", age: 17, achievement: "SGFI National Bronze Medalist (2023-24) and proudly representing India at the Chess Olympiad (2022)", image: "/student-2.jpg", quote: "Best decision we ever made!" },
             ].map((story, index) => (
