@@ -80,8 +80,8 @@ export default function FMAwardSection() {
                     </p>
                   </div>
                   <div>
-                    <p className="text-[9px] md:text-[10px] font-bold text-violet-400 uppercase tracking-widest">Year Awarded</p>
-                    <p className="text-sm md:text-base font-black text-violet-900">2026</p>
+                    <p className="text-[9px] md:text-[10px] font-bold text-violet-400 uppercase tracking-widest">FIDE Rating</p>
+                    <p className="text-sm md:text-base font-black text-violet-900">2353</p>
                   </div>
                   <div>
                     <p className="text-[9px] md:text-[10px] font-bold text-violet-400 uppercase tracking-widest">Status</p>

@@ -11,6 +11,8 @@ import { Textarea } from "@/components/ui/textarea"
 import Link from "next/link"
 import { MapPin, Phone, Mail, Clock, MessageCircle, Send, Award, Users, Trophy } from "lucide-react"
 
+import { sendContactEmail } from "@/app/actions/sendEmail" // Import the action
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
@@ -29,21 +31,10 @@ export default function ContactPage() {
     setIsSubmitting(true)
     setSubmitStatus(null)
 
-    try {
-      const scriptUrl = "https://script.google.com/macros/s/AKfycbymi8K9-aKZMJbBxNAnRvGRW8Jc2OlXVu72-8FlFtGV2nuINxXHPSwsfZPrCgCLIW7y/exec"
-      
-      await fetch(scriptUrl, {
-        method: "POST",
-        mode: "no-cors",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          ...formData,
-          timestamp: new Date().toISOString(),
-        }),
-      })
+    // Call the Server Action
+    const result = await sendContactEmail(formData)
 
+    if (result.success) {
       setSubmitStatus("success")
       setFormData({
         name: "",
@@ -54,12 +45,12 @@ export default function ContactPage() {
         program: "",
         message: "",
       })
-    } catch (error) {
-      console.error("Error submitting form:", error)
+    } else {
+      console.error("Resend Error:", result.error)
       setSubmitStatus("error")
-    } finally {
-      setIsSubmitting(false)
     }
+    
+    setIsSubmitting(false)
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {

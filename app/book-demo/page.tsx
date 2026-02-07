@@ -21,6 +21,8 @@ import {
   Video,
 } from "lucide-react"
 
+import { sendDemoBookingEmail } from "@/app/actions/sendEmail"
+
 export default function BookDemoPage() {
   const [formData, setFormData] = useState({
     studentName: "",
@@ -49,38 +51,20 @@ export default function BookDemoPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setError(null)
     setSubmitStatus(null)
 
-    try {
-      if (!validateForm()) {
-        setSubmitStatus("error")
-        setError("Please fill out all required fields before submitting.")
-        setIsSubmitting(false)
-        return
-      }
+    if (!validateForm()) {
+      setError("Please fill out all required fields.")
+      setIsSubmitting(false)
+      return
+    }
 
-      const formDataToSubmit = {
-        studentName: formData.studentName,
-        parentName: formData.parentName,
-        email: formData.email,
-        phone: formData.phone,
-        age: formData.age,
-        experience: formData.experience,
-        timestamp: new Date().toISOString(),
-      }
+    // Call Resend Server Action
+    const result = await sendDemoBookingEmail(formData)
 
-      await fetch("https://script.google.com/macros/s/AKfycbwPBxWXpnQ4ywqrdfmKvfFi7g5Uu6hjmaTFVDE5EiMI0YEyqjRNTCxionf65Q5Zqlg/exec", {
-        method: "POST",
-        mode: "no-cors",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formDataToSubmit),
-      })
-
-      // Since mode is 'no-cors', we can't read the response status reliably
+    if (result.success) {
       setSubmitStatus("success")
-      console.log("Form submitted:", formDataToSubmit)
       setFormData({
         studentName: "",
         parentName: "",
@@ -89,12 +73,12 @@ export default function BookDemoPage() {
         age: "",
         experience: "",
       })
-    } catch (error) {
-      console.error("Error submitting form:", error)
+    } else {
+      setError("Something went wrong. Please try again or call us.")
       setSubmitStatus("error")
-    } finally {
-      setIsSubmitting(false)
     }
+
+    setIsSubmitting(false)
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
