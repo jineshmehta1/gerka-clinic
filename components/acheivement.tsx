@@ -62,7 +62,7 @@ export function AchievementShowcase() {
             Congratulations
           </h2>
           <h3 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-            Candidate Master Madhvendra Pratap Sharma
+            Fide Master Madhvendra Pratap Sharma
           </h3>
         </motion.div>
 
@@ -104,7 +104,7 @@ export function AchievementShowcase() {
                   </div>
 
                   <h3 className="text-2xl font-black text-gray-900 mb-1">Madhvendra Pratap Sharma</h3>
-                  <p className="text-purple-600 font-bold mb-6 text-sm tracking-wider">CANDIDATE MASTER</p>
+                  <p className="text-purple-600 font-bold mb-6 text-sm tracking-wider">FIDE MASTER</p>
 
                   <div className="grid grid-cols-2 gap-3 mb-6">
                     <div className="bg-amber-50 rounded-xl p-3 border border-amber-100">

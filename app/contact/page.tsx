@@ -314,7 +314,7 @@ export default function ContactPage() {
                       <div>
                         <h3 className="text-xl font-black text-gray-800 mb-2">Call Us</h3>
                         <p className="text-gray-600 leading-relaxed">
-                          +91-9799253983, +91-9636809800
+                          +91-9636809800
                         </p>
                       </div>
                     </div>
@@ -391,7 +391,7 @@ export default function ContactPage() {
               variant="outline"
               className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-gray-900 font-bold text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-5 rounded-full bg-transparent transition-all duration-300"
             >
-              Call Now: +91-9799253983
+              Call Now: +91-9636809800
             </Button>
           </div>
         </div>

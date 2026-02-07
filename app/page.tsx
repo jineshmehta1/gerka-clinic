@@ -27,6 +27,7 @@ import {
 import { AchievementShowcase } from "@/components/acheivement"
 import { SuccessMoments } from "@/components/moment"
 import MinisterFelicitation from "@/components/fali"
+import AchievementSection from "@/components/congratulations"
 
 // Animated Counter Component
 function AnimatedCounter({ end, duration = 2000, suffix = "" }: { end: number; duration?: number; suffix?: string }) {
@@ -416,7 +417,7 @@ export default function HomePage() {
     description: "World-class chess training programs led by Grandmaster Pravin Mahadeo Thipsay and International Master Bhagyashree Thipsay, offering personalized coaching for all ages and skill levels.",
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+91-9799253983",
+      telephone: "+91-9636809800",
       contactType: "Customer Service",
       contactOption: "WhatsApp",
       areaServed: "Global",
@@ -832,6 +833,8 @@ export default function HomePage() {
 
           <MinisterFelicitation/>
 
+          <AchievementSection/>
+
           <AchievementShowcase/>
 
           <SuccessMoments/>
@@ -908,7 +911,7 @@ export default function HomePage() {
                     quote: "Chess opened doors I never knew existed. It’s a life skill that changed everything!",
                   },
                   {
-  name: "Candidate Master Madhvendra Pratap Sharma",
+  name: "Fide Master Madhvendra Pratap Sharma",
   age: 12,
   achievement: "Gold Medalist in Asian Youth 2025 & Commonwealth Representative",
   image: "/student-1.jpg",
@@ -1231,7 +1234,7 @@ export default function HomePage() {
               transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, repeatDelay: 3 }}
             >
               <a
-                href="https://wa.me/919799253983"
+                href="https://wa.me/919636809800"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white font-bold px-5 py-3 sm:px-6 sm:py-3 rounded-full shadow-2xl hover:shadow-3xl text-sm sm:text-base flex items-center space-x-2"

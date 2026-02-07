@@ -17,6 +17,14 @@ export default function GalleryPage() {
   const images = [
     {
       id: 16,
+      src: "/fide-manvendra.jpeg",
+      category: "acheivements",
+      title: "Gold medalist",
+      description: "Asian Youth Chess Championship 2025 Gold Medalist",
+      achievement: "Kings of chess",
+    },
+    {
+      id: 16,
       src: "/program1.jpeg",
       category: "acheivements",
       title: "Gold medalist",

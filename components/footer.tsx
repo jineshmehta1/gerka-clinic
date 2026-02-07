@@ -86,14 +86,14 @@ export function Footer() {
               </div>
               <div className="flex items-center justify-center sm:justify-start space-x-3">
                 <Phone className="w-4 h-4 text-[#C9A227]" />
-                <p className="text-white/80">+91-9636809800, +91-9799253983</p>
+                <p className="text-white/80">+91-9636809800</p>
               </div>
               <div className="flex items-center justify-center sm:justify-start space-x-3">
                 <Mail className="w-4 h-4 text-[#C9A227]" />
                 <p className="text-white/80 break-all">Geniuschessacademy12@gmail.com</p>
               </div>
               <Button asChild className="bg-[#25D366] hover:bg-[#20B858] text-white w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
-                <a href="https://wa.me/919799253983?text=Hello%20Genius%20Chess%20Academy!" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/919636809800?text=Hello%20Genius%20Chess%20Academy!" target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="w-4 h-4 mr-2" />
                   WhatsApp Us
                 </a>

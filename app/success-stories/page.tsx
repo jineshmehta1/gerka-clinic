@@ -12,14 +12,14 @@ export default function SuccessStoriesPage() {
   const stories = [
     {
   id: 1,
-  name: "Candidate Master Madhvendra Pratap Sharma",
+  name: "Fide Master Madhvendra Pratap Sharma",
   age: 12,
   image: "/student-1.jpg",
   achievement: "Gold Medalist: Asian Youth & Commonwealth Chess Championships",
   rating: "ELO 2229",
   timeframe: "3 years",
   story:
-    "Candidate Master Madhvendra Pratap Sharma (ELO 2229) is a shining talent from Genius Chess Academy who has achieved outstanding success on the world stage. He made India proud by securing Gold Medals at both the Asian Youth Chess Championship 2025 (Thailand) and the Commonwealth Chess Championship. Previously, he dominated the 2022 Asian Youth Championship in Indonesia, becoming champion in all three formats (Rapid, Blitz, Classical), and won National Championships in 2022 (Indore) and 2024 (Hyderabad). His vision is to become a Grandmaster, and his journey is an inspiration for chess learners everywhere.",
+    "Fide Master Madhvendra Pratap Sharma (ELO 2229) is a shining talent from Genius Chess Academy who has achieved outstanding success on the world stage. He made India proud by securing Gold Medals at both the Asian Youth Chess Championship 2025 (Thailand) and the Commonwealth Chess Championship. Previously, he dominated the 2022 Asian Youth Championship in Indonesia, becoming champion in all three formats (Rapid, Blitz, Classical), and won National Championships in 2022 (Indore) and 2024 (Hyderabad). His vision is to become a Grandmaster, and his journey is an inspiration for chess learners everywhere.",
   quote: "I love how chess makes me think differently about problems. Representing India and winning Gold is just the beginning!",
   badges: ["Asian Games Gold", "Commonwealth Gold", "National Champion"],
   program: "Grandmaster Path",
