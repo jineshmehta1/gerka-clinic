@@ -305,7 +305,7 @@ export default function ContactPage() {
                       <div>
                         <h3 className="text-xl font-black text-gray-800 mb-2">Call Us</h3>
                         <p className="text-gray-600 leading-relaxed">
-                          +91-9636809800
+                          +91-9636809800, +91-9636790801
                         </p>
                       </div>
                     </div>

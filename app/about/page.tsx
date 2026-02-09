@@ -57,7 +57,7 @@ export default function AboutPage() {
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
               Meet Our{" "}
               <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
-                Founder & Director
+                Founder & CEO
               </span>
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
@@ -179,7 +179,7 @@ export default function AboutPage() {
               <blockquote className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 italic mb-6">
                 "Every child is a potential grandmaster of life. Chess is just the beginning of their journey."
               </blockquote>
-              <p className="text-base sm:text-lg text-gray-600 font-semibold">- Kamlesh Choudhary, Founder & Director</p>
+              <p className="text-base sm:text-lg text-gray-600 font-semibold">- Kamlesh Choudhary, Founder & CEO</p>
             </div>
           </div>
         </div>
