@@ -807,7 +807,7 @@ export default function HomePage() {
                 {[
                   { number: 1500, suffix: "+", label: "Students Trained", icon: Users },
                   { number: 50000, suffix: "+", label: "Training Hours", icon: Clock },
-                  { number: 10, suffix: "+", label: "Countries Reached", icon: Globe },
+                  { number: 20, suffix: "+", label: "Countries Reached", icon: Globe },
                   { number: 50, suffix: "+", label: "Champions Created", icon: Trophy },
                 ].map((stat, index) => (
                   <motion.div
