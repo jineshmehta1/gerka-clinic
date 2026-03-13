@@ -1,129 +1,179 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { Mail, Phone, MapPin, Facebook, Instagram, Youtube, MessageCircle } from "lucide-react"
+import React from "react"
 import Link from "next/link"
+import { motion } from "framer-motion"
+import { 
+  Instagram, 
+  Facebook, 
+  Twitter, 
+  MapPin, 
+  Phone, 
+  ArrowUp,
+  MessageCircle
+} from "lucide-react"
+
+const services = [
+  { name: "Face", color: "bg-[#D9D9D2]", href: "/face/prp-facial" },
+  { name: "Body", color: "bg-[#D4C2C2]", href: "/body/cellulite" },
+  { name: "Nails", color: "bg-[#nail]", href: "/nail" },
+  { name: "Women's health", color: "bg-[#D1B68C]", href: "/womens-health" },
+]
+
+// Updated Navigation Links to more standard pages
+const navLinks = {
+  "Quick Links": [
+    { label: "Home", href: "/" },
+    { label: "About Us", href: "/about" },
+    { label: "Contact", href: "/#contact" }
+  ],
+  "Legal": [
+    { label: "Privacy Policy", href: "/privacy" },
+    { label: "Terms & Conditions", href: "/terms" },
+  ]
+}
 
 export function Footer() {
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
   return (
-    <footer className="bg-[#2B2B2B] text-white">
-      <div className="container mx-auto px-4 sm:px-6 py-12 md:py-16">
-        {/* Grid Layout */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center sm:text-left">
+    <footer className="relative bg-[#EAEAE6] pt-24 pb-12 overflow-hidden">
+      {/* BACKGROUND ANIMATION */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-40">
+        <motion.div 
+          animate={{ 
+            x: [0, 40, 0], 
+            y: [0, -40, 0],
+            scale: [1, 1.1, 1] 
+          }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          className="absolute -top-20 -right-20 w-96 h-96 bg-white/40 blur-[100px] rounded-full" 
+        />
+        <motion.div 
+          animate={{ 
+            x: [0, -30, 0], 
+            y: [0, 30, 0] 
+          }}
+          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+          className="absolute -bottom-20 -left-20 w-80 h-80 bg-zinc-300/30 blur-[80px] rounded-full" 
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 border-b border-zinc-300 pb-20">
           
-          {/* Company Info */}
-          <div className="col-span-2 sm:col-span-1 lg:col-span-1 space-y-6 flex flex-col items-center sm:items-start">
-            <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-[#C9A227] rounded-lg flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-bold text-xl">♔</span>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-[#C9A227]">Genius Chess</h3>
-                <p className="text-sm opacity-70">Academy (International School of Chess)</p>
-              </div>
-            </div>
-            <p className="text-white/80 leading-relaxed max-w-xs mx-auto sm:mx-0 text-sm">
-              Transform your chess game with personalized coaching from a Grandmaster.
-            </p>
-            <div className="flex space-x-4">
-              <Link href="https://www.facebook.com/share/1CrebozWXz/" className="text-white/80 hover:text-[#C9A227] transition-colors">
-              <Button size="icon" variant="outline" className="border-[#C9A227] text-[#C9A227] hover:bg-[#C9A227] hover:text-white bg-transparent rounded-full">
-                <Facebook className="w-4 h-4" />
-              </Button>
-              </Link>
-              <Link href="https://www.instagram.com/geniuschessacademy2025?utm_source=qr&igsh=MWJybzBnejRwN3VyMw==" className="text-white/80 hover:text-[#C9A227] transition-colors">
-              <Button size="icon" variant="outline" className="border-[#C9A227] text-[#C9A227] hover:bg-[#C9A227] hover:text-white bg-transparent rounded-full">
-                <Instagram className="w-4 h-4" />
-              </Button>
-              </Link>
-              <Link href="https://youtube.com/@geniuschessacademy?si=ejNj6kL3k9asYnBK" className="text-white/80 hover:text-[#C9A227] transition-colors">
-              <Button size="icon" variant="outline" className="border-[#C9A227] text-[#C9A227] hover:bg-[#C9A227] hover:text-white bg-transparent rounded-full">
-                <Youtube className="w-4 h-4" />
-              </Button>
-              </Link>
-            </div>
-          </div>
+          {/* SECTION 1: LOGO & SOCIALS */}
+          <div className="lg:col-span-4 flex flex-col space-y-8">
+            <Link href="/" className="flex flex-col group">
+              <span className="text-3xl font-light tracking-[0.3em] text-zinc-800 uppercase leading-tight transition-all group-hover:tracking-[0.35em] duration-500">
+                Gerka Clinic
+              </span>
+              <span className="text-[10px] tracking-[0.5em] text-zinc-500 uppercase font-medium mt-1">
+                Women&apos;s Wellness
+              </span>
+            </Link>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-base sm:text-lg font-semibold text-[#C9A227] mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-sm">
-              {[
-                { href: "/", label: "Home" },
-                { href: "/about", label: "About Us" },
-                { href: "/classes", label: "Classes" },
-                { href: "/gallery", label: "Gallery" },
-                { href: "/success-stories", label: "Success Stories" },
-                { href: "/contact", label: "Contact" },
-              ].map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href} className="text-white/80 hover:text-[#C9A227] transition-colors">
-                    {link.label}
-                  </Link>
-                </li>
+            <div className="flex items-center gap-5">
+              {[Instagram, Facebook, Twitter, MessageCircle].map((Icon, i) => (
+                <motion.a
+                  key={i}
+                  href="#"
+                  whileHover={{ y: -5, scale: 1.1 }}
+                  className="w-10 h-10 rounded-full border border-zinc-300 flex items-center justify-center text-zinc-600 hover:bg-zinc-800 hover:text-white hover:border-zinc-800 transition-all duration-300 shadow-sm"
+                >
+                  <Icon size={18} strokeWidth={1.5} />
+                </motion.a>
               ))}
-            </ul>
-          </div>
-
-          {/* Programs */}
-          <div>
-            <h4 className="text-base sm:text-lg font-semibold text-[#C9A227] mb-4">Programs</h4>
-            <ul className="space-y-2 text-sm">
-              <li><Link href="/classes" className="text-white/80 hover:text-[#C9A227] transition-colors">Beginner Classes</Link></li>
-              <li><Link href="/classes" className="text-white/80 hover:text-[#C9A227] transition-colors">Intermediate</Link></li>
-              <li><Link href="/classes" className="text-white/80 hover:text-[#C9A227] transition-colors">Advanced Coaching</Link></li>
-              <li><Link href="/classes" className="text-white/80 hover:text-[#C9A227] transition-colors">Tournament Prep</Link></li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div className="col-span-2 sm:col-span-1 lg:col-span-1">
-            <h4 className="text-base sm:text-lg font-semibold text-[#C9A227] mb-4">Contact Info</h4>
-            <div className="space-y-4 text-sm">
-              <div className="flex items-start justify-center sm:justify-start space-x-3">
-                <MapPin className="w-4 h-4 text-[#C9A227] mt-1 flex-shrink-0" />
-                <div><p className="text-white/80">Ghanta ghar, barisadri, dist. chittorgarh Raj 312403</p></div>
-              </div>
-              <div className="flex items-center justify-center sm:justify-start space-x-3">
-                <Phone className="w-4 h-4 text-[#C9A227]" />
-                <p className="text-white/80">+91-9636809800, +91-9636790801</p>
-              </div>
-              <div className="flex items-center justify-center sm:justify-start space-x-3">
-                <Mail className="w-4 h-4 text-[#C9A227]" />
-                <p className="text-white/80 break-all">Geniuschessacademy12@gmail.com</p>
-              </div>
-              <Button asChild className="bg-[#25D366] hover:bg-[#20B858] text-white w-full max-w-xs mx-auto sm:max-w-none sm:mx-0">
-                <a href="https://wa.me/919636809800?text=Hello%20Genius%20Chess%20Academy!" target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="w-4 h-4 mr-2" />
-                  WhatsApp Us
-                </a>
-              </Button>
             </div>
+
+            <div className="space-y-1">
+              <p className="text-xs tracking-[0.1em] text-zinc-500 font-medium">Monday To Saturday</p>
+              <p className="text-[11px] tracking-[0.2em] text-zinc-400 italic">By Appointment ONLY</p>
+            </div>
+          </div>
+
+          {/* SECTION 2: ADDRESS & CONTACT */}
+          <div className="lg:col-span-3 space-y-8">
+            <h4 className="text-[11px] font-bold uppercase tracking-[0.3em] text-zinc-400">Address</h4>
+            <div className="space-y-6">
+              <a 
+                href="https://maps.google.com/?q=1+Priory+Office+Park+Stillorgan+Rd+A94NH31" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex items-start gap-4 group cursor-pointer"
+              >
+                <MapPin size={18} className="text-zinc-400 group-hover:text-zinc-800 transition-colors shrink-0" />
+                <p className="text-sm tracking-widest leading-relaxed text-zinc-600 uppercase">
+                  1 Priory Office Park<br />
+                  Stillorgan Rd.<br />
+                  A94NH31
+                </p>
+              </a>
+              <a href="tel:0878888087" className="flex items-center gap-4 group cursor-pointer">
+                <Phone size={18} className="text-zinc-400 group-hover:text-zinc-800 transition-colors" />
+                <p className="text-sm tracking-widest text-zinc-600">0878888087</p>
+              </a>
+            </div>
+          </div>
+
+          {/* SECTION 3: SERVICES (Wrapped in Links) */}
+          <div className="lg:col-span-2 space-y-8">
+            <h4 className="text-[11px] font-bold uppercase tracking-[0.3em] text-zinc-400">Services</h4>
+            <div className="flex flex-col gap-3 items-start">
+              {services.map((service) => (
+                <Link key={service.name} href={service.href}>
+                  <motion.div
+                    whileHover={{ x: 10, scale: 1.05 }}
+                    className={`${service.color} text-zinc-700 text-[11px] font-semibold tracking-widest uppercase px-6 py-2.5 rounded-full transition-shadow hover:shadow-md shadow-sm cursor-pointer`}
+                  >
+                    {service.name}
+                  </motion.div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* SECTION 4: UPDATED NAVIGATION LINKS */}
+          <div className="lg:col-span-3 grid grid-cols-2 lg:grid-cols-1 gap-12">
+            {Object.entries(navLinks).map(([title, links]) => (
+              <div key={title} className="space-y-6">
+                <h4 className="text-[11px] font-bold uppercase tracking-[0.3em] text-zinc-400">{title}</h4>
+                <ul className="space-y-4">
+                  {links.map((link) => (
+                    <li key={link.label}>
+                      <Link 
+                        href={link.href} 
+                        className="text-[13px] tracking-widest text-zinc-600 hover:text-zinc-900 transition-colors duration-300 relative group block"
+                      >
+                        {link.label}
+                        <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-zinc-800 transition-all duration-300 group-hover:w-full" />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Copyright & Credits */}
-        <div className="border-t border-white/20 mt-12 pt-8 text-center">
-          <p className="text-white/60 text-xs sm:text-sm mb-3">
-            © 2025 Genius Chess Academy (International School of Chess). All rights reserved.
-            <span className="hidden sm:inline"> |</span>
-            <br className="sm:hidden" />
-            <Link href="/privacy" className="hover:text-[#C9A227] sm:ml-1">Privacy Policy</Link> |
-            <Link href="/terms" className="hover:text-[#C9A227] ml-1">Terms of Service</Link>
+        {/* BOTTOM BAR */}
+        <div className="pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="text-[10px] tracking-[0.3em] uppercase text-zinc-400 font-medium">
+            © {new Date().getFullYear()} Gerka Clinic. All rights reserved.
           </p>
           
-          {/* DESIGNED BY JINESH MEHTA - WhatsApp Link */}
-          <p className="text-white/40 text-xs">
-            Designed by{" "}
-            <a 
-              href="https://wa.me/917851988964?text=Hi%20Jinesh,%20I%20saw%20your%20work%20on%20Genius%20Chess%20Academy" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-[#C9A227] font-medium hover:underline hover:text-[#e0b835] transition-colors"
-            >
-              Jinesh Mehta
-            </a>
-          </p>
+          <motion.button
+            onClick={scrollToTop}
+            whileHover={{ y: -5 }}
+            className="flex items-center gap-3 group"
+          >
+            <span className="text-[10px] tracking-[0.4em] uppercase text-zinc-500 font-bold group-hover:text-zinc-900 transition-colors">
+              Back to Top
+            </span>
+            <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm group-hover:bg-zinc-900 group-hover:text-white transition-all duration-300">
+              <ArrowUp size={16} />
+            </div>
+          </motion.button>
         </div>
       </div>
     </footer>

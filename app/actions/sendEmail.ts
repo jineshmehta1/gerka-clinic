@@ -4,55 +4,31 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-// 1. Action for Contact Page
-export async function sendContactEmail(formData: any) {
+export async function sendGerkaInquiry(formData: FormData) {
   try {
-    const { name, email, phone, age, experience, program, message } = formData;
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const treatment = formData.get("treatment") as string;
+    const message = formData.get("message") as string;
 
     const { data, error } = await resend.emails.send({
-      from: "Genius Chess Academy <onboarding@resend.dev>",
-      to: ["Geniuschessacademy12@gmail.com"],
-      subject: `New Contact Inquiry: ${name}`,
+      from: "Gerka Clinic Inquiry <onboarding@resend.dev>",
+      to: ["hello@gerkaclinic.com"], // Update to your real email
+      subject: `New Inquiry: ${treatment} from ${name}`,
       replyTo: email,
       html: `
-        <h1>New Contact Inquiry</h1>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Age:</strong> ${age}</p>
-        <p><strong>Experience:</strong> ${experience}</p>
-        <p><strong>Program:</strong> ${program}</p>
-        <p><strong>Message:</strong> ${message}</p>
-      `,
-    });
-
-    if (error) return { success: false, error };
-    return { success: true };
-  } catch (err) {
-    return { success: false, error: err };
-  }
-}
-
-// 2. Action for Book Demo Page
-export async function sendDemoBookingEmail(formData: any) {
-  try {
-    const { studentName, parentName, email, phone, age, experience } = formData;
-
-    const { data, error } = await resend.emails.send({
-      from: "Genius Chess Academy <onboarding@resend.dev>",
-      to: ["Geniuschessacademy12@gmail.com"],
-      subject: `FREE DEMO BOOKED: ${studentName}`,
-      replyTo: email,
-      html: `
-        <div style="font-family: sans-serif; padding: 20px; border: 2px solid #f97316;">
-          <h1 style="color: #f97316;">New Demo Class Booking</h1>
-          <p><strong>Student Name:</strong> ${studentName}</p>
-          <p><strong>Parent Name:</strong> ${parentName}</p>
-          <p><strong>Age:</strong> ${age}</p>
-          <p><strong>Experience:</strong> ${experience}</p>
-          <hr />
-          <p><strong>Phone:</strong> ${phone}</p>
-          <p><strong>Email:</strong> ${email}</p>
+        <div style="font-family: sans-serif; max-width: 600px; margin: auto; border: 1px solid #eee; padding: 20px;">
+          <h2 style="color: #18181b; font-weight: 300; border-bottom: 1px solid #eee; padding-bottom: 10px;">New Website Inquiry</h2>
+          <p style="margin-bottom: 10px;"><strong>Client Name:</strong> ${name}</p>
+          <p style="margin-bottom: 10px;"><strong>Email:</strong> ${email}</p>
+          <p style="margin-bottom: 10px;"><strong>Interest:</strong> ${treatment}</p>
+          <p style="margin-bottom: 10px;"><strong>Message:</strong></p>
+          <div style="background: #f9f9f9; padding: 15px; border-radius: 5px; color: #444;">
+            ${message}
+          </div>
+          <footer style="margin-top: 20px; font-size: 12px; color: #a1a1aa;">
+            Sent from Gerka Clinic Website Contact Form
+          </footer>
         </div>
       `,
     });

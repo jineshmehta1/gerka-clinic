@@ -4,56 +4,56 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 
+// Import your components (ensure these paths match your file structure)
+import { Navbar } from '@/components/navbar';
+import { Footer } from '@/components/footer';
+
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: {
-    default: 'Genius Chess Academy (International School of Chess) - Learn Chess from Grandmaster Pravin Thipsay',
-    template: '%s | Genius Chess Academy (International School of Chess)',
+    default: 'Gerka Clinic | Regenerative Aesthetic Gynaecology & Wellness Dublin',
+    template: '%s | Gerka Clinic',
   },
   description:
-    'Master chess with Genius Chess Academy (International School of Chess). Learn from Grandmaster Pravin Thipsay with online and offline training at Genius Chess Academy (International School of Chess).',
+    'Gerka Clinic is a leading aesthetic and regenerative medicine clinic in Dublin. Specializing in advanced intimate health, women’s wellness, and modern aesthetic treatments.',
   keywords: [
-    'Genius Chess Academy International School of Chess',
-    'Genius Chess Academy',
-    'Genius Chess Academy',
-    'International school of chess',
-    'Chess Udaipur',
-    'Grandmaster Pravin Thipsay',
-    'learn chess',
-    'online chess lessons',
-    'offline chess training',
-    'chess academy',
-    'chess training',
+    'Gerka Clinic Dublin',
+    'Regenerative Aesthetic Gynaecology Ireland',
+    'BTL Emsella Dublin',
+    'Women’s Wellness Clinic',
+    'Intimate Health Treatments',
+    'Vanquish Me Fat Reduction',
+    'Labiaplasty Dublin',
+    'Aesthetic Medicine Barcelona',
   ],
-  metadataBase: new URL('https://www.thegeniuschessacademy.com'),
+  metadataBase: new URL('https://www.gerkaclinic.com'),
   alternates: {
-    canonical: 'https://www.thegeniuschessacademy.com',
+    canonical: 'https://www.gerkaclinic.com',
   },
-  authors: [{ name: 'Genius Chess Academy', url: 'https://www.thegeniuschessacademy.com' }],
-  creator: 'Genius Chess Academy',
-  publisher: 'Genius Chess Academy',
+  authors: [{ name: 'Gerka Clinic', url: 'https://www.gerkaclinic.com' }],
+  creator: 'Gerka Clinic',
+  publisher: 'Gerka Clinic',
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: 'Genius Chess Academy - Learn Chess from Grandmaster Pravin Thipsay',
-    description: 'World-class chess training academy led by GM Pravin Thipsay.',
-    url: 'https://www.thegeniuschessacademy.com',
-    siteName: 'Genius Chess Academy',
+    title: 'Gerka Clinic | Empowering Confidence Through Clinical Excellence',
+    description: 'Specialized women’s health and aesthetic clinic in Dublin and Barcelona.',
+    url: 'https://www.gerkaclinic.com',
+    siteName: 'Gerka Clinic',
     images: [
       {
-        url: 'https://www.thegeniuschessacademy.com/genius.png',
-        width: 800,
-        height: 600,
-        alt: 'Genius Chess Academy Logo',
+        url: 'https://www.gerkaclinic.com/og-image.jpg', // Ensure you have an OG image
+        width: 1200,
+        height: 630,
+        alt: 'Gerka Clinic Reception',
       },
     ],
-    locale: 'en_IN',
+    locale: 'en_IE',
     type: 'website',
   },
-  generator: 'Next.js',
 };
 
 export default function RootLayout({
@@ -62,87 +62,59 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
-        {/* Favicons */}
+        {/* Favicons - Ensure these exist in your public folder */}
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
-        <link rel="manifest" href="/site.webmanifest"/>
-        <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
 
-        {/* JSON-LD Structured Data */}
+        {/* JSON-LD Structured Data for Medical Clinic */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify([
               {
                 '@context': 'https://schema.org',
-                '@type': 'EducationalOrganization',
-                name: 'Genius Chess Academy (International School of Chess)',
-                url: 'https://www.thegeniuschessacademy.com',
-                logo: 'https://www.thegeniuschessacademy.com/genius.png',
-                description: 'World-class chess training academy led by Grandmaster Pravin Thipsay.',
+                '@type': 'MedicalClinic',
+                name: 'Gerka Clinic',
+                url: 'https://www.gerkaclinic.com',
+                logo: 'https://www.gerkaclinic.com/logo.png',
+                description: 'Leading aesthetic and regenerative medicine clinic specializing in women’s wellness.',
                 address: {
                   '@type': 'PostalAddress',
-                  streetAddress: 'Sector 3',
-                  addressLocality: 'Udaipur, jaipur',
-                  addressRegion: 'Rajasthan',
-                  postalCode: '313001',
-                  addressCountry: 'IN',
+                  streetAddress: '1 Priory Office Park, Stillorgan Rd',
+                  addressLocality: 'Dublin',
+                  postalCode: 'A94NH31',
+                  addressCountry: 'IE',
                 },
                 contactPoint: {
                   '@type': 'ContactPoint',
-                  telephone: '+91-9636809800',
-                  email: 'geniuschessacademy12@gmail.com',
+                  telephone: '+353-878888087',
+                  contactType: 'reservations',
                 },
-                aggregateRating: {
-                  '@type': 'AggregateRating',
-                  ratingValue: '4.9',
-                  reviewCount: '250',
-                },
-              },
-              {
-                '@context': 'https://schema.org',
-                '@type': 'Person',
-                name: 'Grandmaster Pravin Thipsay',
-                jobTitle: 'Head Coach',
-                url: 'https://www.thegeniuschessacademy.com',
-                sameAs: [
-                  'https://en.wikipedia.org/wiki/Pravin_Thipsay',
-                  'https://ratings.fide.com/profile/5001499',
-                ],
-              },
-              {
-                '@context': 'https://schema.org',
-                '@type': 'FAQPage',
-                mainEntity: [
-                  {
-                    '@type': 'Question',
-                    name: 'What is Genius Chess Academy?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: 'Genius Chess Academy is a world-class chess training institute led by Grandmaster Pravin Thipsay offering online and offline chess training.'
-                    }
-                  },
-                  {
-                    '@type': 'Question',
-                    name: 'Who is the head coach of Genius Chess Academy?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: 'The head coach is Grandmaster Pravin Thipsay, one of India’s top chess grandmasters.'
-                    }
-                  }
+                medicalSpecialty: [
+                  'Aesthetic Medicine',
+                  'Gynaecology',
+                  'Regenerative Medicine'
                 ]
               }
             ]),
           }}
         />
       </head>
-      <body className={inter.className}>
-        {children}
+      <body className={`${inter.className} bg-white antialiased`}>
+        {/* Navbar appears on all pages */}
+        <Navbar />
+        
+        {/* Main Content Area */}
+        <main className="min-h-screen">
+          {children}
+        </main>
+        
+        {/* Footer appears on all pages */}
+        <Footer />
       </body>
     </html>
   );
