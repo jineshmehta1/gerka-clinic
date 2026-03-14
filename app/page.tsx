@@ -118,8 +118,6 @@ export default function HomePage() {
             <ContactSection />
           </section>
         </main>
-
-        <Footer />
       </div>
     </>
   )

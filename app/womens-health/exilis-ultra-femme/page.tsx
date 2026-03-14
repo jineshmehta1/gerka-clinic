@@ -153,7 +153,7 @@ export default function ExilisUltraFemmePage() {
                 <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-zinc-500">Intimate Aesthetic Care</p>
                 <h2 className="text-3xl md:text-4xl font-light text-white leading-tight">Book a private consultation</h2>
               </div>
-              <Link href="/contact" className="w-full md:w-auto relative z-10">
+              <Link href="/#contact" className="w-full md:w-auto relative z-10">
                 <button className="w-full md:w-auto bg-white text-zinc-900 px-12 py-5 rounded-full text-[11px] font-bold uppercase tracking-[0.2em] hover:scale-105 transition-all active:scale-95 shadow-lg">
                   Book Now
                 </button>

@@ -163,7 +163,7 @@ export default function SkinVivePage() {
                 <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-zinc-400 mb-2">Ready For The Experience?</p>
                 <h2 className="text-3xl font-light text-zinc-900">Book a consultation</h2>
               </div>
-              <Link href="/contact" className="w-full md:w-auto">
+              <Link href="/#contact" className="w-full md:w-auto">
                 <button className="w-full md:w-auto bg-zinc-900 text-white px-10 py-5 rounded-full flex items-center justify-center gap-3 hover:bg-zinc-800 transition-all active:scale-95 group">
                   <span className="text-[11px] font-bold uppercase tracking-[0.2em]">Book Now</span>
                   <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />

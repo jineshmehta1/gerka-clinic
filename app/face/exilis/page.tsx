@@ -193,7 +193,7 @@ export default function ExilisServicePage() {
                 <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-zinc-400">Ready For The Experience?</p>
                 <h2 className="text-3xl font-light text-zinc-900 leading-tight">Book your consultation</h2>
               </div>
-              <Link href="/contact" className="w-full md:w-auto">
+              <Link href="/#contact" className="w-full md:w-auto">
                 <button className="w-full md:w-auto bg-zinc-900 text-white px-10 py-5 rounded-full flex items-center justify-center gap-3 hover:bg-zinc-800 transition-all active:scale-95 shadow-xl shadow-zinc-200 group">
                   <span className="text-[11px] font-bold uppercase tracking-[0.2em]">Check Availability</span>
                   <Calendar size={16} className="group-hover:rotate-12 transition-transform" />

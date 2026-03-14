@@ -197,7 +197,7 @@ export default function CelluliteTreatmentPage() {
                   Perfect for clients who want smoother, tighter thighs or buttocks with a non-surgical approach and natural-looking results.
                 </p>
               </div>
-              <Link href="/contact" className="w-full md:w-auto relative z-10">
+              <Link href="/#contact" className="w-full md:w-auto relative z-10">
                 <button className="w-full md:w-auto bg-white text-zinc-900 px-12 py-5 rounded-full text-[11px] font-bold uppercase tracking-[0.2em] hover:scale-105 transition-all active:scale-95 shadow-lg">
                   Book Now
                 </button>

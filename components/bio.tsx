@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Award, GraduationCap, MapPin } from "lucide-react"
+import { Award, GraduationCap } from "lucide-react"
 
 const specialists = [
   {
@@ -32,50 +32,56 @@ const specialists = [
 
 export function SpecialistsSection() {
   return (
-    <section className="py-24 md:py-32 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 md:px-10">
+    <section className="py-16 md:py-24 lg:py-32 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10">
         
         {/* SECTION HEADER */}
-        <div className="text-center mb-24">
+        <div className="text-center mb-16 md:mb-24">
           <motion.div 
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center rounded-full px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.3em] text-zinc-400 bg-zinc-50 border border-zinc-100 mb-6"
+            className="inline-flex items-center rounded-full px-3 py-1 md:px-4 md:py-1.5 text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] md:tracking-[0.3em] text-zinc-400 bg-zinc-50 border border-zinc-100 mb-4 md:mb-6"
           >
             Our Leadership
           </motion.div>
-          <h2 className="text-4xl md:text-6xl font-light text-zinc-900 tracking-tight">
+          <motion.h2 
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl sm:text-4xl md:text-6xl font-light text-zinc-900 tracking-tight"
+          >
             The <span className="italic font-serif text-zinc-500">Specialists</span>
-          </h2>
+          </motion.h2>
         </div>
 
         {/* SPECIALISTS LIST */}
-        <div className="space-y-32">
+        <div className="space-y-20 md:space-y-32">
           {specialists.map((pro, index) => (
             <div 
               key={pro.name}
-              className={`flex flex-col ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} items-center gap-16 lg:gap-24`}
+              className={`flex flex-col ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} items-center gap-10 md:gap-16 lg:gap-24`}
             >
               {/* IMAGE SIDE */}
               <motion.div 
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, ease: "easeOut" }}
                 viewport={{ once: true }}
                 className="w-full lg:w-1/2"
               >
-                <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl group">
+                <div className="relative aspect-[4/5] rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-xl md:shadow-2xl group">
                   <img 
                     src={pro.image} 
                     alt={pro.name} 
                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                   />
-                  {/* Floating Info Tag */}
-                  <div className="absolute bottom-8 left-8 right-8 bg-white/90 backdrop-blur-md p-6 rounded-3xl border border-white/20 shadow-lg translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                    <div className="flex items-center gap-3 text-zinc-800">
-                      <GraduationCap size={20} className="text-zinc-400" />
-                      <span className="text-xs font-bold uppercase tracking-widest">{pro.credentials}</span>
+                  
+                  {/* Floating Info Tag - Visible on hover (desktop) and tap (mobile) */}
+                  <div className="absolute bottom-4 left-4 right-4 md:bottom-8 md:left-8 md:right-8 bg-white/95 backdrop-blur-md p-4 md:p-6 rounded-2xl md:rounded-3xl border border-white/20 shadow-lg lg:translate-y-4 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100 transition-all duration-500">
+                    <div className="flex items-center gap-2 md:gap-3 text-zinc-800">
+                      <GraduationCap size={16} className="text-zinc-400 md:w-5 md:h-5" />
+                      <span className="text-[9px] md:text-xs font-bold uppercase tracking-widest">{pro.credentials}</span>
                     </div>
                   </div>
                 </div>
@@ -83,42 +89,42 @@ export function SpecialistsSection() {
 
               {/* TEXT SIDE */}
               <motion.div 
-                initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1, ease: "easeOut" }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: true }}
-                className="w-full lg:w-1/2 space-y-8"
+                className="w-full lg:w-1/2 space-y-6 md:space-y-8"
               >
-                <div className="space-y-2">
-                  <span className="text-[11px] font-bold uppercase tracking-[0.4em] text-zinc-400">
+                <div className="space-y-2 md:space-y-3 text-center lg:text-left">
+                  <span className="text-[10px] md:text-[11px] font-bold uppercase tracking-[0.3em] md:tracking-[0.4em] text-zinc-400">
                     {pro.role}
                   </span>
-                  <h3 className="text-4xl md:text-5xl font-light text-zinc-900 tracking-tight">
+                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-light text-zinc-900 tracking-tight">
                     {pro.name}
                   </h3>
                 </div>
 
                 {/* Highlight Boxes */}
-                <div className="flex flex-wrap gap-4">
-                  <div className="flex items-center gap-2 bg-zinc-50 border border-zinc-100 px-4 py-2 rounded-full">
-                    <Award size={14} className="text-zinc-400" />
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-zinc-600">Pioneer in Excellence</span>
+                <div className="flex flex-wrap justify-center lg:justify-start gap-3 md:gap-4">
+                  <div className="flex items-center gap-2 bg-zinc-50 border border-zinc-100 px-3 py-1.5 md:px-4 md:py-2 rounded-full">
+                    <Award size={12} className="text-zinc-400 md:w-3.5 md:h-3.5" />
+                    <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-zinc-600">Pioneer in Excellence</span>
                   </div>
                 </div>
 
                 {/* Bio Paragraphs */}
-                <div className="space-y-6">
+                <div className="space-y-4 md:space-y-6 text-center lg:text-left">
                   {pro.bio.map((para, i) => (
-                    <p key={i} className="text-lg text-zinc-500 font-light leading-relaxed">
+                    <p key={i} className="text-base md:text-lg text-zinc-500 font-light leading-relaxed">
                       {para}
                     </p>
                   ))}
                 </div>
 
                 {/* Technical Skills Row */}
-                <div className="pt-6 border-t border-zinc-100">
-                   <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-zinc-400 mb-3">Core Expertise</p>
-                   <p className="text-sm text-zinc-900 font-medium tracking-wide">
+                <div className="pt-6 border-t border-zinc-100 text-center lg:text-left">
+                   <p className="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.3em] text-zinc-400 mb-2 md:mb-3">Core Expertise</p>
+                   <p className="text-xs md:text-sm text-zinc-900 font-medium tracking-wide">
                      {pro.specialties}
                    </p>
                 </div>
