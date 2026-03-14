@@ -17,7 +17,7 @@ const services = [
   { name: "Face", color: "bg-[#D9D9D2]", href: "/face/prp-facial" },
   { name: "Body", color: "bg-[#D4C2C2]", href: "/body/cellulite" },
   { name: "Nails", color: "bg-[#F3E5F5]", href: "/nail" }, // Fixed background color placeholder
-  { name: "Women's health", color: "bg-[#D1B68C]", href: "/womens-health" },
+  { name: "Women's health", color: "bg-[#D1B68C]", href: "/womens-health/emsella" },
 ]
 
 const navLinks = {
