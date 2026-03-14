@@ -18,7 +18,7 @@ export function NailHeroBanner() {
   ]
 
   return (
-    <section className="relative w-full min-h-[100dvh] flex flex-col items-center justify-center overflow-hidden bg-white pt-32 pb-16 md:pt-40 md:pb-20">
+    <section className="relative w-full min-h-[100dvh] flex flex-col items-center justify-center overflow-hidden bg-white pt-32 pb-4 md:pt-40 md:pb-20">
       
       {/* 1. BACKGROUND IMAGE COLLAGE */}
       <div className="absolute inset-0 z-0">

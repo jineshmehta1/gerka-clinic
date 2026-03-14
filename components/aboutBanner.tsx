@@ -17,7 +17,7 @@ export function GerkaHeroBanner() {
   ]
 
   return (
-    <section className="relative w-full min-h-[100dvh] flex flex-col items-center justify-center overflow-hidden bg-white py-20 lg:pt-40 lg:pb-24">
+    <section className="relative w-full min-h-[100dvh] flex flex-col items-center justify-center overflow-hidden bg-white pt-30 lg:pt-40 lg:pb-24">
       
       {/* 1. BACKGROUND IMAGE COLLAGE */}
       <div className="absolute inset-0 z-0">
