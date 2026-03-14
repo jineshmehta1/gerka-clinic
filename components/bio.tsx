@@ -7,7 +7,7 @@ const specialists = [
   {
     name: "Giselle Gerka",
     role: "Founder & Clinical Director",
-    image: "/1.webp",
+    image: "/2.webp",
     credentials: "University of Seville",
     specialties: "Regenerative Gynaecology • Pelvic Floor Health",
     bio: [
@@ -19,7 +19,7 @@ const specialists = [
   {
     name: "Dr. Evelyn Alba",
     role: "Gynaecology & Obstetrics Specialist",
-    image: "/2.webp",
+    image: "/1.webp",
     credentials: "Universitat de Barcelona",
     specialties: "Gynaecological Oncology • Breast Pathology",
     bio: [
