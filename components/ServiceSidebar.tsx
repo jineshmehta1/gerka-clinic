@@ -57,8 +57,8 @@ const womensHealthServices: ServiceSection[] = [
       { name: "Postpartum Scar Treatment", href: "/womens-health/postpartum-scar" },
       { name: "Skin Lesion Removal", href: "/womens-health/skin-lesion-removal" },
       { name: "Exilis Ultra Femme® Vaginal Tightening", href: "/womens-health/exilis-ultra-femme" },
-      { name: "Hymenoplasty", href: "/womens-health/hymenoplasty" },
-      { name: "Labiaplasty", href: "/womens-health/labiaplasty" },
+      { name: "Hymenoplasty (Surgical)", href: "/womens-health/hymenoplasty" },
+      { name: "Labiaplasty (Surgical)", href: "/womens-health/labiaplasty" },
     ]
   }
 ]

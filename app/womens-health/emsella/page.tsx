@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowLeft, Clock, Euro, CheckCircle2, ShieldCheck, Zap, Target, Info, ChevronRight, HeartPulse, UserCheck } from "lucide-react"
+import { ArrowLeft, Clock, Euro, CheckCircle2, ShieldCheck, Zap, Target, Info, ChevronRight, HeartPulse, UserCheck, Activity, GraduationCap } from "lucide-react"
 import Link from "next/link"
 import { ServiceSidebar } from "@/components/ServiceSidebar"
 
@@ -11,8 +11,26 @@ const conditions = [
   "Mixed urinary incontinence",
   "Pelvic floor weakness after childbirth",
   "Menopausal pelvic floor changes",
-  "Reduced pelvic muscle tone in men",
   "Mild sexual dysfunction related to pelvic floor strength"
+]
+
+// New Data for Men's Benefits
+const maleBenefits = [
+  {
+    title: "Erectile performance optimisation",
+    description: "Enhancing blood flow and neuromuscular control essential for sexual health.",
+    icon: <Activity size={20} className="text-zinc-400" />
+  },
+  {
+    title: "Post-prostate rehabilitation",
+    description: "Accelerating recovery and restoring continence following prostate procedures.",
+    icon: <HeartPulse size={20} className="text-zinc-400" />
+  },
+  {
+    title: "Male pelvic floor training",
+    description: "Deep core strengthening to improve bladder control and pelvic stability.",
+    icon: <Target size={20} className="text-zinc-400" />
+  }
 ]
 
 const mechanismBenefits = [
@@ -44,13 +62,11 @@ export default function EmsellaServicePage() {
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="flex flex-col lg:grid lg:grid-cols-12 gap-12 lg:gap-20">
           
-          {/* 2. REUSABLE SIDEBAR */}
           <ServiceSidebar 
             activeService="Emsella® Chair Pelvic Floor Treatment" 
             categoryTitle="Women's Health" 
           />
 
-          {/* 3. MAIN CONTENT AREA */}
           <div className="lg:col-span-9 space-y-16 md:space-y-24">
             
             {/* HERO SECTION */}
@@ -83,7 +99,6 @@ export default function EmsellaServicePage() {
                   </p>
                 </div>
                 <div className="aspect-square rounded-[3rem] overflow-hidden shadow-2xl border-white border-8">
-                  {/* Image showing the clinician and patient at the Emsella chair from your screenshot */}
                   <img src="/emsella.jpeg" alt="Emsella Chair Consultation" className="w-full h-full object-cover" />
                 </div>
               </div>
@@ -103,6 +118,35 @@ export default function EmsellaServicePage() {
                        <span className="text-sm text-zinc-600 font-light">{item}</span>
                     </div>
                   ))}
+               </div>
+            </section>
+
+            {/* --- NEW SECTION: EMSELLA FOR MEN --- */}
+            <section className="bg-[#1A1A1A] text-white rounded-[3.5rem] p-10 md:p-16 relative overflow-hidden">
+               <div className="absolute top-0 right-0 w-64 h-64 bg-zinc-800 rounded-full blur-[100px] opacity-50" />
+               
+               <div className="relative z-10 space-y-12">
+                  <div className="space-y-4 max-w-2xl">
+                    <h2 className="text-3xl md:text-4xl font-light tracking-tight">
+                      Emsella® for Men – <br/>
+                      <span className="italic font-serif text-zinc-400">Targeted Male Wellness</span>
+                    </h2>
+                    <p className="text-zinc-400 font-light leading-relaxed">
+                      Beyond incontinence, the Emsella® Chair is a revolutionary tool for male intimate health and core stability. 
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {maleBenefits.map((benefit, i) => (
+                      <div key={i} className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700 p-8 rounded-[2rem] space-y-4 hover:border-zinc-500 transition-colors group">
+                        <div className="w-12 h-12 rounded-2xl bg-zinc-700 flex items-center justify-center group-hover:bg-zinc-100 transition-colors group-hover:text-zinc-900">
+                          {benefit.icon}
+                        </div>
+                        <h4 className="text-lg font-medium leading-snug">{benefit.title}</h4>
+                        <p className="text-xs text-zinc-400 font-light leading-relaxed">{benefit.description}</p>
+                      </div>
+                    ))}
+                  </div>
                </div>
             </section>
 
@@ -128,14 +172,12 @@ export default function EmsellaServicePage() {
                   </div>
                </div>
                <div className="order-1 lg:order-2 aspect-[4/3] rounded-[3rem] overflow-hidden shadow-xl border border-zinc-100">
-                  {/* Product shot of the Emsella Chair from your screenshot */}
                   <img src="/emsella2.webp" alt="Emsella HIFEM Technology" className="w-full h-full object-cover" />
                </div>
             </section>
 
             {/* BENTO GRID: PROTOCOL & SUITABILITY */}
             <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Protocol Card */}
               <div className="bg-[#EAEAE6] p-12 rounded-[3rem] space-y-8">
                 <div className="space-y-4">
                    <h3 className="text-2xl font-light text-zinc-900 uppercase tracking-tight">Treatment Protocol</h3>
@@ -155,7 +197,6 @@ export default function EmsellaServicePage() {
                 </div>
               </div>
 
-              {/* Is it Right for You Card */}
               <div className="bg-white border border-zinc-100 p-12 rounded-[3rem] space-y-8 shadow-sm">
                 <div className="space-y-2">
                    <h3 className="text-2xl font-light text-zinc-900">Is Emsella® Right for You?</h3>

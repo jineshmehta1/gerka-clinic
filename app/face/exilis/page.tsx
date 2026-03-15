@@ -153,7 +153,6 @@ export default function ExilisServicePage() {
                     "Smoother skin texture",
                     "Healthy, natural glow",
                     "Results visible within week",
-                    "Results last up to 6 months",
                     "Maintenance treatments may be advised"
                   ].map((text) => (
                     <li key={text} className="flex items-center gap-3 text-sm text-zinc-500 font-light">

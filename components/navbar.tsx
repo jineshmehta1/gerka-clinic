@@ -60,8 +60,8 @@ const navItems = [
           { label: "Postpartum Scar Treatment", href: "/womens-health/postpartum-scar" },
           { label: "Skin Lesion Removal", href: "/womens-health/skin-lesion-removal" },
           { label: "Exilis Ultra Femme® Vaginal Tightening", href: "/womens-health/exilis-ultra-femme" },
-          { label: "Hymenoplasty", href: "/womens-health/hymenoplasty" },
-          { label: "Labiaplasty", href: "/womens-health/labiaplasty" }
+          { label: "Hymenoplasty (Surgical)", href: "/womens-health/hymenoplasty" },
+{ label: "Labiaplasty (Surgical)", href: "/womens-health/labiaplasty" }
         ]
       }
     ]

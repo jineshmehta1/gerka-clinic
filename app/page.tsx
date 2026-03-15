@@ -10,6 +10,7 @@ import { TreatmentGrid } from "@/components/services"
 import { MissionSection } from "@/components/mission"
 import { FAQSection } from "@/components/faq"
 import { ContactSection } from "@/components/contact"
+import { PaymentPlan } from "@/components/payment"
 
 export default function HomePage() {
   // Structured Data for SEO (MedicalBusiness is better for clinics than Organization)
@@ -109,6 +110,8 @@ export default function HomePage() {
 
           {/* Mission / About Section */}
           <MissionSection />
+
+          <PaymentPlan/>
 
           {/* FAQ Section */}
           <FAQSection />
