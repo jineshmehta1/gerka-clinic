@@ -2,17 +2,15 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X } from "lucide-react"
- {/* LOGO */}
-        import Image from "next/image";
+import { Menu, X, ChevronDown, ChevronRight } from "lucide-react"
 
-// Navigation Data with specific links for every item
 const navItems = [
   { href: "/about", label: "About us" },
   { 
-    href: "/", 
+    href: "#", 
     label: "Face",
     dropdown: [
       { label: "SkinVive", href: "/face/skinvive" },
@@ -28,7 +26,7 @@ const navItems = [
     ]
   },
   { 
-    href: "/", 
+    href: "#", 
     label: "Body",
     dropdown: [
       { label: "Vanquish ME® Body Contouring", href: "/body/vanquish" },
@@ -44,7 +42,7 @@ const navItems = [
   { href: "/hand-rejuvenation", label: "Hands Treatment" },
   { href: "/hair-loss-treatments", label: "Hair Loss" },
   { 
-    href: "/", 
+    href: "#", 
     label: "Women's Health",
     isSectioned: true,
     sections: [
@@ -63,7 +61,7 @@ const navItems = [
           { label: "Skin Lesion Removal", href: "/womens-health/skin-lesion-removal" },
           { label: "Exilis Ultra Femme® Vaginal Tightening", href: "/womens-health/exilis-ultra-femme" },
           { label: "Hymenoplasty (Surgical)", href: "/womens-health/hymenoplasty" },
-{ label: "Labiaplasty (Surgical)", href: "/womens-health/labiaplasty" }
+          { label: "Labiaplasty (Surgical)", href: "/womens-health/labiaplasty" }
         ]
       }
     ]
@@ -74,6 +72,7 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null)
   const pathname = usePathname()
 
   useEffect(() => {
@@ -82,47 +81,47 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  // Close mobile menu on route change
+  useEffect(() => {
+    setIsOpen(false)
+  }, [pathname])
+
   return (
     <nav
       onMouseLeave={() => setActiveDropdown(null)}
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-        scrolled || activeDropdown
-          ? "bg-white border-b border-zinc-100 py-3 shadow-sm" 
-          : "bg-white py-6"
+      className={`fixed top-0 w-full z-[100] transition-all duration-500 ${
+        scrolled || activeDropdown || isOpen
+          ? "bg-white border-b border-zinc-100 py-3 shadow-md" 
+          : "bg-white/90 backdrop-blur-md py-5"
       }`}
     >
-      <div className="max-w-8xl mx-auto px-6 md:px-10 flex items-center justify-between">
+      <div className="max-w-[1800px] mx-auto px-4 md:px-8 flex items-center justify-between">
         
-       
+        {/* LOGO AREA */}
+        <Link href="/" className="flex items-center gap-2 group shrink-0">
+          <div className="relative w-8 h-8 md:w-12 md:h-12">
+            <Image
+              src="/gerkalogo.png"
+              alt="Gerka Clinic"
+              fill
+              className="object-contain"
+            />
+          </div>
+          <div className="flex flex-col">
+            <span className="text-base md:text-xl font-light tracking-[0.15em] text-zinc-800 uppercase leading-tight">
+              Gerka Clinic
+            </span>
+            <span className="text-[7px] md:text-[9px] tracking-[0.2em] text-zinc-400 uppercase font-medium">
+              Women&apos;s Wellness
+            </span>
+          </div>
+        </Link>
 
-<Link href="/" className="flex items-center gap-2 group shrink-0">
-
-  {/* Icon / Logo */}
-  <Image
-    src="/gerkalogo.png"
-    alt="Gerka Clinic"
-    width={60}
-    height={40}
-    className="object-contain"
-  />
-
-  {/* Text */}
-  <div className="flex flex-col">
-    <span className="text-xl md:text-2xl font-light tracking-[0.2em] text-zinc-800 uppercase leading-tight">
-      Gerka Clinic
-    </span>
-    <span className="text-[9px] tracking-[0.4em] text-zinc-400 uppercase font-medium -mt-0.5">
-      Women&apos;s Wellness
-    </span>
-  </div>
-
-</Link>
-
-        {/* CENTER NAV LINKS */}
-        <div className="hidden lg:flex items-center space-x-10">
+        {/* DESKTOP NAV - Hidden until XL (1280px) to prevent overlapping */}
+        <div className="hidden xl:flex items-center space-x-4 2xl:space-x-8">
           {navItems.map((item) => {
-            const isActive = pathname === item.href
             const hasDropdown = item.dropdown || item.sections
+            const isActive = pathname === item.href
 
             return (
               <div 
@@ -132,42 +131,38 @@ export function Navbar() {
               >
                 <Link
                   href={item.href}
-                  className="group flex items-center gap-1"
+                  className="group flex items-center gap-1 whitespace-nowrap"
                 >
-                  <span className={`text-[13px] font-medium tracking-widest transition-colors duration-300 ${
+                  <span className={`text-[11px] 2xl:text-[13px] font-semibold tracking-widest transition-colors duration-300 uppercase ${
                     isActive || activeDropdown === item.label ? "text-zinc-900" : "text-zinc-500 hover:text-zinc-900"
                   }`}>
                     {item.label}
                   </span>
-                  
-                  <span className={`absolute bottom-0 left-0 h-[1px] bg-zinc-900 transition-all duration-300 ${
-                    isActive ? "w-full" : "w-0 group-hover:w-full"
-                  }`} />
+                  {hasDropdown && <ChevronDown size={12} className="text-zinc-300" />}
                 </Link>
 
-                {/* DESKTOP DROPDOWN MENU */}
+                {/* DESKTOP DROPDOWN */}
                 <AnimatePresence>
                   {activeDropdown === item.label && hasDropdown && (
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
-                      transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 pt-4"
+                      className="absolute top-full left-1/2 -translate-x-1/2 pt-4"
                     >
-                      <div className="bg-white border border-zinc-100 shadow-xl rounded-2xl p-6 min-w-[320px]">
+                      <div className="bg-white border border-zinc-100 shadow-2xl rounded-2xl p-6 min-w-[280px] max-h-[70vh] overflow-y-auto custom-scrollbar">
                         {item.isSectioned ? (
                           <div className="space-y-6">
                             {item.sections?.map((section) => (
                               <div key={section.title}>
-                                <h4 className="text-[10px] uppercase tracking-[0.2em] font-bold text-zinc-900 mb-3">
+                                <h4 className="text-[10px] uppercase tracking-widest font-bold text-zinc-400 mb-3 border-b pb-1">
                                   {section.title}
                                 </h4>
-                                <ul className="space-y-2.5">
-                                  {section.items.map((subItem) => (
-                                    <li key={subItem.label}>
-                                      <Link href={subItem.href} className="text-[13px] text-zinc-600 hover:text-zinc-900 transition-colors block leading-tight">
-                                        {subItem.label}
+                                <ul className="space-y-2">
+                                  {section.items.map((sub) => (
+                                    <li key={sub.label}>
+                                      <Link href={sub.href} className="text-[12px] text-zinc-600 hover:text-zinc-900 block py-1">
+                                        {sub.label}
                                       </Link>
                                     </li>
                                   ))}
@@ -176,11 +171,11 @@ export function Navbar() {
                             ))}
                           </div>
                         ) : (
-                          <ul className="space-y-3">
-                            {item.dropdown?.map((subItem) => (
-                              <li key={subItem.label}>
-                                <Link href={subItem.href} className="text-[13px] text-zinc-600 hover:text-zinc-900 transition-colors block leading-tight">
-                                  {subItem.label}
+                          <ul className="space-y-2">
+                            {item.dropdown?.map((sub) => (
+                              <li key={sub.label}>
+                                <Link href={sub.href} className="text-[12px] text-zinc-600 hover:text-zinc-900 block py-1">
+                                  {sub.label}
                                 </Link>
                               </li>
                             ))}
@@ -195,63 +190,104 @@ export function Navbar() {
           })}
         </div>
 
-        {/* RIGHT ACTION - LINK TO CONTACT SECTION */}
-        <div className="hidden lg:block">
-          <Link href="/#contact">
-            <button className="bg-zinc-900 hover:bg-zinc-800 text-white text-[11px] font-semibold tracking-[0.25em] uppercase px-8 py-3.5 rounded-full transition-all duration-300 active:scale-95 shadow-lg shadow-zinc-200">
-              Contact
-            </button>
-          </Link>
-        </div>
+        {/* CONTACT BUTTON & MOBILE TOGGLE */}
+        <div className="flex items-center gap-4">
+          <div className="hidden lg:block">
+            <Link href="/#contact">
+              <button className="bg-zinc-900 hover:bg-zinc-800 text-white text-[10px] md:text-[11px] font-bold tracking-[0.2em] uppercase px-5 py-3 md:px-7 md:py-3.5 rounded-full transition-all shadow-md active:scale-95">
+                Contact
+              </button>
+            </Link>
+          </div>
 
-        {/* MOBILE TOGGLE */}
-        <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden p-2 text-zinc-800">
-          {isOpen ? <X size={24} strokeWidth={1.5} /> : <Menu size={24} strokeWidth={1.5} />}
-        </button>
+          <button 
+            onClick={() => setIsOpen(!isOpen)} 
+            className="xl:hidden p-2 text-zinc-800 hover:bg-zinc-50 rounded-lg transition-colors"
+          >
+            {isOpen ? <X size={26} /> : <Menu size={26} />}
+          </button>
+        </div>
       </div>
 
-      {/* MOBILE MENU */}
+      {/* MOBILE MENU OVERLAY */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: "100%" }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="fixed inset-0 top-[64px] bg-white z-40 lg:hidden flex flex-col p-8 overflow-y-auto"
+            exit={{ opacity: 0, x: "100%" }}
+            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+            className="fixed inset-0 top-[60px] md:top-[80px] bg-white z-50 xl:hidden flex flex-col overflow-y-auto no-scrollbar"
           >
-            {navItems.map((item) => (
-              <div key={item.label} className="border-b border-zinc-50 py-4">
-                <Link
-                  href={item.href}
-                  onClick={() => setIsOpen(false)}
-                  className="text-xl font-light tracking-widest text-zinc-800 block mb-2"
-                >
-                  {item.label}
-                </Link>
-                {/* Mobile Sub-items */}
-                {(item.dropdown || item.sections) && (
-                  <div className="pl-4 space-y-3 mt-4">
-                    {item.isSectioned 
-                      ? item.sections?.flatMap(s => s.items).map(i => (
-                          <Link key={i.label} href={i.href} onClick={() => setIsOpen(false)} className="text-zinc-500 text-sm block">
-                            {i.label}
-                          </Link>
-                        ))
-                      : item.dropdown?.map(i => (
-                          <Link key={i.label} href={i.href} onClick={() => setIsOpen(false)} className="text-zinc-500 text-sm block">
-                            {i.label}
-                          </Link>
-                        ))
-                    }
+            <div className="p-6 space-y-2 pb-32">
+              {navItems.map((item) => {
+                const hasSub = item.dropdown || item.sections
+                const isExpanded = mobileExpanded === item.label
+
+                return (
+                  <div key={item.label} className="border-b border-zinc-50 last:border-0">
+                    {hasSub ? (
+                      <button 
+                        onClick={() => setMobileExpanded(isExpanded ? null : item.label)}
+                        className="w-full flex justify-between items-center py-4 text-left"
+                      >
+                        <span className="text-base font-medium tracking-widest text-zinc-900 uppercase">{item.label}</span>
+                        <ChevronRight className={`transition-transform duration-300 text-zinc-400 ${isExpanded ? "rotate-90" : ""}`} size={18} />
+                      </button>
+                    ) : (
+                      <Link href={item.href} className="block py-4 text-base font-medium tracking-widest text-zinc-900 uppercase">
+                        {item.label}
+                      </Link>
+                    )}
+
+                    {/* MOBILE ACCORDION CONTENT */}
+                    <AnimatePresence>
+                      {isExpanded && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="pb-4 pl-4 space-y-4">
+                            {item.isSectioned ? (
+                              item.sections?.map(sec => (
+                                <div key={sec.title} className="space-y-3">
+                                  <p className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">{sec.title}</p>
+                                  <div className="flex flex-col gap-3 border-l border-zinc-100 pl-3">
+                                    {sec.items.map(sub => (
+                                      <Link key={sub.label} href={sub.href} className="text-sm text-zinc-600 active:text-zinc-900">
+                                        {sub.label}
+                                      </Link>
+                                    ))}
+                                  </div>
+                                </div>
+                              ))
+                            ) : (
+                              <div className="flex flex-col gap-4 border-l border-zinc-100 pl-3">
+                                {item.dropdown?.map(sub => (
+                                  <Link key={sub.label} href={sub.href} className="text-sm text-zinc-600 active:text-zinc-900">
+                                    {sub.label}
+                                  </Link>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </div>
-                )}
+                )
+              })}
+              
+              <div className="pt-8">
+                <Link href="/#contact">
+                  <button className="w-full bg-zinc-900 text-white py-4 rounded-full tracking-[0.2em] uppercase text-sm font-bold shadow-lg">
+                    Book Consultation
+                  </button>
+                </Link>
               </div>
-            ))}
-            <Link href="/#contact" onClick={() => setIsOpen(false)} className="mt-8">
-              <button className="w-full bg-zinc-900 text-white py-5 rounded-full tracking-[0.2em] uppercase text-sm font-semibold">
-                Contact Us
-              </button>
-            </Link>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
