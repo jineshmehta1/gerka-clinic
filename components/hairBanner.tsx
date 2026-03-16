@@ -7,14 +7,14 @@ import Link from "next/link"
 export function HairHeroBanner() {
   // Filenames optimized for the Regenerative Hair department
   const backgroundImages = [
-    "/hair-loss-1.jpg",
-    "/prp-vial.jpg",
-    "/scalp-clinical.jpg",
-    "/follicle-health.jpg",
-    "/hair-density.jpg",
-    "/meso-hair.jpg",
-    "/regenerative-tech.jpg",
-    "/hair-analysis-2.jpg"
+    "/hair1.jpeg",
+    "/scalp.jpg",
+    "/dht.avif",
+    "/hair2.jpg",
+    "/hair6.jpg",
+    "/prp.webp",
+    "/hair4.jpg",
+    "/hair3.png"
   ]
 
   return (
