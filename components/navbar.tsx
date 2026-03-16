@@ -41,7 +41,8 @@ const navItems = [
     ]
   },
   { href: "/nail", label: "Nail Disorders" },
-  { href: "/hands", label: "Hands Treatment" },
+  { href: "/hand-rejuvenation", label: "Hands Treatment" },
+  { href: "/hair-loss-treatments", label: "Hair Loss" },
   { 
     href: "/", 
     label: "Women's Health",
@@ -90,7 +91,7 @@ export function Navbar() {
           : "bg-white py-6"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between">
+      <div className="max-w-8xl mx-auto px-6 md:px-10 flex items-center justify-between">
         
        
 
