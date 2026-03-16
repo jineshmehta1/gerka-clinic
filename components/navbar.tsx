@@ -41,6 +41,7 @@ const navItems = [
     ]
   },
   { href: "/nail", label: "Nail Disorders" },
+  { href: "/hands", label: "Hands Treatment" },
   { 
     href: "/", 
     label: "Women's Health",
