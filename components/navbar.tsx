@@ -40,7 +40,7 @@ const navItems = [
       { label: "Skin Lesion Removal", href: "/body/lesion-removal" }
     ]
   },
-  { href: "/nail", label: "Nail" },
+  { href: "/nail", label: "Nail Disorders" },
   { 
     href: "/", 
     label: "Women's Health",

@@ -49,14 +49,7 @@ export function NailHeroBanner() {
       {/* 2. MAIN CONTENT AREA */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 flex flex-col items-center text-center">
         
-        {/* Top Pill Badge */}
-        <motion.div 
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="bg-zinc-900 text-white text-[9px] md:text-[10px] font-bold uppercase tracking-[0.3em] md:tracking-[0.4em] px-5 py-2 md:px-6 md:py-2.5 rounded-full mb-6 md:mb-10 shadow-lg"
-        >
-          Medical Podiatry
-        </motion.div>
+       
 
         {/* Headline */}
         <motion.h1 
