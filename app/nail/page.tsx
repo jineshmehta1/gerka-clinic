@@ -11,7 +11,7 @@ const nailConditions = [
     id: "fungal",
     title: "Onychomycosis",
     subtitle: "Fungal Nail Infection",
-    image: "/oni.jpeg",
+    image: "/ony.jpg",
     description: "Onychomycosis is a fungal infection of the nail that can cause thickening, brittleness, and discoloration ranging from yellow to brown.",
     symptoms: ["Thickened or brittle nails", "Yellow, white or brown discoloration", "Nail deformation", "Separation from the nail bed"],
     approach: "We utilize Lunula® Laser, a low-level cold laser technology designed to target organisms safely and support recovery."
@@ -38,7 +38,7 @@ const nailConditions = [
     id: "separation",
     title: "Onycholysis",
     subtitle: "Nail Separation",
-    image: "/onyc.webp",
+    image: "/oni.jpeg",
     description: "Refers to the detachment of the nail plate from the nail bed, often appearing as a white or yellow area.",
     symptoms: ["Trauma-induced lifting", "Fungal or bacterial secondary infection", "Psoriasis-related separation", "Exposure to moisture/chemicals"],
     approach: "Management focuses on identifying the underlying cause, protecting the nail, and supporting healthy regrowth."
