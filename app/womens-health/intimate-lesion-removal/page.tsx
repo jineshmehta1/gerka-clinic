@@ -39,7 +39,7 @@ export default function IntimateLesionServicePage() {
           
           {/* 2. SIDEBAR */}
           <ServiceSidebar 
-            activeService="Intimate Lesion Removal" 
+            activeService="Intimate Area Lesion Removal" 
             categoryTitle="Women's Health" 
           />
 
@@ -50,7 +50,7 @@ export default function IntimateLesionServicePage() {
             <section className="space-y-12">
               <div className="space-y-6">
                 <h1 className="text-4xl md:text-5xl font-light text-zinc-900 tracking-tight leading-tight">
-                  Intimate Lesion Removal – <br />
+                  Intimate Area Lesion Removal – <br />
                   <span className="italic font-serif text-zinc-500 font-light">Safe & Discreet Clinical Care</span>
                 </h1>
                 <div className="flex flex-wrap gap-4 border-b border-zinc-200 pb-8">
@@ -75,8 +75,8 @@ export default function IntimateLesionServicePage() {
                     All patients undergo a thorough clinical evaluation prior to treatment to ensure appropriate diagnosis and management.
                   </p>
                 </div>
-                <div className="aspect-[4/3] rounded-[3rem] overflow-hidden shadow-2xl border-white border-8">
-                  <img src="/int.jpg" alt="Clinical Precision Care" className="w-full h-full object-cover" />
+                <div className="aspect-square rounded-[3rem] overflow-hidden shadow-2xl border-white border-8">
+                  <img src="/lesion.png" alt="Clinical Precision Care" className="w-full h-full object-cover" />
                 </div>
               </div>
             </section>

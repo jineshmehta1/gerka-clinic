@@ -5,17 +5,27 @@ import { Award, GraduationCap } from "lucide-react"
 
 const specialists = [
   {
-    name: "Giselle Gerka",
-    role: "Founder & Clinical Director",
-    image: "/2.webp",
-    credentials: "University of Seville",
-    specialties: "Regenerative Gynaecology • Pelvic Floor Health",
-    bio: [
-      "Giselle Gerka is the founder of Gerka Clinic, where regenerative gynaecology, pelvic floor health and aesthetic dermatology are integrated within a refined, medically grounded environment.",
-      "Graduated as a Pelvic Floor Physiotherapist from the University of Seville, she has dedicated her career to advancing women’s intimate health. Since 2010, she has developed recognised expertise in benign skin lesion removal and advanced energy-based technologies.",
-      "A pioneer in Barcelona, Spain, introducing BTL Emsella and Exilis Ultra Femme in 2018, Giselle remains committed to clinical excellence through continuous international training and advanced anatomical practice."
-    ]
-  },
+  name: "Giselle Gerka",
+  role: "Founder | Aesthetic & Regenerative Practitioner | Skin Lesion Specialist",
+  image: "/2.webp",
+  credentials: "University of Seville",
+  specialties: "Aesthetic Medicine • Regenerative Treatments • Skin Lesion Care • Pelvic Floor Health",
+  bio: [
+    "Giselle Gerka is the founder of Gerka Clinic and has over 17 years of experience in aesthetic medicine.",
+    
+    "She began her training in Venezuela with a technical degree in physiotherapy, and later specialised in pelvic floor rehabilitation and women’s health in Spain. This background supports her structured and functional approach to patient care.",
+    
+    "Giselle has completed formal training in minor surgery in Spain and holds an international certification in laser technologies. She works with a range of advanced aesthetic and energy-based treatments.",
+    
+    "Her clinical focus includes dermatology, particularly the assessment and treatment of skin lesions. She has trained in dermoscopy and skin biopsy techniques through programmes associated with King’s College Hospital London.",
+    
+    "She also undertakes continuous training in anatomy, with hands-on practical sessions in Spain, ensuring a high level of precision and safety in her procedures.",
+    
+    "She is currently continuing her professional development with further studies in aesthetic surgery in Barcelona.",
+    
+    "At Gerka Clinic, Giselle focuses on delivering safe, effective treatments with a combination of medical and aesthetic expertise."
+  ]
+},
   {
     name: "Dr. Evelyn Alba",
     role: "Gynaecology & Obstetrics Specialist",
