@@ -41,8 +41,15 @@ const bodyServices: Service[] = [
   { name: "Skin Lesion Removal", href: "/body/lesion-removal" },
 ]
 
-// New Data Structure for Women's Health based on your image
+// UPDATED DATA STRUCTURE
 const womensHealthServices: ServiceSection[] = [
+  {
+    title: "MEDICAL / VULVAL HEALTH",
+    items: [
+      { name: "Vulval Lichen Specialist Care", href: "/womens-health/vulval-lichen" },
+      { name: "Vaginal Dryness & Genitourinary Syndrome Support", href: "/womens-health/vaginal-dryness" },
+    ]
+  },
   {
     title: "FUNCTIONAL",
     items: [
@@ -52,7 +59,7 @@ const womensHealthServices: ServiceSection[] = [
     ]
   },
   {
-    title: "AESTHETIC",
+    title: "AESTHETIC / SURGICAL",
     items: [
       { name: "Postpartum Scar Treatment", href: "/womens-health/postpartum-scar" },
       { name: "Skin Lesion Removal", href: "/womens-health/skin-lesion-removal" },
@@ -79,7 +86,7 @@ export function ServiceSidebar({ activeService, categoryTitle }: ServiceSidebarP
           </h4>
 
           {isWomensHealth ? (
-            /* Render Sectioned Layout for Women's Health */
+            /* Render Sectioned Layout for Women's Health (3 Sections) */
             <div className="space-y-10">
               {womensHealthServices.map((section) => (
                 <div key={section.title}>
@@ -88,6 +95,7 @@ export function ServiceSidebar({ activeService, categoryTitle }: ServiceSidebarP
                   </h5>
                   <ul className="space-y-5">
                     {section.items.map((service) => {
+                      // Comparison logic for active state
                       const isActive = activeService === service.name
                       return (
                         <li key={service.name}>

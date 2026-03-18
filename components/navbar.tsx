@@ -41,13 +41,19 @@ const navItems = [
   { href: "/nail", label: "Nail Disorders" },
   { href: "/hand-rejuvenation", label: "Hands Treatment" },
   { href: "/hair-loss-treatments", label: "Hair Loss" },
-  // NEW PAGE ADDED HERE
   { href: "/earlobe-rejuvenation-lobuloplasty", label: "Earlobe Rejuvenation" },
   { 
     href: "#", 
     label: "Women's Health",
     isSectioned: true,
     sections: [
+      {
+        title: "Medical / Vulval Health",
+        items: [
+          { label: "Vulval Lichen Specialist Care", href: "/womens-health/vulval-lichen" },
+          { label: "Vaginal Dryness & Genitourinary Syndrome Support", href: "/womens-health/vaginal-dryness" }
+        ]
+      },
       {
         title: "Functional",
         items: [
@@ -57,7 +63,7 @@ const navItems = [
         ]
       },
       {
-        title: "Aesthetic",
+        title: "Aesthetic / Surgical",
         items: [
           { label: "Postpartum Scar Treatment", href: "/womens-health/postpartum-scar" },
           { label: "Skin Lesion Removal", href: "/womens-health/skin-lesion-removal" },
