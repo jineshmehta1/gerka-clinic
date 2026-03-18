@@ -66,6 +66,7 @@ const womensHealthServices: ServiceSection[] = [
       { name: "Exilis Ultra Femme® Vaginal Tightening", href: "/womens-health/exilis-ultra-femme" },
       { name: "Hymenoplasty (Surgical)", href: "/womens-health/hymenoplasty" },
       { name: "Labiaplasty (Surgical)", href: "/womens-health/labiaplasty" },
+      { name: "Intimate Lesion Removal", href: "/womens-health/intimate-lesion-removal" },
     ]
   }
 ]

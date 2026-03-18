@@ -69,7 +69,8 @@ const navItems = [
           { label: "Skin Lesion Removal", href: "/womens-health/skin-lesion-removal" },
           { label: "Exilis Ultra Femme® Vaginal Tightening", href: "/womens-health/exilis-ultra-femme" },
           { label: "Hymenoplasty (Surgical)", href: "/womens-health/hymenoplasty" },
-          { label: "Labiaplasty (Surgical)", href: "/womens-health/labiaplasty" }
+          { label: "Labiaplasty (Surgical)", href: "/womens-health/labiaplasty" },
+          { label: "Intimate Lesion Removal", href: "/womens-health/intimate-lesion-removal" },
         ]
       }
     ]
