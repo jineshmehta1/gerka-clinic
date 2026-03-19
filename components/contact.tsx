@@ -10,15 +10,26 @@ export function ContactSection() {
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
+
+    if (status === "loading") return
     setStatus("loading")
 
-    const formData = new FormData(event.currentTarget)
-    const result = await sendGerkaInquiry(formData)
+    try {
+      const formData = new FormData(event.currentTarget)
 
-    if (result.success) {
-      setStatus("success")
-      ;(event.target as HTMLFormElement).reset()
-    } else {
+      const result = await sendGerkaInquiry(formData)
+
+      if (result?.success) {
+        setStatus("success")
+        event.currentTarget.reset()
+
+        // reset UI after 3s
+        setTimeout(() => setStatus("idle"), 3000)
+      } else {
+        setStatus("error")
+      }
+    } catch (err) {
+      console.error(err)
       setStatus("error")
     }
   }
@@ -27,7 +38,7 @@ export function ContactSection() {
     <section id="contact" className="py-16 md:py-24 lg:py-32 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10">
         
-        {/* SECTION HEADER */}
+        {/* HEADER */}
         <div className="flex flex-col items-center text-center mb-12 md:mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 10 }}
@@ -41,7 +52,7 @@ export function ContactSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-20 items-start">
           
-          {/* LEFT SIDE: HERO IMAGE WITH CONTACT INFO */}
+          {/* LEFT */}
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -54,32 +65,37 @@ export function ContactSection() {
               alt="Gerka Clinic Office" 
               className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
             />
-            {/* Darker gradient on mobile for better text legibility */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
             
             <div className="absolute bottom-6 left-6 md:bottom-8 md:left-8 space-y-3 md:space-y-4 w-[calc(100%-48px)]">
               <div className="flex items-center gap-3 md:gap-4 text-white">
-                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-white/30 bg-white/10 backdrop-blur-md flex items-center justify-center flex-shrink-0">
-                  <Phone size={14} className="md:w-4 md:h-4" strokeWidth={1.5} />
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-white/30 bg-white/10 backdrop-blur-md flex items-center justify-center">
+                  <Phone size={14} />
                 </div>
-                <span className="text-[11px] md:text-[13px] tracking-[0.2em] font-light">0878888087</span>
+                <span className="text-[11px] md:text-[13px] tracking-[0.2em]">0878888087</span>
               </div>
+
               <div className="flex items-center gap-3 md:gap-4 text-white">
-                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-white/30 bg-white/10 backdrop-blur-md flex items-center justify-center flex-shrink-0">
-                  <Mail size={14} className="md:w-4 md:h-4" strokeWidth={1.5} />
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-white/30 bg-white/10 backdrop-blur-md flex items-center justify-center">
+                  <Mail size={14} />
                 </div>
-                <span className="text-[11px] md:text-[13px] tracking-[0.2em] font-light lowercase truncate">info@gerkaclinic.com</span>
+                <span className="text-[11px] md:text-[13px] tracking-[0.2em] lowercase truncate">
+                  info@gerkaclinic.com
+                </span>
               </div>
+
               <div className="flex items-center gap-3 md:gap-4 text-white">
-                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-white/30 bg-white/10 backdrop-blur-md flex items-center justify-center flex-shrink-0">
-                  <MapPin size={14} className="md:w-4 md:h-4" strokeWidth={1.5} />
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-white/30 bg-white/10 backdrop-blur-md flex items-center justify-center">
+                  <MapPin size={14} />
                 </div>
-                <span className="text-[11px] md:text-[13px] tracking-[0.2em] font-light uppercase">STILLORGAN RD, A94NH31</span>
+                <span className="text-[11px] md:text-[13px] tracking-[0.2em] uppercase">
+                  STILLORGAN RD, A94NH31
+                </span>
               </div>
             </div>
           </motion.div>
 
-          {/* RIGHT SIDE: LUXURY FORM */}
+          {/* RIGHT FORM */}
           <motion.div 
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -88,96 +104,64 @@ export function ContactSection() {
             className="flex flex-col order-1 lg:order-2"
           >
             <form onSubmit={handleSubmit} className="space-y-8 md:space-y-10">
+
+              {/* 🔥 Honeypot */}
+              <input type="text" name="company" className="hidden" />
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-                <div className="flex flex-col space-y-2">
-                  <label htmlFor="name" className="text-[9px] md:text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-400">Full Name</label>
-                  <input 
-                    required
-                    id="name"
-                    name="name"
-                    type="text" 
-                    placeholder="Sophie"
-                    className="bg-transparent border-b border-zinc-200 py-2 focus:outline-none focus:border-zinc-900 transition-colors text-zinc-800 placeholder:text-zinc-300 font-light text-sm md:text-base"
+                <div>
+                  <label className="text-[10px] uppercase tracking-[0.3em] text-zinc-400">Full Name</label>
+                  <input required name="name" type="text"
+                    className="w-full border-b py-2 focus:outline-none text-sm"
                   />
                 </div>
-                <div className="flex flex-col space-y-2">
-                  <label htmlFor="email" className="text-[9px] md:text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-400">Email Address</label>
-                  <input 
-                    required
-                    id="email"
-                    name="email"
-                    type="email" 
-                    placeholder="sophie@example.com"
-                    className="bg-transparent border-b border-zinc-200 py-2 focus:outline-none focus:border-zinc-900 transition-colors text-zinc-800 placeholder:text-zinc-300 font-light text-sm md:text-base"
+
+                <div>
+                  <label className="text-[10px] uppercase tracking-[0.3em] text-zinc-400">Email</label>
+                  <input required name="email" type="email"
+                    className="w-full border-b py-2 focus:outline-none text-sm"
                   />
                 </div>
               </div>
 
-              <div className="flex flex-col space-y-2">
-                <label htmlFor="treatment" className="text-[9px] md:text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-400">Desired Treatment</label>
-                <div className="relative">
-                  <select 
-                    id="treatment"
-                    name="treatment" 
-                    className="w-full bg-transparent border-b border-zinc-200 py-2 focus:outline-none focus:border-zinc-900 transition-colors text-zinc-800 font-light cursor-pointer appearance-none text-sm md:text-base"
-                  >
-                    <option value="General Inquiry">General Inquiry</option>
-                    <option value="BTL Emsella">BTL Emsella</option>
-                    <option value="BTL Vanquish">BTL Vanquish ME</option>
-                    <option value="Skin Lesion Removal">Skin Lesion Removal</option>
-                    <option value="PRP Intimate">PRP Intimate</option>
-                    <option value="Exilis Ultra 360">Exilis Ultra 360</option>
-                  </select>
-                  <div className="absolute right-0 bottom-3 pointer-events-none opacity-40">
-                    <Send size={12} className="rotate-90" />
-                  </div>
-                </div>
+              <div>
+                <label className="text-[10px] uppercase tracking-[0.3em] text-zinc-400">Treatment</label>
+                <select name="treatment" className="w-full border-b py-2 text-sm">
+                  <option>General Inquiry</option>
+                  <option>BTL Emsella</option>
+                  <option>BTL Vanquish ME</option>
+                  <option>Skin Lesion Removal</option>
+                  <option>PRP Intimate</option>
+                  <option>Exilis Ultra 360</option>
+                </select>
               </div>
 
-              <div className="flex flex-col space-y-2">
-                <label htmlFor="message" className="text-[9px] md:text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-400">Message</label>
-                <textarea 
-                  required
-                  id="message"
-                  name="message"
-                  rows={3}
-                  placeholder="How can we help you?"
-                  className="bg-transparent border-b border-zinc-200 py-2 focus:outline-none focus:border-zinc-900 transition-colors text-zinc-800 placeholder:text-zinc-300 font-light resize-none text-sm md:text-base"
+              <div>
+                <label className="text-[10px] uppercase tracking-[0.3em] text-zinc-400">Message</label>
+                <textarea required name="message" rows={3}
+                  className="w-full border-b py-2 text-sm resize-none"
                 />
               </div>
 
-              <div className="pt-2 md:pt-4">
-                <button 
-                  disabled={status === "loading"}
-                  type="submit"
-                  className="w-full md:w-auto group relative bg-zinc-900 text-white px-8 md:px-10 py-4 md:py-5 rounded-full flex items-center justify-center gap-4 transition-all hover:bg-zinc-800 active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed"
-                >
-                  <span className="text-[10px] md:text-[11px] tracking-[0.3em] uppercase font-bold">
-                    {status === "loading" ? "Sending..." : "Send Inquiry"}
-                  </span>
-                  {status === "loading" ? (
-                    <Loader2 size={14} className="animate-spin" />
-                  ) : (
-                    <Send size={14} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-                  )}
-                </button>
+              <button
+                disabled={status === "loading"}
+                className="w-full bg-black text-white py-4 rounded-full flex justify-center items-center gap-2"
+              >
+                {status === "loading" ? <Loader2 className="animate-spin" /> : <Send />}
+                {status === "loading" ? "Sending..." : "Send Inquiry"}
+              </button>
 
-                {status === "success" && (
-                  <motion.p initial={{ opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} className="mt-4 text-green-600 text-[12px] font-medium tracking-wide">
-                    Thank you! Your inquiry has been sent successfully.
-                  </motion.p>
-                )}
-                
-                {status === "error" && (
-                  <motion.p initial={{ opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} className="mt-4 text-red-500 text-[12px] font-medium tracking-wide">
-                    Something went wrong. Please try again later.
-                  </motion.p>
-                )}
-                
-                <p className="text-[9px] md:text-[10px] text-zinc-400 mt-6 md:mt-8 tracking-widest leading-relaxed max-w-[280px] mx-auto md:mx-0 text-center md:text-left">
-                  By submitting this form, you agree to our privacy policy and data protection guidelines.
+              {status === "success" && (
+                <p className="text-green-600 text-sm mt-3">
+                  Inquiry sent successfully
                 </p>
-              </div>
+              )}
+
+              {status === "error" && (
+                <p className="text-red-500 text-sm mt-3">
+                  Something went wrong
+                </p>
+              )}
             </form>
           </motion.div>
         </div>
