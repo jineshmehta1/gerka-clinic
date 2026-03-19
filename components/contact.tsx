@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react"
 import { motion } from "framer-motion"
-import { Send, Phone, Mail, MapPin, Loader2 } from "lucide-react"
+import { Send, Phone, Mail, MapPin, Loader2, ChevronDown } from "lucide-react"
 import emailjs from "emailjs-com"
 
 export function ContactSection() {
@@ -20,7 +20,6 @@ export function ContactSection() {
 
     // 🔒 Honeypot check (Spam protection)
     if (formData.get("company")) {
-      // Pretend it worked to the bot, but don't send anything
       setTimeout(() => {
         setStatus("success")
         form.reset()
@@ -114,40 +113,59 @@ export function ContactSection() {
           >
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-8 md:space-y-10">
               
-              {/* 🔒 Honeypot Field (Hidden from users) */}
+              {/* 🔒 Honeypot Field */}
               <input type="text" name="company" className="hidden" tabIndex={-1} autoComplete="off" />
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                {/* NAME */}
                 <div className="flex flex-col space-y-2">
                   <label htmlFor="name" className="text-[9px] md:text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-400">Full Name</label>
                   <input 
-                    required
-                    id="name"
-                    name="name"
-                    type="text" 
-                    placeholder="Sophie"
+                    required id="name" name="name" type="text" placeholder="Sophie"
                     className="bg-transparent border-b border-zinc-200 py-2 focus:outline-none focus:border-zinc-900 transition-colors text-zinc-800 placeholder:text-zinc-300 font-light text-sm md:text-base"
                   />
                 </div>
+                {/* EMAIL */}
                 <div className="flex flex-col space-y-2">
                   <label htmlFor="email" className="text-[9px] md:text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-400">Email Address</label>
                   <input 
-                    required
-                    id="email"
-                    name="email"
-                    type="email" 
-                    placeholder="sophie@example.com"
+                    required id="email" name="email" type="email" placeholder="sophie@example.com"
                     className="bg-transparent border-b border-zinc-200 py-2 focus:outline-none focus:border-zinc-900 transition-colors text-zinc-800 placeholder:text-zinc-300 font-light text-sm md:text-base"
                   />
                 </div>
+                {/* PHONE */}
+                <div className="flex flex-col space-y-2">
+                  <label htmlFor="phone" className="text-[9px] md:text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-400">Phone Number</label>
+                  <input 
+                    required id="phone" name="phone" type="tel" placeholder="+353 87 123 4567"
+                    className="bg-transparent border-b border-zinc-200 py-2 focus:outline-none focus:border-zinc-900 transition-colors text-zinc-800 placeholder:text-zinc-300 font-light text-sm md:text-base"
+                  />
+                </div>
+                {/* PREFERRED CONTACT METHOD */}
+                <div className="flex flex-col space-y-2">
+                  <label htmlFor="contact_method" className="text-[9px] md:text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-400">How should we reach you?</label>
+                  <div className="relative">
+                    <select 
+                      id="contact_method" name="contact_method" 
+                      className="w-full bg-transparent border-b border-zinc-200 py-2 focus:outline-none focus:border-zinc-900 transition-colors text-zinc-800 font-light cursor-pointer appearance-none text-sm md:text-base"
+                    >
+                      <option value="Email">Contact via Email</option>
+                      <option value="Phone Call">Contact via Phone Call</option>
+                      <option value="WhatsApp / SMS">Contact via WhatsApp / SMS</option>
+                    </select>
+                    <div className="absolute right-0 bottom-3 pointer-events-none opacity-40">
+                      <ChevronDown size={14} />
+                    </div>
+                  </div>
+                </div>
               </div>
 
+              {/* TREATMENT SELECTION */}
               <div className="flex flex-col space-y-2">
                 <label htmlFor="treatment" className="text-[9px] md:text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-400">Desired Treatment</label>
                 <div className="relative">
                   <select 
-                    id="treatment"
-                    name="treatment" 
+                    id="treatment" name="treatment" 
                     className="w-full bg-transparent border-b border-zinc-200 py-2 focus:outline-none focus:border-zinc-900 transition-colors text-zinc-800 font-light cursor-pointer appearance-none text-sm md:text-base"
                   >
                     <option value="General Inquiry">General Inquiry</option>
@@ -158,19 +176,16 @@ export function ContactSection() {
                     <option value="Exilis Ultra 360">Exilis Ultra 360</option>
                   </select>
                   <div className="absolute right-0 bottom-3 pointer-events-none opacity-40">
-                    <Send size={12} className="rotate-90" />
+                    <ChevronDown size={14} />
                   </div>
                 </div>
               </div>
 
+              {/* MESSAGE */}
               <div className="flex flex-col space-y-2">
                 <label htmlFor="message" className="text-[9px] md:text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-400">Message</label>
                 <textarea 
-                  required
-                  id="message"
-                  name="message"
-                  rows={3}
-                  placeholder="How can we help you?"
+                  required id="message" name="message" rows={3} placeholder="How can we help you?"
                   className="bg-transparent border-b border-zinc-200 py-2 focus:outline-none focus:border-zinc-900 transition-colors text-zinc-800 placeholder:text-zinc-300 font-light resize-none text-sm md:text-base"
                 />
               </div>
