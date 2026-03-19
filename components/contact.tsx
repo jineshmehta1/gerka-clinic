@@ -50,7 +50,7 @@ export function ContactSection() {
             className="relative aspect-[4/5] sm:aspect-[16/9] lg:aspect-[4/3] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl group order-2 lg:order-1"
           >
             <img 
-              src="/contact.jpg" 
+              src="/b2.webp" 
               alt="Gerka Clinic Office" 
               className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
             />
@@ -68,7 +68,7 @@ export function ContactSection() {
                 <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-white/30 bg-white/10 backdrop-blur-md flex items-center justify-center flex-shrink-0">
                   <Mail size={14} className="md:w-4 md:h-4" strokeWidth={1.5} />
                 </div>
-                <span className="text-[11px] md:text-[13px] tracking-[0.2em] font-light lowercase truncate">hello@gerkaclinic.com</span>
+                <span className="text-[11px] md:text-[13px] tracking-[0.2em] font-light lowercase truncate">info@gerkaclinic.com</span>
               </div>
               <div className="flex items-center gap-3 md:gap-4 text-white">
                 <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-white/30 bg-white/10 backdrop-blur-md flex items-center justify-center flex-shrink-0">

@@ -13,7 +13,7 @@ export async function sendGerkaInquiry(formData: FormData) {
 
     const { data, error } = await resend.emails.send({
       from: "Gerka Clinic Inquiry <onboarding@resend.dev>",
-      to: ["hello@gerkaclinic.com"], // Update to your real email
+      to: ["info@gerkaclinic.com"], // Update to your real email
       subject: `New Inquiry: ${treatment} from ${name}`,
       replyTo: email,
       html: `
