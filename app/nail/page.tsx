@@ -234,7 +234,7 @@ export default function NailTreatmentPage() {
               </div>
             </div>
             <div className="relative min-h-[300px] md:min-h-[500px]">
-              <img src="/nail3.png" alt="Lunula Laser Device" className="absolute inset-0 w-full h-full object-cover" />
+              <img src="/nail3.PNG" alt="Lunula Laser Device" className="absolute inset-0 w-full h-full object-cover" />
             </div>
           </div>
         </div>

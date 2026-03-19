@@ -14,7 +14,7 @@ export function NailHeroBanner() {
     "/onyc.webp",
     "/nail4.jpg",
     "/nail2.webp",
-    "/nail3.png"
+    "/nail3.PNG"
   ]
 
   return (
