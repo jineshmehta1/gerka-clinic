@@ -1,38 +1,53 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { motion } from "framer-motion"
 import { Send, Phone, Mail, MapPin, Loader2 } from "lucide-react"
-import { sendGerkaInquiry } from "@/app/actions/sendEmail"
+import emailjs from "emailjs-com"
 
 export function ContactSection() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
+  const formRef = useRef<HTMLFormElement>(null)
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-  event.preventDefault()
+    event.preventDefault()
 
-  if (status === "loading") return
-  setStatus("loading")
+    if (status === "loading") return
+    setStatus("loading")
 
-  const form = event.currentTarget // ✅ store reference early
-  const formData = new FormData(form)
+    const form = event.currentTarget
+    const formData = new FormData(form)
 
-  try {
-    const result = await sendGerkaInquiry(formData)
+    // 🔒 Honeypot check (Spam protection)
+    if (formData.get("company")) {
+      // Pretend it worked to the bot, but don't send anything
+      setTimeout(() => {
+        setStatus("success")
+        form.reset()
+      }, 1000)
+      return
+    }
 
-    if (result?.success) {
-      setStatus("success")
-      form.reset() // ✅ safe now
+    try {
+      const result = await emailjs.sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        form,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      )
 
-      setTimeout(() => setStatus("idle"), 3000)
-    } else {
+      if (result.text === "OK") {
+        setStatus("success")
+        form.reset()
+        setTimeout(() => setStatus("idle"), 3000)
+      } else {
+        setStatus("error")
+      }
+    } catch (err) {
+      console.error("EmailJS Error:", err)
       setStatus("error")
     }
-  } catch (err) {
-    console.error(err)
-    setStatus("error")
   }
-}
 
   return (
     <section id="contact" className="py-16 md:py-24 lg:py-32 bg-white overflow-hidden">
@@ -65,7 +80,6 @@ export function ContactSection() {
               alt="Gerka Clinic Office" 
               className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
             />
-            {/* Darker gradient on mobile for better text legibility */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
             
             <div className="absolute bottom-6 left-6 md:bottom-8 md:left-8 space-y-3 md:space-y-4 w-[calc(100%-48px)]">
@@ -98,7 +112,11 @@ export function ContactSection() {
             viewport={{ once: true }}
             className="flex flex-col order-1 lg:order-2"
           >
-            <form onSubmit={handleSubmit} className="space-y-8 md:space-y-10">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-8 md:space-y-10">
+              
+              {/* 🔒 Honeypot Field (Hidden from users) */}
+              <input type="text" name="company" className="hidden" tabIndex={-1} autoComplete="off" />
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                 <div className="flex flex-col space-y-2">
                   <label htmlFor="name" className="text-[9px] md:text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-400">Full Name</label>
