@@ -39,7 +39,7 @@ const navItems = [
     ]
   },
   { href: "/nail", label: "Nail Disorders" },
-  { href: "/hand-rejuvenation", label: "Hands Treatment" },
+  { href: "/hand-rejuvenation", label: "Hand Rejuvenation" },
   { href: "/hair-loss-treatments", label: "Hair Loss" },
   { href: "/earlobe-rejuvenation-lobuloplasty", label: "Earlobe Rejuvenation" },
   { 

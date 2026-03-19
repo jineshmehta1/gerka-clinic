@@ -16,8 +16,12 @@ import {
 const services = [
   { name: "Face", color: "bg-[#D9D9D2]", href: "/face/prp-facial" },
   { name: "Body", color: "bg-[#D4C2C2]", href: "/body/cellulite" },
-  { name: "Nails", color: "bg-[#F3E5F5]", href: "/nail" }, // Fixed background color placeholder
+  { name: "Nails", color: "bg-[#F3E5F5]", href: "/nail" },
   { name: "Women's health", color: "bg-[#D1B68C]", href: "/womens-health/emsella" },
+  /* Added 4 Major Services below */
+  { name: "Hand Rejuvenation", color: "bg-[#E2E2E2]", href: "/hand-rejuvenation" },
+  { name: "Hair Loss", color: "bg-[#C9D6C9]", href: "/hair-loss-treatments" },
+  { name: "Earlobe Rejuvenation", color: "bg-[#E8D7CF]", href: "/earlobe-rejuvenation-lobuloplasty" },
 ]
 
 const navLinks = {
@@ -62,7 +66,7 @@ export function Footer() {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
+      <div className="max-w-8xl mx-auto px-6 md:px-10 relative z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-12 md:gap-16 lg:gap-8 border-b border-zinc-300 pb-12 md:pb-20">
           
           {/* SECTION 1: LOGO & SOCIALS */}
@@ -119,7 +123,7 @@ export function Footer() {
             </div>
           </div>
 
-          {/* SECTION 3: SERVICES */}
+          {/* SECTION 3: SERVICES (Now with 8 items) */}
           <div className="lg:col-span-2 space-y-6 md:space-y-8">
             <h4 className="text-[10px] md:text-[11px] font-bold uppercase tracking-[0.3em] text-zinc-400">Services</h4>
             <div className="flex flex-wrap lg:flex-col gap-3 items-start">

@@ -74,9 +74,9 @@ export function PlanningVisit() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
               viewport={{ once: true }}
-              className="absolute right-0 top-[10%] sm:top-20 w-[45%] md:w-[50%] aspect-square rounded-[1rem] md:rounded-[2rem] overflow-hidden shadow-xl z-30 border-[6px] md:border-[10px] border-[#EAEAE6]"
+              className="absolute right-0 top-[10%] sm:top-20 w-[45%] md:w-[50%] aspect-[4/5] rounded-[1rem] md:rounded-[2rem] overflow-hidden shadow-xl z-30 border-[6px] md:border-[10px] border-[#EAEAE6]"
             >
-              <img src="/b2.webp" alt="Clinic Entrance" className="w-full h-full object-cover" />
+              <img src="/gerka.jpeg" alt="Clinic Entrance" className="w-full h-full object-cover" />
             </motion.div>
 
             {/* Image 3: Wide Reception */}
