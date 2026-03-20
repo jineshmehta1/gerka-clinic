@@ -49,7 +49,7 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-16 md:py-24 lg:py-32 bg-white overflow-hidden">
+    <section id="contact" className="py-16 md:py-14 lg:py-12 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10">
         
         {/* SECTION HEADER */}
