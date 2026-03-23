@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 const brands = [
   { name: "Mesoestetic", logo: "/meso.jpeg" },
   { name: "ZO Skin Health", logo: "/zo.jpg" },
-  { name: "Regen Lab", logo: "/lab.png" },
+  { name: "Regen Lab", logo: "/lab.PNG" },
   { name: "BTL", logo: "/blt.jpeg" },
 ]
 
