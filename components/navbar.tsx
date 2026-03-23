@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X, ChevronDown, ChevronRight } from "lucide-react"
 
 const navItems = [
-  { href: "/about", label: "About us" },
+  { href: "/about", label: "About Us" },
   { 
     href: "#", 
     label: "Face",
@@ -38,9 +38,15 @@ const navItems = [
       { label: "Skin Lesion Removal", href: "/body/lesion-removal" }
     ]
   },
-  { href: "/nail", label: "Nail Disorders" },
+  { 
+    href: "#", 
+    label: "Hair & Nail Health",
+    dropdown: [
+      { label: "Hair Loss Restoration", href: "/hair-loss-treatments" },
+      { label: "Nail Disorders Treatments", href: "/nail" }
+    ]
+  },
   { href: "/hand-rejuvenation", label: "Hand Rejuvenation" },
-  { href: "/hair-loss-treatments", label: "Hair Loss" },
   { href: "/earlobe-rejuvenation-lobuloplasty", label: "Earlobe Rejuvenation" },
   { 
     href: "#", 
@@ -125,7 +131,7 @@ export function Navbar() {
           </div>
         </Link>
 
-        {/* DESKTOP NAV - Triggering mobile menu earlier (xl) to handle long titles */}
+        {/* DESKTOP NAV */}
         <div className="hidden xl:flex items-center space-x-3 2xl:space-x-6">
           {navItems.map((item) => {
             const hasDropdown = item.dropdown || item.sections
@@ -144,13 +150,7 @@ export function Navbar() {
                   <span className={`text-[10px] 2xl:text-[12px] font-semibold tracking-widest transition-colors duration-300 uppercase ${
                     isActive || activeDropdown === item.label ? "text-zinc-900" : "text-zinc-500 hover:text-zinc-900"
                   }`}>
-                    {/* Special handling for the long Earlobe title on standard desktops */}
-                    {item.label === "Earlobe Rejuvenation" ? (
-                      <>
-                        <span className="2xl:hidden">Earlobe</span>
-                        <span className="hidden 2xl:inline">Earlobe Rejuvenation</span>
-                      </>
-                    ) : item.label}
+                    {item.label}
                   </span>
                   {hasDropdown && <ChevronDown size={10} className="text-zinc-300" />}
                 </Link>
@@ -252,7 +252,7 @@ export function Navbar() {
                       </button>
                     ) : (
                       <Link href={item.href} className="block py-4 text-sm font-medium tracking-widest text-zinc-900 uppercase">
-                        {/* Full label used for mobile */}
+                        {/* Use full title for Mobile for clarity */}
                         {item.label === "Earlobe Rejuvenation" ? "Earlobe Rejuvenation & Lobuloplasty" : item.label}
                       </Link>
                     )}

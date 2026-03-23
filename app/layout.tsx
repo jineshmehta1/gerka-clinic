@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: '%s | Gerka Clinic',
   },
   description:
-    'Gerka Clinic is a leading aesthetic and regenerative medicine clinic in Dublin. Specializing in advanced intimate health, women’s wellness, and modern aesthetic treatments.',
+    'Gerka Clinic is a leading Dublin aesthetic clinic specialising in aesthetic treatments, regenerative medicine and women’s health, located on Stillorgan Road and serving Mount Merrion, Blackrock and South Dublin.',
   keywords: [
     'Gerka Clinic Dublin',
     'Regenerative Aesthetic Gynaecology Ireland',
