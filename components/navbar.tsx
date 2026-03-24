@@ -81,6 +81,7 @@ const navItems = [
       }
     ]
   },
+  { href: "/clinical-outcomes", label: "Clinical Outcomes" },
 ]
 
 export function Navbar() {
@@ -106,14 +107,14 @@ export function Navbar() {
       className={`fixed top-0 w-full z-[100] transition-all duration-500 ${
         scrolled || activeDropdown || isOpen
           ? "bg-white border-b border-zinc-100 py-3 shadow-md" 
-          : "bg-white/95 backdrop-blur-md py-5"
+          : "bg-white/95 backdrop-blur-md py-4 md:py-5"
       }`}
     >
-      <div className="max-w-[1800px] mx-auto px-4 md:px-8 flex items-center justify-between">
+      <div className="max-w-[1600px] mx-auto px-4 md:px-6 flex items-center justify-between gap-2">
         
         {/* LOGO AREA */}
-        <Link href="/" className="flex items-center gap-2 group shrink-0">
-          <div className="relative w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12">
+        <Link href="/" className="flex items-center gap-2 group shrink-0 relative z-[101]">
+          <div className="relative w-9 h-9 md:w-9 md:h-9 lg:w-11 lg:h-11">
             <Image
               src="/gerkalogo.png"
               alt="Gerka Clinic"
@@ -122,17 +123,18 @@ export function Navbar() {
             />
           </div>
           <div className="flex flex-col">
-            <span className="text-sm md:text-lg lg:text-xl font-light tracking-[0.15em] text-zinc-800 uppercase leading-tight">
+            <span className="text-[13px] md:text-sm lg:text-base font-light tracking-[0.1em] text-zinc-800 uppercase leading-tight">
               Gerka Clinic
             </span>
-            <span className="text-[6px] md:text-[8px] lg:text-[9px] tracking-[0.2em] text-zinc-400 uppercase font-medium">
+            <span className="text-[7px] md:text-[7px] lg:text-[8px] tracking-[0.2em] text-zinc-400 uppercase font-medium">
               Women&apos;s Wellness
             </span>
           </div>
         </Link>
 
-        {/* DESKTOP NAV */}
-        <div className="hidden xl:flex items-center space-x-3 2xl:space-x-6">
+        {/* DESKTOP NAV - Responsive logic to prevent overlap */}
+        {/* Hidden below 1360px to prevent the "Contact" button from going off frame */}
+        <div className="hidden min-[1360px]:flex items-center gap-x-1 2xl:gap-x-4">
           {navItems.map((item) => {
             const hasDropdown = item.dropdown || item.sections
             const isActive = pathname === item.href
@@ -145,9 +147,9 @@ export function Navbar() {
               >
                 <Link
                   href={item.href}
-                  className="group flex items-center gap-1 whitespace-nowrap"
+                  className="group flex items-center gap-0.5 whitespace-nowrap px-1.5 2xl:px-3"
                 >
-                  <span className={`text-[10px] 2xl:text-[12px] font-semibold tracking-widest transition-colors duration-300 uppercase ${
+                  <span className={`text-[10px] 2xl:text-[11px] font-semibold tracking-wider transition-colors duration-300 uppercase ${
                     isActive || activeDropdown === item.label ? "text-zinc-900" : "text-zinc-500 hover:text-zinc-900"
                   }`}>
                     {item.label}
@@ -155,7 +157,6 @@ export function Navbar() {
                   {hasDropdown && <ChevronDown size={10} className="text-zinc-300" />}
                 </Link>
 
-                {/* DESKTOP DROPDOWN */}
                 <AnimatePresence>
                   {activeDropdown === item.label && hasDropdown && (
                     <motion.div
@@ -205,10 +206,10 @@ export function Navbar() {
         </div>
 
         {/* ACTION BUTTONS */}
-        <div className="flex items-center gap-3">
-          <div className="hidden lg:block">
+        <div className="flex items-center gap-3 shrink-0 relative z-[101]">
+          <div className="hidden min-[1360px]:block lg:block">
             <Link href="/#contact">
-              <button className="bg-zinc-900 hover:bg-zinc-800 text-white text-[9px] 2xl:text-[11px] font-bold tracking-[0.2em] uppercase px-4 py-2.5 2xl:px-7 2xl:py-3.5 rounded-full transition-all shadow-md active:scale-95">
+              <button className="bg-zinc-900 hover:bg-zinc-800 text-white text-[9px] 2xl:text-[10px] font-bold tracking-[0.2em] uppercase px-4 py-2.5 2xl:px-7 2xl:py-3.5 rounded-full transition-all shadow-md active:scale-95 whitespace-nowrap">
                 Contact
               </button>
             </Link>
@@ -216,7 +217,7 @@ export function Navbar() {
 
           <button 
             onClick={() => setIsOpen(!isOpen)} 
-            className="xl:hidden p-2 text-zinc-800 hover:bg-zinc-50 rounded-lg transition-colors"
+            className="min-[1360px]:hidden p-2 text-zinc-800 hover:bg-zinc-50 rounded-lg transition-colors"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -231,7 +232,7 @@ export function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed inset-0 top-[60px] md:top-[80px] bg-white z-50 xl:hidden flex flex-col overflow-y-auto no-scrollbar"
+            className="fixed inset-0 top-0 bg-white z-[100] min-[1360px]:hidden flex flex-col pt-24 overflow-y-auto no-scrollbar"
           >
             <div className="p-6 space-y-2 pb-32">
               {navItems.map((item) => {
@@ -252,8 +253,7 @@ export function Navbar() {
                       </button>
                     ) : (
                       <Link href={item.href} className="block py-4 text-sm font-medium tracking-widest text-zinc-900 uppercase">
-                        {/* Use full title for Mobile for clarity */}
-                        {item.label === "Earlobe Rejuvenation" ? "Earlobe Rejuvenation & Lobuloplasty" : item.label}
+                        {item.label}
                       </Link>
                     )}
 
@@ -265,14 +265,14 @@ export function Navbar() {
                           exit={{ height: 0, opacity: 0 }}
                           className="overflow-hidden"
                         >
-                          <div className="pb-4 pl-4 space-y-4">
+                          <div className="pb-4 pl-4 space-y-4 bg-zinc-50 p-4 rounded-xl mt-2">
                             {item.isSectioned ? (
                               item.sections?.map(sec => (
                                 <div key={sec.title} className="space-y-3">
                                   <p className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">{sec.title}</p>
-                                  <div className="flex flex-col gap-3 border-l border-zinc-100 pl-3">
+                                  <div className="flex flex-col gap-3 border-l border-zinc-200 pl-3">
                                     {sec.items.map(sub => (
-                                      <Link key={sub.label} href={sub.href} className="text-xs text-zinc-600 active:text-zinc-900">
+                                      <Link key={sub.label} href={sub.href} className="text-xs text-zinc-600">
                                         {sub.label}
                                       </Link>
                                     ))}
@@ -280,9 +280,9 @@ export function Navbar() {
                                 </div>
                               ))
                             ) : (
-                              <div className="flex flex-col gap-4 border-l border-zinc-100 pl-3">
+                              <div className="flex flex-col gap-4 border-l border-zinc-200 pl-3">
                                 {item.dropdown?.map(sub => (
-                                  <Link key={sub.label} href={sub.href} className="text-xs text-zinc-600 active:text-zinc-900">
+                                  <Link key={sub.label} href={sub.href} className="text-xs text-zinc-600">
                                     {sub.label}
                                   </Link>
                                 ))}
