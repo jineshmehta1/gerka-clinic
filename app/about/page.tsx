@@ -11,6 +11,7 @@ import { SpecialistsSection } from "@/components/bio"
 import { PlanningVisit} from "@/components/visit"
 import { ContactSection } from "@/components/contact"
 import { GerkaHeroBanner } from "@/components/aboutBanner"
+import ClinicIntro from "@/components/features"
 
 export default function AboutPage() {
   return (
@@ -18,6 +19,7 @@ export default function AboutPage() {
       <GerkaHeroBanner/>
       <AboutIntro/>
       <SpecialistsSection/>
+      <ClinicIntro/>
       <PlanningVisit/>
       <ContactSection/>
       
