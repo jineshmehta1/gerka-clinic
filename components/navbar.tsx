@@ -114,7 +114,7 @@ export function Navbar() {
         
         {/* LOGO AREA */}
         <Link href="/" className="flex items-center gap-2 group shrink-0 relative z-[101]">
-          <div className="relative w-9 h-9 md:w-9 md:h-9 lg:w-11 lg:h-11">
+          <div className="relative w-8 h-8 md:w-8 md:h-8 lg:w-11 lg:h-11">
             <Image
               src="/icon2.png"
               alt="Gerka Clinic"
@@ -127,7 +127,7 @@ export function Navbar() {
               Gerka Clinic
             </span>
             <span className="text-[7px] md:text-[7px] lg:text-[8px] tracking-[0.2em] text-zinc-400 uppercase font-medium">
-              Women&apos;s Wellness
+              Aesthetic & Intimate Health
             </span>
           </div>
         </Link>
