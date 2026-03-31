@@ -116,7 +116,7 @@ export function Navbar() {
         <Link href="/" className="flex items-center gap-2 group shrink-0 relative z-[101]">
           <div className="relative w-9 h-9 md:w-9 md:h-9 lg:w-11 lg:h-11">
             <Image
-              src="/gerkalogo.png"
+              src="/icon2.png"
               alt="Gerka Clinic"
               fill
               className="object-contain"
