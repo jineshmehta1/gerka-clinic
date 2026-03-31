@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowLeft, ShieldCheck, Zap, Heart, Activity, Sparkles, ChevronRight, Info, Microscope, Stethoscope, UserCheck, Target, CheckCircle2 } from "lucide-react"
+import { ArrowLeft, ShieldCheck, Zap, Heart, Activity, Sparkles, ChevronRight, Info, Microscope, Stethoscope, UserCheck, Target, CheckCircle2, Euro, Clock } from "lucide-react"
 import Link from "next/link"
 import { ServiceSidebar } from "@/components/ServiceSidebar"
 
@@ -53,12 +53,15 @@ export default function ExilisUltraFemmePage() {
                   Exilis Ultra Femme® – <br />
                   <span className="italic font-serif text-zinc-500 font-light">Advanced Vaginal Tightening</span>
                 </h1>
-                <div className="flex flex-wrap gap-4 border-b border-zinc-200 pb-8">
+                <div className="flex flex-wrap gap-6 border-b border-zinc-200 pb-8">
                   <span className="text-xs font-bold text-zinc-900 uppercase tracking-widest flex items-center gap-2">
-                    <ShieldCheck size={14} className="text-zinc-400" /> Monopolar Radiofrequency
+                    <Euro size={14} className="text-zinc-400" /> €400 Internal & External Session
                   </span>
-                  <span className="text-xs font-bold text-zinc-400 uppercase tracking-widest italic">
-                    Dublin Clinical Excellence
+                  <span className="text-xs font-bold text-zinc-900 uppercase tracking-widest flex items-center gap-2">
+                    <Euro size={14} className="text-zinc-400" /> Package of 3: €1050
+                  </span>
+                  <span className="text-xs font-bold text-zinc-400 uppercase tracking-widest flex items-center gap-2 italic border-l border-zinc-200 pl-4">
+                    <Clock size={14} className="text-zinc-400" /> 45-60 min
                   </span>
                 </div>
               </div>
@@ -73,7 +76,6 @@ export default function ExilisUltraFemmePage() {
                   </p>
                 </div>
                 <div className="aspect-[7/5] rounded-[3rem] overflow-hidden shadow-2xl border-white border-8">
-                  {/* Image showing the Exilis device applicator from your screenshot */}
                   <img src="/exillis.jpeg" alt="Exilis Ultra Femme Applicator" className="w-full h-full object-cover" />
                 </div>
               </div>
@@ -93,7 +95,6 @@ export default function ExilisUltraFemmePage() {
                      </div>
                   </div>
                   <div className="relative aspect-video rounded-[2.5rem] overflow-hidden shadow-lg border border-zinc-50">
-                     {/* The anatomical cross-section image from your screenshot */}
                      <img src="/ultra.webp" alt="Exilis Ultra Femme Mechanism" className="w-full h-full object-cover" />
                   </div>
                </div>
@@ -135,14 +136,14 @@ export default function ExilisUltraFemmePage() {
                    <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center">
                       <Activity size={24} className="text-zinc-900" />
                    </div>
-                   <h3 className="text-2xl font-light text-zinc-900 uppercase tracking-tight">Zero Downtime</h3>
+                   <h3 className="text-2xl font-light text-zinc-900 uppercase tracking-tight">Clinical Protocol</h3>
                    <p className="text-sm text-zinc-600 font-light leading-relaxed">
-                     Exilis Ultra Femme® offers a safe, comfortable, and discreet solution with <span className="font-bold text-zinc-900">no recovery period required</span>. You can return to your daily activities immediately after your session.
+                     Optimal results are typically achieved through a series of <span className="font-bold text-zinc-900">3 sessions</span>. The treatment is safe, comfortable, and discreet with <span className="font-bold text-zinc-900">no downtime</span> required.
                    </p>
                 </div>
                 <div className="pt-6 border-t border-zinc-200">
-                   <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-400 mb-2">Patient Safety</p>
-                   <p className="text-[13px] text-zinc-800 font-medium">Safe for most skin tones and clinical backgrounds.</p>
+                   <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-400 mb-2">Package Pricing</p>
+                   <p className="text-[13px] text-zinc-800 font-medium">Available for recommended clinical courses.</p>
                 </div>
               </div>
             </section>

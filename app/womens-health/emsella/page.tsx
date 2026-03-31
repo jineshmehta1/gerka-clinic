@@ -14,7 +14,6 @@ const conditions = [
   "Mild sexual dysfunction related to pelvic floor strength"
 ]
 
-// New Data for Men's Benefits
 const maleBenefits = [
   {
     title: "Erectile performance optimisation",
@@ -76,11 +75,17 @@ export default function EmsellaServicePage() {
                   Emsella® Chair – <br />
                   <span className="italic font-serif text-zinc-500 font-light">Advanced Pelvic Floor Therapy</span>
                 </h1>
-                <div className="flex flex-wrap gap-4 border-b border-zinc-200 pb-8">
+                <div className="flex flex-wrap gap-6 border-b border-zinc-200 pb-8">
                   <span className="text-xs font-bold text-zinc-900 uppercase tracking-widest flex items-center gap-2">
-                    <ShieldCheck size={14} className="text-zinc-400" /> Non-Invasive HIFEM® Technology
+                    <Euro size={14} className="text-zinc-400" /> €90 per session
                   </span>
-                  <span className="text-xs font-bold text-zinc-400 uppercase tracking-widest italic">
+                  <span className="text-xs font-bold text-zinc-900 uppercase tracking-widest flex items-center gap-2">
+                    <Euro size={14} className="text-zinc-400" /> Package of 6: €420
+                  </span>
+                  <span className="text-xs font-bold text-zinc-400 uppercase tracking-widest flex items-center gap-2 italic">
+                    Extra session: €60
+                  </span>
+                  <span className="text-xs font-bold text-zinc-400 uppercase tracking-widest italic border-l border-zinc-200 pl-4">
                     Dublin Clinic
                   </span>
                 </div>
@@ -121,7 +126,7 @@ export default function EmsellaServicePage() {
                </div>
             </section>
 
-            {/* --- NEW SECTION: EMSELLA FOR MEN --- */}
+            {/* --- EMSELLA FOR MEN --- */}
             <section className="bg-[#1A1A1A] text-white rounded-[3.5rem] p-10 md:p-16 relative overflow-hidden">
                <div className="absolute top-0 right-0 w-64 h-64 bg-zinc-800 rounded-full blur-[100px] opacity-50" />
                
@@ -182,7 +187,7 @@ export default function EmsellaServicePage() {
                 <div className="space-y-4">
                    <h3 className="text-2xl font-light text-zinc-900 uppercase tracking-tight">Treatment Protocol</h3>
                    <p className="text-sm text-zinc-600 font-light leading-relaxed">
-                    A standard course usually consists of <span className="font-bold text-zinc-900">6 sessions</span>, performed twice per week over 3 weeks. Maintenance sessions may be recommended depending on individual needs.
+                    A standard course usually consists of <span className="font-bold text-zinc-900">6 sessions (€420)</span>, performed twice per week over 3 weeks. Extra sessions after the initial course are available at <span className="font-bold text-zinc-900">€60 each</span>.
                    </p>
                 </div>
                 <div className="grid grid-cols-2 gap-4 border-t border-zinc-300 pt-8">
@@ -191,8 +196,8 @@ export default function EmsellaServicePage() {
                       <p className="text-sm font-medium text-zinc-800">Approx. 28 mins</p>
                    </div>
                    <div className="space-y-1 text-right">
-                      <p className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Technology</p>
-                      <p className="text-sm font-medium text-zinc-800">Clinically Proven</p>
+                      <p className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Package Pricing</p>
+                      <p className="text-sm font-medium text-zinc-800">Available</p>
                    </div>
                 </div>
               </div>

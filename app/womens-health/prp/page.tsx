@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowLeft, ShieldCheck, Target, Heart, Activity, Sparkles, ChevronRight, Info, Microscope, Stethoscope, UserCheck } from "lucide-react"
+import { ArrowLeft, ShieldCheck, Target, Heart, Activity, Sparkles, ChevronRight, Info, Microscope, Stethoscope, UserCheck, Euro, Clock } from "lucide-react"
 import Link from "next/link"
 import { ServiceSidebar } from "@/components/ServiceSidebar"
 
@@ -27,7 +27,7 @@ const oShotBenefits = [
 const steps = [
   { title: "Sample", desc: "A small blood sample is taken from the patient." },
   { title: "Processing", desc: "Processing the blood using Regen Lab® technology to isolate platelet-rich plasma." },
-  { title: "Application", desc: "Precise medical application of PRP into targeted vaginal or vulvar tissues." }
+  { title: "Application", desc: "Precise medical application of PRP into targeted vaginal or vulvar tissues by our gynaecology specialist." }
 ]
 
 export default function VaginalPRPPage() {
@@ -59,14 +59,17 @@ export default function VaginalPRPPage() {
               <div className="space-y-6">
                 <h1 className="text-4xl md:text-5xl font-light text-zinc-900 tracking-tight leading-tight">
                   Vaginal PRP <br />
-                  <span className="italic font-serif text-zinc-500 font-light">Regenerative Treatment</span>
+                  <span className="italic font-serif text-zinc-500 font-light">Regenerative Gynaecology</span>
                 </h1>
-                <div className="flex flex-wrap gap-4 border-b border-zinc-200 pb-8">
+                <div className="flex flex-wrap gap-6 border-b border-zinc-200 pb-8">
                   <span className="text-xs font-bold text-zinc-900 uppercase tracking-widest flex items-center gap-2">
-                    <ShieldCheck size={14} className="text-zinc-400" /> Regen Lab® FDA-Approved
+                    <Euro size={14} className="text-zinc-400" /> Cost: €550 per session
                   </span>
-                  <span className="text-xs font-bold text-zinc-400 uppercase tracking-widest italic">
-                    Non-Hormonal Therapy
+                  <span className="text-xs font-bold text-zinc-900 uppercase tracking-widest flex items-center gap-2">
+                    <Clock size={14} className="text-zinc-400" /> Duration: 45-60 min
+                  </span>
+                  <span className="text-xs font-bold text-zinc-400 uppercase tracking-widest flex items-center gap-2 italic border-l border-zinc-200 pl-4">
+                    <ShieldCheck size={14} className="text-zinc-400" /> Regen Lab® System
                   </span>
                 </div>
               </div>
@@ -84,7 +87,6 @@ export default function VaginalPRPPage() {
                   </p>
                 </div>
                 <div className="aspect-[6/5] rounded-[3rem] overflow-hidden shadow-2xl border-white border-8">
-                  {/* Image showing syringes and plasma from your screenshot */}
                   <img src="/prp2.webp" alt="PRP Preparation" className="w-full h-full object-cover" />
                 </div>
               </div>
@@ -98,7 +100,6 @@ export default function VaginalPRPPage() {
                </div>
                
                <div className="space-y-12">
-                  {/* Dryness Section */}
                   <div className="space-y-6">
                     <h4 className="text-[13px] font-bold uppercase tracking-[0.2em] text-zinc-900">Vaginal Dryness & Atrophy</h4>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -111,7 +112,6 @@ export default function VaginalPRPPage() {
                     <p className="text-xs text-zinc-400 font-light pt-2">PRP helps improve hydration, tissue thickness and elasticity through collagen stimulation.</p>
                   </div>
 
-                  {/* Lichen Sclerosus Section */}
                   <div className="space-y-6 border-t border-zinc-50 pt-8">
                     <h4 className="text-[13px] font-bold uppercase tracking-[0.2em] text-zinc-900">Lichen Sclerosus (Adjunctive Treatment)</h4>
                     <p className="text-sm text-zinc-500 font-light max-w-2xl">Vaginal and vulvar PRP may be used as an adjunctive regenerative therapy in selected patients aiming to:</p>
@@ -124,7 +124,6 @@ export default function VaginalPRPPage() {
                     </ul>
                   </div>
 
-                  {/* O-Shot Section */}
                   <div className="space-y-6 border-t border-zinc-50 pt-8">
                     <h4 className="text-[13px] font-bold uppercase tracking-[0.2em] text-zinc-900">Vaginal PRP Shot (O-Shot®-Style Treatment)</h4>
                     <p className="text-sm text-zinc-500 font-light max-w-2xl">PRP can also be administered as a vaginal revitalisation targeting specific areas to:</p>
@@ -168,19 +167,17 @@ export default function VaginalPRPPage() {
                   </ul>
                </div>
                <div className="order-1 lg:order-2 aspect-square rounded-[3rem] overflow-hidden shadow-xl border border-zinc-100">
-                  {/* Image from screenshot: woman in white */}
                   <img src="/wprp2.webp" alt="Vaginal PRP Medical Professional" className="w-full h-full object-cover" />
                </div>
             </section>
 
             {/* BENTO GRID: PROTOCOL & SUITABILITY */}
             <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Protocol Card */}
               <div className="bg-zinc-900 text-white p-12 rounded-[3rem] space-y-8 shadow-xl">
                 <div className="space-y-4">
                    <h3 className="text-2xl font-light text-white uppercase tracking-tight leading-tight">Treatment Protocol</h3>
                    <p className="text-sm text-zinc-400 font-light leading-relaxed">
-                    Treatment plans are personalised. Some patients benefit from a <span className="text-white font-bold">single session</span>, while others may require a <span className="text-white font-bold">series of treatments</span>, depending on the condition being treated and clinical response.
+                    Treatment plans are personalised. Some patients benefit from a <span className="text-white font-bold">single session (€550)</span>, while others may require a series of treatments depending on clinical assessment.
                    </p>
                 </div>
                 <div className="p-6 bg-white/5 rounded-2xl border border-white/10 flex items-center gap-4">
@@ -189,7 +186,6 @@ export default function VaginalPRPPage() {
                 </div>
               </div>
 
-              {/* Is it Right for You Card */}
               <div className="bg-white border border-zinc-100 p-12 rounded-[3rem] space-y-8 shadow-sm">
                 <div className="space-y-2">
                    <h3 className="text-2xl font-light text-zinc-900">Is Vaginal PRP Right for You?</h3>

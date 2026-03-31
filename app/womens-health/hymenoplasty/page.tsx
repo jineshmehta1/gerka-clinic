@@ -1,7 +1,19 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowLeft, ShieldCheck, Lock, Heart, Clock, CheckCircle2, ChevronRight, UserCircle, Stethoscope, Info } from "lucide-react"
+import { 
+  ArrowLeft, 
+  ShieldCheck, 
+  Lock, 
+  Heart, 
+  Clock, 
+  CheckCircle2, 
+  ChevronRight, 
+  UserCircle, 
+  Stethoscope, 
+  Info,
+  Euro 
+} from "lucide-react"
 import Link from "next/link"
 import { ServiceSidebar } from "@/components/ServiceSidebar"
 
@@ -30,7 +42,7 @@ export default function HymenoplastyServicePage() {
           
           {/* 2. REUSABLE SIDEBAR */}
           <ServiceSidebar 
-            activeService="Hymenoplasty" 
+            activeService="Hymenoplasty (Surgical)" 
             categoryTitle="Women's Health" 
           />
 
@@ -44,11 +56,14 @@ export default function HymenoplastyServicePage() {
                   Hymenoplasty – <br />
                   <span className="italic font-serif text-zinc-500 font-light">Confidential Specialist Care</span>
                 </h1>
-                <div className="flex flex-wrap gap-4 border-b border-zinc-200 pb-8">
+                <div className="flex flex-wrap gap-6 border-b border-zinc-200 pb-8">
+                  <span className="text-xs font-bold text-zinc-900 uppercase tracking-widest flex items-center gap-2">
+                    <Euro size={14} className="text-zinc-400" /> Cost: TBC / Consultation Required
+                  </span>
                   <span className="text-xs font-bold text-zinc-900 uppercase tracking-widest flex items-center gap-2">
                     <Lock size={14} className="text-zinc-400" /> Discreet Environment
                   </span>
-                  <span className="text-xs font-bold text-zinc-400 uppercase tracking-widest italic">
+                  <span className="text-xs font-bold text-zinc-400 uppercase tracking-widest italic border-l border-zinc-200 pl-4">
                     Sensitive & Personalised Service
                   </span>
                 </div>
@@ -60,11 +75,10 @@ export default function HymenoplastyServicePage() {
                     A confidential and specialist hymenoplasty service at Gerka Clinic, offering sensitive, personalised care in a discreet environment.
                   </p>
                   <p>
-                    This delicate surgical procedure aims to restore the hymenal tissue for personal, cultural, or emotional reasons. Our approach prioritises <span className="text-zinc-900 font-medium">comfort, confidentiality, and patient wellbeing</span> at every stage.
+                    This delicate surgical procedure aims to restore the hymenal tissue for personal, cultural, or emotional reasons. Our approach prioritises <span className="text-zinc-900 font-medium italic">comfort, confidentiality, and patient wellbeing</span> at every stage.
                   </p>
                 </div>
                 <div className="aspect-[5/4] rounded-[3rem] overflow-hidden shadow-2xl border-white border-8">
-                  {/* Image showing the symbolic feather from your screenshot */}
                   <img src="/hymeno1.avif" alt="Sensitive Clinical Care" className="w-full h-full object-cover" />
                 </div>
               </div>
@@ -95,7 +109,6 @@ export default function HymenoplastyServicePage() {
                      </div>
                   </div>
                   <div className="aspect-[4/3] rounded-[2.5rem] overflow-hidden border border-zinc-50 shadow-inner">
-                     {/* Torso image from your screenshot */}
                      <img src="/pigment.webp" alt="Hymenoplasty Specialist Care" className="w-full h-full object-cover" />
                   </div>
                </div>
@@ -146,9 +159,13 @@ export default function HymenoplastyServicePage() {
                
                <div className="pt-6 relative z-10">
                   <Link href="/#contact" className="w-full md:w-auto">
-                    <button className="w-full md:w-auto bg-zinc-900 text-white px-12 py-5 rounded-full text-[11px] font-bold uppercase tracking-[0.2em] hover:bg-zinc-800 transition-all active:scale-95 shadow-xl shadow-zinc-200 flex items-center justify-center gap-3">
+                    <motion.button 
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      className="w-full md:w-auto bg-zinc-900 text-white px-12 py-5 rounded-full text-[11px] font-bold uppercase tracking-[0.2em] hover:bg-zinc-800 transition-all active:scale-95 shadow-xl shadow-zinc-200 flex items-center justify-center gap-3"
+                    >
                       Book Now <ChevronRight size={16} />
-                    </button>
+                    </motion.button>
                   </Link>
                </div>
                {/* Aesthetic Background Detail */}

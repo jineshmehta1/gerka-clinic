@@ -46,13 +46,13 @@ export default function VanquishServicePage() {
                 </h1>
                 <div className="flex flex-wrap gap-4 border-b border-zinc-200 pb-8">
                   <span className="text-xs font-bold text-zinc-900 uppercase tracking-widest flex items-center gap-2">
-                    <Euro size={14} className="text-zinc-400" /> Cost: 180 €
+                    <Euro size={14} className="text-zinc-400" /> Cost: €200 per session
                   </span>
                   <span className="text-xs font-bold text-zinc-900 uppercase tracking-widest flex items-center gap-2">
                     <Clock size={14} className="text-zinc-400" /> Duration: 45 min
                   </span>
-                  <span className="text-xs font-bold text-zinc-400 uppercase tracking-widest italic">
-                    Packages price available
+                  <span className="text-xs font-bold text-zinc-900 uppercase tracking-widest flex items-center gap-2 italic">
+                    Package of 4: €600
                   </span>
                 </div>
               </div>
@@ -70,7 +70,6 @@ export default function VanquishServicePage() {
                   </p>
                 </div>
                 <div className="aspect-square rounded-[3rem] overflow-hidden shadow-2xl">
-                  {/* Using the image of the Vanquish device over the abdomen from your screenshot */}
                   <img src="/vanquish.jpeg" alt="Vanquish ME Procedure" className="w-full h-full object-cover" />
                 </div>
               </div>
@@ -123,7 +122,7 @@ export default function VanquishServicePage() {
                   <div className="space-y-4">
                      <h4 className="text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-400">Treatment Details</h4>
                      <p className="text-lg text-zinc-800 font-light leading-relaxed">
-                        Sessions last approximately <span className="font-semibold text-zinc-900">30–45 minutes</span>. A course of 4–6 treatments is usually recommended for optimal results.
+                        Sessions last approximately <span className="font-semibold text-zinc-900">45 minutes</span>. A clinical course of <span className="font-semibold text-zinc-900">4 treatments</span> is recommended for optimal silhouette refinement.
                      </p>
                   </div>
                   <div className="space-y-4">

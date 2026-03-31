@@ -33,18 +33,18 @@ export default function SunekosServicePage() {
             <section className="space-y-12">
               <div className="space-y-6">
                 <h1 className="text-4xl md:text-5xl font-light text-zinc-900 tracking-tight leading-tight">
-                  Sunekos® <br />
+                  Sunekos Cell 15 (15 ml) <br />
                   <span className="italic font-serif text-zinc-500">Skin Booster</span>
                 </h1>
                 <div className="flex flex-wrap gap-4 border-b border-zinc-200 pb-8">
                   <span className="text-xs font-bold text-zinc-900 uppercase tracking-widest flex items-center gap-2">
-                    <Euro size={14} className="text-zinc-400" /> Cost: €280 per session
+                    <Euro size={14} className="text-zinc-400" /> Cost: €320 per session
                   </span>
                   <span className="text-xs font-bold text-zinc-900 uppercase tracking-widest flex items-center gap-2">
                     <Clock size={14} className="text-zinc-400" /> Duration: 20-30 min
                   </span>
                   <span className="text-xs font-bold text-zinc-400 uppercase tracking-widest italic">
-                    Package prices available
+                    Package of 3: €795
                   </span>
                 </div>
               </div>

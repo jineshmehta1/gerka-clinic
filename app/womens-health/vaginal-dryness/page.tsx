@@ -30,14 +30,15 @@ const symptoms = [
 
 const treatmentOptions = [
   { 
+    title: "Cellular Matrix (Gynaecology)", 
+    desc: "A combination of PRP and Hyaluronic Acid for deep hydration and tissue regeneration.",
+    icon: <Sparkles size={18} className="text-zinc-900" />,
+    price: "€950"
+  },
+  { 
     title: "Medical Treatment", 
     desc: "Targeted pharmacological therapy to restore vaginal health and relieve symptoms.",
     icon: <ShieldCheck size={18} className="text-zinc-400" />
-  },
-  { 
-    title: "Regenerative Therapies", 
-    desc: "PRP and Cellular Matrix to improve tissue hydration, elasticity and regeneration.",
-    icon: <Sparkles size={18} className="text-zinc-400" />
   },
   { 
     title: "Radiofrequency (Exilis Ultra Femme®)", 
@@ -92,9 +93,9 @@ export default function VaginalDrynessGSMPage() {
                 </h1>
                 <div className="flex flex-wrap gap-4 border-b border-zinc-200 pb-8">
                   <span className="text-xs font-bold text-zinc-900 uppercase tracking-widest flex items-center gap-2">
-                    <Euro size={14} className="text-zinc-400" /> Cost: Consultation Required
+                    <Euro size={14} className="text-zinc-400" /> Cellular Matrix (Gynaecology): €950
                   </span>
-                  <span className="text-xs font-bold text-zinc-400 uppercase tracking-widest italic">
+                  <span className="text-xs font-bold text-zinc-900 uppercase tracking-widest italic">
                     Medical & Regenerative Care
                   </span>
                 </div>
@@ -106,7 +107,7 @@ export default function VaginalDrynessGSMPage() {
                     Advanced care for vaginal dryness, discomfort and genitourinary syndrome of menopause (GSM). We specialize in restoring the physiological balance of intimate tissues.
                   </p>
                   <p>
-                    We combine medical treatment with regenerative and energy-based therapies to restore hydration, elasticity and intimate wellbeing, ensuring a comprehensive approach to menopausal health.
+                    We combine medical treatment with regenerative and energy-based therapies like <strong>Cellular Matrix</strong> to restore hydration, elasticity and intimate wellbeing, ensuring a comprehensive approach to menopausal health.
                   </p>
                   <p className="text-sm border-l-2 border-zinc-200 pl-4 py-1 italic">
                     Our protocols are designed to address both the clinical symptoms and the impact on your quality of life.
@@ -171,7 +172,10 @@ export default function VaginalDrynessGSMPage() {
                   {treatmentOptions.map((item, i) => (
                     <div key={i} className="p-8 bg-white border border-zinc-100 rounded-3xl space-y-3 shadow-sm hover:border-zinc-300 transition-colors">
                        {item.icon}
-                       <h5 className="text-[13px] font-bold uppercase tracking-widest text-zinc-900">{item.title}</h5>
+                       <div className="flex justify-between items-start">
+                         <h5 className="text-[13px] font-bold uppercase tracking-widest text-zinc-900">{item.title}</h5>
+                         {item.price && <span className="text-[11px] font-bold text-zinc-900">{item.price}</span>}
+                       </div>
                        <p className="text-xs text-zinc-500 font-light leading-relaxed">{item.desc}</p>
                     </div>
                   ))}
@@ -181,9 +185,9 @@ export default function VaginalDrynessGSMPage() {
             {/* DIAGNOSIS & ASSESSMENT */}
             <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Diagnosis Card */}
-              <div className="bg-zinc-900 text-white p-12 rounded-[3rem] space-y-8 shadow-xl">
-                <h3 className="text-2xl font-light">Clinical Diagnosis</h3>
-                <p className="text-zinc-400 font-light leading-relaxed text-sm">
+              <div className="bg-zinc-900 text-white p-12 rounded-[3rem] shadow-xl">
+                <h3 className="text-2xl font-light mb-6">Clinical Diagnosis</h3>
+                <p className="text-zinc-400 font-light leading-relaxed text-sm mb-6">
                   Assessment includes a specialist consultation and clinical evaluation to identify the underlying cause and tailor the most appropriate treatment plan.
                 </p>
                 <ul className="space-y-5">
