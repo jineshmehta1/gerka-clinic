@@ -74,13 +74,25 @@ export default function ChemicalPeelsServicePage() {
                   Chemical Peels – <br />
                   <span className="italic font-serif text-zinc-500">Medical Skin Resurfacing</span>
                 </h1>
-                <div className="flex flex-wrap gap-4 border-b border-zinc-200 pb-8">
-                  <span className="text-xs font-bold text-zinc-900 uppercase tracking-widest flex items-center gap-2">
-                    <Euro size={14} className="text-zinc-400" /> Cost: From 120€
-                  </span>
-                  <span className="text-xs font-bold text-zinc-400 uppercase tracking-widest italic">
-                    Face, Neck and Chest
-                  </span>
+                <div className="flex flex-wrap gap-6 border-b border-zinc-200 pb-8">
+                  <div className="flex flex-col gap-1">
+                    <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Peeling Face</span>
+                    <span className="text-sm font-bold text-zinc-900 flex items-center gap-2">
+                      <Euro size={14} className="text-zinc-400" /> From €120 per session
+                    </span>
+                  </div>
+                  <div className="flex flex-col gap-1 border-l border-zinc-200 pl-6">
+                    <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">TCA Peel</span>
+                    <span className="text-sm font-bold text-zinc-900 flex items-center gap-2">
+                      <Euro size={14} className="text-zinc-400" /> €180 per session
+                    </span>
+                  </div>
+                  <div className="flex flex-col gap-1 border-l border-zinc-200 pl-6">
+                    <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Packages</span>
+                    <span className="text-sm font-bold text-zinc-400 uppercase tracking-widest italic">
+                      Price TBC
+                    </span>
+                  </div>
                 </div>
               </div>
 
@@ -126,7 +138,6 @@ export default function ChemicalPeelsServicePage() {
                      </div>
                   </div>
                   <div className="relative">
-                     {/* Image of Mesoestetic Peel Bottles from screenshot */}
                      <img src="/chemical2.webp" alt="Mesoestetic Professional Solutions" className="w-full h-auto object-contain rounded-2xl" />
                   </div>
                </div>
@@ -142,7 +153,6 @@ export default function ChemicalPeelsServicePage() {
                </div>
                
                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  {/* The Science Card */}
                   <div className="p-10 rounded-[2.5rem] bg-zinc-900 text-white space-y-8">
                     <div className="flex flex-col gap-2">
                        <h3 className="text-2xl font-light text-white flex items-center gap-3">Medical Acid Blends <Beaker size={20} className="text-zinc-500" /></h3>
@@ -157,7 +167,6 @@ export default function ChemicalPeelsServicePage() {
                     </ul>
                   </div>
 
-                  {/* The Results Card */}
                   <div className="p-10 rounded-[2.5rem] bg-[#EAEAE6] border border-zinc-200 space-y-8">
                     <h3 className="text-2xl font-light text-zinc-900">Clinical Impact</h3>
                     <ul className="space-y-4">
@@ -181,7 +190,6 @@ export default function ChemicalPeelsServicePage() {
 
             {/* BENEFITS & FAQ GRID */}
             <section className="grid grid-cols-1 lg:grid-cols-[0.4fr_0.6fr] gap-12">
-               {/* Benefits List */}
                <div className="space-y-8">
                   <h3 className="text-2xl font-light text-zinc-900">Benefits</h3>
                   <ul className="space-y-4">
@@ -200,7 +208,6 @@ export default function ChemicalPeelsServicePage() {
                   </ul>
                </div>
 
-               {/* Treatment FAQs */}
                <div className="space-y-10">
                   <h3 className="text-2xl font-light text-zinc-900">Treatment FAQs</h3>
                   <div className="grid grid-cols-1 gap-8">

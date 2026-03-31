@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowLeft, ShieldCheck, Target, Microscope, Zap, CheckCircle2, ChevronRight, Eye, AlertTriangle, Activity } from "lucide-react"
+import { ArrowLeft, ShieldCheck, Target, Microscope, Zap, CheckCircle2, ChevronRight, Eye, AlertTriangle, Activity, Euro } from "lucide-react"
 import Link from "next/link"
 import { ServiceSidebar } from "@/components/ServiceSidebar"
 
@@ -67,6 +67,9 @@ export default function SkinLesionRemovalPage() {
                   <span className="italic font-serif text-zinc-500 font-light">Removal – Expert Care in Dublin</span>
                 </h1>
                 <div className="flex flex-wrap gap-4 border-b border-zinc-200 pb-8">
+                  <span className="text-xs font-bold text-zinc-900 uppercase tracking-widest flex items-center gap-2">
+                    <Euro size={14} className="text-zinc-400" /> Cost: TBC / Consultation Required
+                  </span>
                   <span className="text-xs font-bold text-zinc-900 uppercase tracking-widest flex items-center gap-2">
                     <ShieldCheck size={14} className="text-zinc-400" /> Benign Lesions Only
                   </span>

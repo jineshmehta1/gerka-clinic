@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowLeft, ShieldCheck, Zap, HeartPulse, CheckCircle2, ChevronRight, Info, Activity, Stethoscope } from "lucide-react"
+import { ArrowLeft, ShieldCheck, Zap, HeartPulse, CheckCircle2, ChevronRight, Info, Activity, Stethoscope, Euro } from "lucide-react"
 import Link from "next/link"
 import { ServiceSidebar } from "@/components/ServiceSidebar"
 
@@ -51,6 +51,10 @@ export default function VaginismusServicePage() {
                 </h1>
                 <div className="flex flex-wrap gap-4 border-b border-zinc-200 pb-8">
                   <span className="text-xs font-bold text-zinc-900 uppercase tracking-widest flex items-center gap-2">
+                    <Euro size={14} className="text-zinc-400" /> Cost: TBC / Consultation Required
+                  </span>
+                  <span className="text-xs font-bold text-zinc-900 uppercase tracking-widest flex items-center gap-2">
+
                     <ShieldCheck size={14} className="text-zinc-400" /> Proven Experience Since 2018
                   </span>
                   <span className="text-xs font-bold text-zinc-400 uppercase tracking-widest italic">
