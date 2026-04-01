@@ -50,12 +50,15 @@ export default function SkinVivePage() {
               <div className="space-y-8 order-2 md:order-1">
                 <div className="space-y-4">
                   <h1 className="text-4xl md:text-5xl font-light text-zinc-900 tracking-tight">SkinVive</h1>
-                  <div className="flex flex-wrap gap-4">
+                  <div className="flex flex-wrap gap-3">
                     <span className="flex items-center gap-2 bg-white border border-zinc-100 px-4 py-2 rounded-full text-xs font-medium text-zinc-600">
-                      <Euro size={14} className="text-zinc-400" /> 1ml 375€
+                      <Euro size={14} className="text-zinc-400" /> 1ml — €300
+                    </span>
+                    <span className="flex items-center gap-2 bg-zinc-900 border border-zinc-800 px-4 py-2 rounded-full text-xs font-medium text-white">
+                      <Euro size={14} className="text-zinc-500" /> 2ml — €400
                     </span>
                     <span className="flex items-center gap-2 bg-white border border-zinc-100 px-4 py-2 rounded-full text-xs font-medium text-zinc-600">
-                      <Clock size={14} className="text-zinc-400" /> 20–30 Minutes
+                      <Clock size={14} className="text-zinc-400" /> 20–30 min
                     </span>
                   </div>
                 </div>
@@ -124,15 +127,15 @@ export default function SkinVivePage() {
             {/* CLINICAL DETAILS: RESULTS & AFTERCARE */}
             <section className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 pt-16 border-t border-zinc-200">
               <div className="space-y-6">
-                <h4 className="text-2xl font-light text-zinc-900">Results</h4>
+                <h4 className="text-2xl font-light text-zinc-900">Expected Results</h4>
                 <ul className="space-y-4">
                   {[
                     "Gradual skin improvement",
-                    "Increased hydration",
-                    "Smoother skin texture",
-                    "Healthy, natural glow",
-                    "Results visible within week",
-                    "Results last up to 6 months",
+                    "Increased hydration and bounce",
+                    "Smoother skin texture in the cheek area",
+                    "Healthy, natural internal glow",
+                    "Results visible within 1–2 weeks",
+                    "Hydration lasts up to 6 months",
                     "Maintenance treatments may be advised"
                   ].map((text) => (
                     <li key={text} className="flex gap-4 text-sm text-zinc-500 font-light">
@@ -143,14 +146,17 @@ export default function SkinVivePage() {
               </div>
 
               <div className="space-y-6">
-                <h4 className="text-2xl font-light text-zinc-900">Aftercare</h4>
+                <h4 className="text-2xl font-light text-zinc-900">Post-Treatment Care</h4>
                 <div className="bg-[#EAEAE6]/30 p-8 rounded-3xl border border-zinc-100">
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3 text-sm text-zinc-600 font-light">
-                      <Info size={16} className="text-zinc-400 mt-0.5" /> Avoid exercise for 24 hours
+                      <Info size={16} className="text-zinc-400 mt-0.5" /> Avoid strenuous exercise for 24 hours
                     </li>
                     <li className="flex items-start gap-3 text-sm text-zinc-600 font-light">
-                      <Info size={16} className="text-zinc-400 mt-0.5" /> Avoid heat and sun exposure
+                      <Info size={16} className="text-zinc-400 mt-0.5" /> Avoid excessive heat (saunas, steam rooms)
+                    </li>
+                    <li className="flex items-start gap-3 text-sm text-zinc-600 font-light">
+                      <Info size={16} className="text-zinc-400 mt-0.5" /> Wear SPF 50 daily to protect skin quality
                     </li>
                   </ul>
                 </div>
@@ -158,17 +164,19 @@ export default function SkinVivePage() {
             </section>
 
             {/* RESPONSIVE BOOKING CTA */}
-            <section className="bg-white border border-zinc-100 rounded-[3rem] p-8 md:p-16 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm">
-              <div className="text-center md:text-left">
-                <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-zinc-400 mb-2">Ready For The Experience?</p>
-                <h2 className="text-3xl font-light text-zinc-900">Book a consultation</h2>
+            <section className="bg-zinc-900 rounded-[3rem] p-8 md:p-16 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl relative overflow-hidden">
+              <div className="text-center md:text-left relative z-10">
+                <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-zinc-500 mb-2">Ready For The Glow?</p>
+                <h2 className="text-3xl font-light text-white leading-tight">Book a clinical <br/> assessment</h2>
               </div>
-              <Link href="/#contact" className="w-full md:w-auto">
-                <button className="w-full md:w-auto bg-zinc-900 text-white px-10 py-5 rounded-full flex items-center justify-center gap-3 hover:bg-zinc-800 transition-all active:scale-95 group">
+              <Link href="/#contact" className="w-full md:w-auto relative z-10">
+                <button className="w-full md:w-auto bg-white text-zinc-900 px-10 py-5 rounded-full flex items-center justify-center gap-3 hover:scale-105 transition-all active:scale-95 group">
                   <span className="text-[11px] font-bold uppercase tracking-[0.2em]">Book Now</span>
                   <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
+              {/* Decorative Background Blur */}
+              <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-zinc-100/5 blur-[100px] rounded-full" />
             </section>
 
           </div>

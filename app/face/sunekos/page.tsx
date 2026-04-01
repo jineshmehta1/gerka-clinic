@@ -33,19 +33,28 @@ export default function SunekosServicePage() {
             <section className="space-y-12">
               <div className="space-y-6">
                 <h1 className="text-4xl md:text-5xl font-light text-zinc-900 tracking-tight leading-tight">
-                  Sunekos Cell 15 (15 ml) <br />
+                  Sunekos® <br />
                   <span className="italic font-serif text-zinc-500">Skin Booster</span>
                 </h1>
                 <div className="flex flex-wrap gap-4 border-b border-zinc-200 pb-8">
-                  <span className="text-xs font-bold text-zinc-900 uppercase tracking-widest flex items-center gap-2">
-                    <Euro size={14} className="text-zinc-400" /> Cost: €320 per session
-                  </span>
-                  <span className="text-xs font-bold text-zinc-900 uppercase tracking-widest flex items-center gap-2">
-                    <Clock size={14} className="text-zinc-400" /> Duration: 20-30 min
-                  </span>
-                  <span className="text-xs font-bold text-zinc-400 uppercase tracking-widest italic">
-                    Package of 3: €795
-                  </span>
+                  <div className="flex flex-col gap-1">
+                    <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Single Session</span>
+                    <span className="text-sm font-bold text-zinc-900 flex items-center gap-2">
+                      <Euro size={14} className="text-zinc-400" /> €280
+                    </span>
+                  </div>
+                  <div className="flex flex-col gap-1 border-l border-zinc-200 pl-6">
+                    <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Package of 3</span>
+                    <span className="text-sm font-bold text-zinc-900 flex items-center gap-2">
+                      <Euro size={14} className="text-zinc-400" /> €740
+                    </span>
+                  </div>
+                  <div className="flex flex-col gap-1 border-l border-zinc-200 pl-6">
+                    <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Duration</span>
+                    <span className="text-sm font-bold text-zinc-900 flex items-center gap-2">
+                      <Clock size={14} className="text-zinc-400" /> 20-30 min
+                    </span>
+                  </div>
                 </div>
               </div>
 
@@ -62,7 +71,6 @@ export default function SunekosServicePage() {
                   </p>
                 </div>
                 <div className="aspect-square rounded-[3rem] overflow-hidden shadow-2xl">
-                  {/* Using image woman with treatment mapping from your screenshot */}
                   <img src="/sune1.webp" alt="Sunekos Treatment Mapping" className="w-full h-full object-cover" />
                 </div>
               </div>

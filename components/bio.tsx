@@ -7,7 +7,7 @@ const specialists = [
   {
   name: "Giselle Gerka",
   role: "Founder | Aesthetic & Regenerative Practitioner | Skin Lesion Specialist",
-  image: "/2.webp",
+  image: "/gerka.jpeg",
   credentials: "University of Seville",
   specialties: "Aesthetic Medicine • Regenerative Treatments • Skin Lesion Care • Pelvic Floor Health",
   bio: [
