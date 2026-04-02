@@ -5,9 +5,12 @@ import { motion } from "framer-motion"
 
 const brands = [
   { name: "Mesoestetic", logo: "/meso.jpeg" },
+  { name: "Hydrafacial", logo: "/hydrafacial.PNG" },
   { name: "ZO Skin Health", logo: "/zo.jpg" },
   { name: "Regen Lab", logo: "/lab.PNG" },
   { name: "BTL", logo: "/blt.jpeg" },
+  { name: "Cellgenic", logo: "/cellge.webp" },
+
 ]
 
 // Duplicate for seamless loop

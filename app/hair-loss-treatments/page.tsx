@@ -13,7 +13,8 @@ import {
   Search,
   TestTube,
   Stethoscope,
-  Wind
+  Wind,
+  Euro
 } from "lucide-react"
 import Link from "next/link"
 import { HairHeroBanner } from "@/components/hairBanner"
@@ -23,6 +24,7 @@ const hairTreatments = [
     id: "prp",
     title: "PRP",
     subtitle: "Platelet-Rich Plasma",
+    price: "€350",
     image: "/prp.webp",
     description: "The procedure uses the patient’s own plasma, which is rich in growth factors, to stimulate dormant hair follicles and improve scalp vascularisation.",
     benefits: [
@@ -37,6 +39,7 @@ const hairTreatments = [
     id: "dutasteride",
     title: "Dutasteride",
     subtitle: "DHT Blocking Injections",
+    price: "€350",
     image: "/dht.avif",
     description: "Micro-injections of dutasteride into the scalp are used to block the hormone DHT (dihydrotestosterone), which plays a key role in androgenetic alopecia.",
     benefits: [
@@ -51,6 +54,7 @@ const hairTreatments = [
     id: "vitamins",
     title: "Nutrient Complexes",
     subtitle: "Scalp Nutrition",
+    price: "€350",
     image: "/scalp.jpg",
     description: "Specialised vitamin and nutrient scalp injections designed to nourish hair follicles and strengthen hair growth.",
     benefits: [
@@ -110,7 +114,7 @@ export default function HairLossTreatmentPage() {
               viewport={{ once: true }}
               className="lg:col-span-5 relative"
             >
-              <div className="aspect-[4/3] sm:aspect-[16/9] lg:aspect-[7/5] rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl z-10 relative">
+              <div className="aspect-[4/3] sm:aspect-[16/9] lg:aspect-[7/5] rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl z-10 relative border-8 border-white">
                 <img src="/hair.webp" alt="Regenerative Hair Restoration" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-zinc-200/50 rounded-full blur-3xl -z-10" />
@@ -119,7 +123,7 @@ export default function HairLossTreatmentPage() {
         </div>
       </section>
 
-      {/* SECTION 2: MEDICAL ASSESSMENT & BLOODS (Strictly based on your data) */}
+      {/* SECTION 2: MEDICAL ASSESSMENT */}
       <section className="py-16 md:py-24 px-5 sm:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
@@ -149,7 +153,7 @@ export default function HairLossTreatmentPage() {
         </div>
       </section>
 
-      {/* SECTION 3: TREATMENT MODALITIES TABS */}
+      {/* SECTION 3: TREATMENT MODALITIES TABS (WITH PRICING) */}
       <section className="py-16 md:py-24 bg-zinc-900 text-white overflow-hidden md:rounded-[3rem]">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
@@ -170,7 +174,12 @@ export default function HairLossTreatmentPage() {
                       : "bg-transparent border-white/10 text-zinc-500 hover:border-white/30"
                     }`}
                   >
-                    <span className="text-sm md:text-xl font-medium tracking-tight">{condition.title}</span>
+                    <div className="flex flex-col">
+                       <span className="text-sm md:text-xl font-medium tracking-tight">{condition.title}</span>
+                       <span className={`text-[10px] uppercase tracking-widest font-bold mt-1 ${activeTab.id === condition.id ? "text-zinc-400" : "text-zinc-600"}`}>
+                         {condition.price} per session
+                       </span>
+                    </div>
                     <ArrowRight className={`w-4 h-4 transition-transform duration-500 ${activeTab.id === condition.id ? "translate-x-0" : "-translate-x-4 opacity-0"}`} />
                   </button>
                 ))}
@@ -189,6 +198,10 @@ export default function HairLossTreatmentPage() {
                 >
                   <div className="relative aspect-video lg:aspect-video rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/5">
                     <img src={activeTab.image} alt={activeTab.title} className="w-full h-full object-cover" />
+                    <div className="absolute top-4 right-4 bg-white/90 backdrop-blur text-zinc-900 px-4 py-2 rounded-full flex items-center gap-2 shadow-lg">
+                       <Euro size={14} className="text-zinc-400" />
+                       <span className="text-xs font-bold uppercase tracking-widest">{activeTab.price}</span>
+                    </div>
                   </div>
                   
                   <div className="space-y-6">
@@ -220,11 +233,10 @@ export default function HairLossTreatmentPage() {
         </div>
       </section>
 
-      {/* SECTION 4: WHO CAN BENEFIT & TREATMENT PLAN (Strict Data) */}
+      {/* SECTION 4: WHO CAN BENEFIT & TREATMENT PLAN */}
       <section className="py-16 md:py-24 lg:py-32 px-5 sm:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-            {/* Beneficiaries */}
             <div className="bg-[#FAF9F6] p-8 md:p-12 rounded-[2.5rem] space-y-8">
               <h3 className="text-2xl md:text-3xl font-light text-zinc-900">Who Can Benefit?</h3>
               <div className="grid grid-cols-1 gap-4">
@@ -243,35 +255,34 @@ export default function HairLossTreatmentPage() {
               </div>
             </div>
 
-            {/* Treatment Plan */}
             <div className="bg-zinc-50 border border-zinc-100 p-8 md:p-12 rounded-[2.5rem] space-y-8">
                <h3 className="text-2xl md:text-3xl font-light text-zinc-900">The Treatment Plan</h3>
                <p className="text-zinc-500 font-light text-sm md:text-base leading-relaxed">
-                 Therapies are typically performed as a series of sessions. Many patients benefit from a combined protocol including:
+                 Therapies are performed as a series of sessions. All primary restoration treatments are standardised at <strong>€350 per session</strong>. Combined protocols may include:
                </p>
                <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-zinc-900" />
-                    <span className="text-xs font-bold uppercase tracking-widest text-zinc-800">PRP therapy</span>
+                    <span className="text-xs font-bold uppercase tracking-widest text-zinc-800">PRP hair therapy</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-zinc-900" />
-                    <span className="text-xs font-bold uppercase tracking-widest text-zinc-800">Dutasteride scalp injections</span>
+                    <span className="text-xs font-bold uppercase tracking-widest text-zinc-800">Dutasteride blocking injections</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-zinc-900" />
-                    <span className="text-xs font-bold uppercase tracking-widest text-zinc-800">Vitamin and regenerative treatments</span>
+                    <span className="text-xs font-bold uppercase tracking-widest text-zinc-800">Nutrient biostimulation</span>
                   </div>
                </div>
                <p className="text-xs italic text-zinc-400 pt-4 border-t border-zinc-100">
-                 Maintenance sessions may be recommended to support long-term results.
+                 A course of 3–6 sessions is typically recommended to see optimal density results.
                </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 5: FINAL CTA & OUR APPROACH */}
+      {/* SECTION 5: FINAL CTA */}
       <section className="py-16 md:py-32 px-5 sm:px-8 max-w-5xl mx-auto text-center">
         <div className="space-y-12">
           <div className="space-y-4">
