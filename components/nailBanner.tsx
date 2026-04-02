@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Home, ChevronRight } from "lucide-react"
+import { Home, ChevronRight, Euro, Activity } from "lucide-react"
 import Link from "next/link"
 
 export function NailHeroBanner() {
@@ -42,15 +42,11 @@ export function NailHeroBanner() {
             </motion.div>
           ))}
         </div>
-        
-        {/* RADIAL OVERLAY: Ensures text legibility by fading images towards the center */}
       </div>
 
       {/* 2. MAIN CONTENT AREA */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 flex flex-col items-center text-center">
         
-       
-
         {/* Headline */}
         <motion.h1 
           initial={{ opacity: 0, scale: 0.95 }}
@@ -67,11 +63,41 @@ export function NailHeroBanner() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="text-zinc-600 text-sm md:text-lg lg:text-xl font-light max-w-2xl leading-relaxed mb-10 md:mb-12 uppercase tracking-widest px-4"
+          className="text-zinc-600 text-sm md:text-lg lg:text-xl font-light max-w-2xl leading-relaxed mb-8 uppercase tracking-widest px-4"
         >
           Advanced clinical assessment and <br className="hidden md:block" />
           <span className="font-medium text-zinc-900">Lunula® Cold Laser</span> technology for total recovery.
         </motion.p>
+
+        {/* --- PRICING SECTION --- */}
+        <motion.div 
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="flex flex-col sm:flex-row items-center gap-4 md:gap-12 mb-12"
+        >
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 rounded-full bg-zinc-50 flex items-center justify-center border border-zinc-100">
+              <Activity size={14} className="text-zinc-400" />
+            </div>
+            <div className="text-left">
+              <p className="text-[9px] font-bold text-zinc-400 uppercase tracking-widest leading-none mb-1">Clinical Assessment</p>
+              <p className="text-sm font-medium text-zinc-800 tracking-tight">Consultation — €50</p>
+            </div>
+          </div>
+
+          <div className="hidden sm:block w-[1px] h-8 bg-zinc-200" />
+
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 rounded-full bg-zinc-50 flex items-center justify-center border border-zinc-100">
+              <Euro size={14} className="text-zinc-400" />
+            </div>
+            <div className="text-left">
+              <p className="text-[9px] font-bold text-zinc-400 uppercase tracking-widest leading-none mb-1">Cold Laser Therapy</p>
+              <p className="text-sm font-medium text-zinc-800 tracking-tight">Lunula 6 Sessions — €450</p>
+            </div>
+          </div>
+        </motion.div>
 
         {/* Breadcrumb Navigation Pill */}
         <motion.div 

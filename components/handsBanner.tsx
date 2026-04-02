@@ -1,12 +1,11 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Home, ChevronRight } from "lucide-react"
+import { Home, ChevronRight, Euro, Droplets, Sparkles } from "lucide-react"
 import Link from "next/link"
 
 export function HandHeroBanner() {
   // Filenames optimized for the Hand Rejuvenation department
-  // Ensure these images exist in your public folder
   const backgroundImages = [
     "/hand.jpg",
     "/pigm.jpg",
@@ -31,7 +30,6 @@ export function HandHeroBanner() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: i * 0.1 }}
               className={`aspect-square rounded-2xl md:rounded-3xl bg-zinc-100 overflow-hidden ${
-                // Hide specific images on mobile to keep the layout tight
                 i > 5 ? "hidden lg:block" : i > 3 ? "hidden sm:block" : ""
               }`}
             >
@@ -64,11 +62,41 @@ export function HandHeroBanner() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="text-zinc-600 text-sm md:text-lg lg:text-xl font-light max-w-2xl leading-relaxed mb-10 md:mb-12 uppercase tracking-widest px-4"
+          className="text-zinc-600 text-sm md:text-lg lg:text-xl font-light max-w-2xl leading-relaxed mb-8 uppercase tracking-widest px-4"
         >
           Advanced Treatment to improve <br className="hidden md:block" />
           <span className="font-medium text-zinc-900">Pigmentation, quality & volume</span> loss in the hands.
         </motion.p>
+
+        {/* --- PRICING SECTION --- */}
+        <motion.div 
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="flex flex-col sm:flex-row items-center gap-4 md:gap-12 mb-12"
+        >
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 rounded-full bg-zinc-50 flex items-center justify-center border border-zinc-100">
+              <Droplets size={14} className="text-zinc-400" />
+            </div>
+            <div className="text-left">
+              <p className="text-[9px] font-bold text-zinc-400 uppercase tracking-widest leading-none mb-1">Volume & Hydration</p>
+              <p className="text-sm font-medium text-zinc-800 tracking-tight">Hyaluronic Acid — €420 <span className="text-[10px] text-zinc-400 ml-1">/ session</span></p>
+            </div>
+          </div>
+
+          <div className="hidden sm:block w-[1px] h-8 bg-zinc-200" />
+
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 rounded-full bg-zinc-50 flex items-center justify-center border border-zinc-100">
+              <Sparkles size={14} className="text-zinc-400" />
+            </div>
+            <div className="text-left">
+              <p className="text-[9px] font-bold text-zinc-400 uppercase tracking-widest leading-none mb-1">Tone Correction</p>
+              <p className="text-sm font-medium text-zinc-800 tracking-tight">Pigmentation — €250 <span className="text-[10px] text-zinc-400 ml-1">/ session</span></p>
+            </div>
+          </div>
+        </motion.div>
 
         {/* Breadcrumb Navigation Pill */}
         <motion.div 
