@@ -39,13 +39,14 @@ const navItems = [
     ]
   },
   { 
-    href: "#", 
-    label: "Hair & Nail Health",
-    dropdown: [
-      { label: "Hair Loss Restoration", href: "/hair-loss-treatments" },
-      { label: "Nail Disorders Treatments", href: "/nail" }
-    ]
-  },
+  href: "#", 
+  label: "Hair & Nail Health",
+  dropdown: [
+    { label: "Hair Loss Restoration", href: "/hair-loss-treatments" },
+    { label: "Hydrafacial Scalp", href: "/hydrafacial-scalp" },
+    { label: "Nail Disorders Treatments", href: "/nail" }
+  ]
+},
   { href: "/hand-rejuvenation", label: "Hand Rejuvenation" },
   { href: "/earlobe-rejuvenation-lobuloplasty", label: "Earlobe Rejuvenation" },
   { 
