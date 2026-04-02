@@ -93,16 +93,14 @@ export default function SkinLesionRemovalPage() {
                   <p>
                     At Gerka Clinic, Dublin, we offer cosmetic removal for a wide range of benign skin lesions, focusing on safety, precision and optimal aesthetic outcomes.
                   </p>
-                  <p>
-                    An <strong>intradermal nevus</strong> (or intradermal mole) is a common, benign skin growth where mole cells are located entirely within the dermis. Typically skin-colored to light brown, these raised nodules are frequently treated in our clinic for cosmetic improvement.
-                  </p>
+                  
                   <div className="p-6 bg-zinc-900 text-white rounded-3xl space-y-2 shadow-sm">
                     <p className="text-xs uppercase tracking-widest font-bold text-zinc-400">Facial Precision</p>
                     <p className="text-sm font-light">We specialize in removal of moles and lesions on delicate facial areas, including eyelids and periocular skin.</p>
                   </div>
                 </div>
-                <div className="aspect-square rounded-[3rem] overflow-hidden shadow-2xl border-white border-8">
-                  <img src="/lision1.webp" alt="Skin Lesion Removal Clinical Care" className="w-full h-full object-cover" />
+                <div className="aspect-[5/4] rounded-[3rem] overflow-hidden shadow-2xl border-white border-8">
+                  <img src="/comp.png" alt="Skin Lesion Removal Clinical Care" className="w-full h-full object-cover" />
                 </div>
               </div>
             </section>
