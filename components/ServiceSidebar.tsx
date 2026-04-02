@@ -20,6 +20,7 @@ interface ServiceSidebarProps {
 
 const faceServices: Service[] = [
   { name: "SkinVive", href: "/face/skinvive" },
+  { name: "Face Skin Lesion Removal", href: "/face/skin-lesion-removal" },
   { name: "Exilis® Radiofrequency Facial Tightening", href: "/face/exilis-facial" },
   { name: "Sunekos® Skin Booster", href: "/face/sunekos" },
   { name: "Profhilo® Skin Booster", href: "/face/profhilo" },
@@ -38,7 +39,7 @@ const bodyServices: Service[] = [
   { name: "Body Pigmentation Treatment", href: "/body/pigmentation" },
   { name: "Exilis Body Skin Tightening", href: "/body/exilis-body" },
   { name: "Postpartum Scar Treatment", href: "/body/postpartum-scar" },
-  { name: "Skin Lesion Removal", href: "/body/lesion-removal" },
+  { name: "Body Skin Lesion Removal", href: "/body/lesion-removal" },
 ]
 
 // UPDATED DATA STRUCTURE
@@ -62,7 +63,7 @@ const womensHealthServices: ServiceSection[] = [
     title: "AESTHETIC / SURGICAL",
     items: [
       { name: "Postpartum Scar Treatment", href: "/womens-health/postpartum-scar" },
-      { name: "Skin Lesion Removal", href: "/womens-health/skin-lesion-removal" },
+      // { name: "Skin Lesion Removal", href: "/womens-health/skin-lesion-removal" },
       { name: "Exilis Ultra Femme® Vaginal Tightening", href: "/womens-health/exilis-ultra-femme" },
       { name: "Hymenoplasty (Surgical)", href: "/womens-health/hymenoplasty" },
       { name: "Labiaplasty (Surgical)", href: "/womens-health/labiaplasty" },
