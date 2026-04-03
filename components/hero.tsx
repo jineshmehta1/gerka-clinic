@@ -52,8 +52,8 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-base sm:text-lg text-zinc-500 font-light leading-relaxed max-w-md"
           >
-            A premium wellness sanctuary dedicated to modern aesthetics and 
-            specialized women's health. Experience personalized care in the 
+            A premium wellness environment dedicated to modern aesthetics and 
+            specialized women's health. Experience personalised care in the 
             heart of the city.
           </motion.p>
 

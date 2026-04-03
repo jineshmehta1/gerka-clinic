@@ -16,8 +16,8 @@ const visitSteps = [
   },
   {
     icon: <Coffee size={20} />,
-    title: "The Sanctuary",
-    desc: "Wait in our refined, calming lounge. Enjoy a selection of refreshments while you prepare for your personalized consultation."
+    title: "The Environment",
+    desc: "Wait in our refined, calming lounge. Enjoy a selection of refreshments while you prepare for your personalised consultation."
   },
   {
     icon: <ShieldCheck size={20} />,

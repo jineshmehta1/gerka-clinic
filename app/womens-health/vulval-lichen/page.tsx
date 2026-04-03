@@ -84,7 +84,7 @@ export default function VulvalLichenServicePage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
                 <div className="space-y-6 text-zinc-600 font-light leading-relaxed text-[16px]">
                   <p>
-                    Advanced diagnosis and personalised treatment for lichen sclerosus and chronic vulval conditions. We provide a sanctuary for patients seeking both medical resolution and regenerative restoration.
+                    Advanced diagnosis and personalised treatment for lichen sclerosus and chronic vulval conditions. We provide a comfortable environment for patients seeking both medical resolution and regenerative restoration.
                   </p>
                   <p>
                     At Gerka Clinic, we specialise in combining evidence-based medical care with advanced regenerative therapies to restore comfort, improve skin quality, and support long-term intimate wellbeing.

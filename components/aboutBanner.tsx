@@ -74,8 +74,8 @@ export function GerkaHeroBanner() {
           transition={{ delay: 0.3 }}
           className="text-zinc-600 text-base md:text-xl font-light max-w-2xl leading-relaxed mb-10 md:mb-12"
         >
-          Ireland&apos;s premier sanctuary for aesthetic gynaecology. <br className="hidden sm:block" />
-          We unite scientific innovation with deeply personalized care.
+          Ireland&apos;s premier comfortable environment for aesthetic gynaecology. <br className="hidden sm:block" />
+          We unite scientific innovation with deeply personalised care.
         </motion.p>
 
         {/* Breadcrumb Navigation Pill */}
