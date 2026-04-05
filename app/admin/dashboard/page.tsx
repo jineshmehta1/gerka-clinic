@@ -1,7 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import { Calendar, Phone, Mail, MessageSquare } from "lucide-react";
+import { Calendar, Phone, Mail, MessageSquare, LogOut } from "lucide-react";
 
 export default async function AdminDashboard() {
   // Security Check: Basic cookie check (for production, use NextAuth)
@@ -13,17 +13,35 @@ export default async function AdminDashboard() {
   });
 
   return (
-    <div className="min-h-screen bg-[#FAF9F6] p-8 pt-14 md:p-20">
+   <div className="min-h-screen bg-[#FAF9F6] pt-28 md:pt-32">
       <div className="max-w-7xl mx-auto space-y-10">
         <div className="flex justify-between items-end">
-          <div className="space-y-2">
-            <h1 className="text-3xl font-light text-zinc-900 tracking-tight">Clinical Bookings</h1>
-            <p className="text-zinc-500 text-sm">Overview of all patient appointments from Neon DB.</p>
-          </div>
-          <div className="px-4 py-2 bg-zinc-900 text-white rounded-full text-[10px] font-bold uppercase tracking-widest">
-            {appointments.length} Total
-          </div>
-        </div>
+  <div className="space-y-2">
+    <h1 className="text-3xl font-light text-zinc-900 tracking-tight">
+      Clinical Bookings
+    </h1>
+    <p className="text-zinc-500 text-sm">
+      Overview of all patient appointments from Neon DB.
+    </p>
+  </div>
+
+  <div className="flex items-center gap-3">
+    <div className="px-4 py-2 bg-zinc-900 text-white rounded-full text-[10px] font-bold uppercase tracking-widest">
+      {appointments.length} Total
+    </div>
+
+    {/* LOGOUT BUTTON */}
+    <form action="/api/admin/logout" method="POST">
+      <button
+  type="submit"
+  className="flex items-center gap-2 px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest border border-zinc-200 text-zinc-600 bg-white hover:bg-red-500 hover:text-white hover:border-red-500 transition-all duration-300 hover:shadow-md active:scale-95"
+>
+  <LogOut size={12} />
+  Logout
+</button>
+    </form>
+  </div>
+</div>
 
         <div className="grid grid-cols-1 gap-6">
           {appointments.map((apt) => (
@@ -58,7 +76,7 @@ export default async function AdminDashboard() {
             </div>
             
           ))}
-
+          
         </div>
       </div>
     </div>

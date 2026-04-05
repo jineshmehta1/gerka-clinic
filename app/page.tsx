@@ -115,10 +115,13 @@ export default function HomePage() {
 
           <PaymentPlan/>
 
+          <section id="booking" className="scroll-mt-20">
+          <AppointmentBooking/>
+          </section>
+
           {/* FAQ Section */}
           <FAQSection />
 
-          <AppointmentBooking/>
 
           {/* Contact Section with ID for navigation from Navbar/Footer */}
           <section id="contact" className="scroll-mt-20">
