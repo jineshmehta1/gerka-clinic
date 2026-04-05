@@ -12,6 +12,7 @@ import { FAQSection } from "@/components/faq"
 import { ContactSection } from "@/components/contact"
 import { PaymentPlan } from "@/components/payment"
 import { TrustedBrands } from "@/components/logo"
+import  AppointmentBooking  from "@/components/appoint"
 
 export default function HomePage() {
   // Structured Data for SEO (MedicalBusiness is better for clinics than Organization)
@@ -116,6 +117,8 @@ export default function HomePage() {
 
           {/* FAQ Section */}
           <FAQSection />
+
+          <AppointmentBooking/>
 
           {/* Contact Section with ID for navigation from Navbar/Footer */}
           <section id="contact" className="scroll-mt-20">
