@@ -34,7 +34,6 @@ export default function DoctorProfileCompact() {
             <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-zinc-500">Clinical Team</span>
             <h1 className="text-3xl md:text-4xl font-light tracking-tight">Tamana Noorzaei, <span className="italic font-serif">MD</span></h1>
             <div className="flex items-center gap-4 text-zinc-400 text-xs uppercase tracking-widest">
-              <span className="flex items-center gap-1.5"><MapPin size={14}/> Monaghan, IE</span>
               <span className="flex items-center gap-1.5"><Stethoscope size={14}/> Aesthetic & Dermatology</span>
             </div>
           </div>
@@ -72,14 +71,7 @@ export default function DoctorProfileCompact() {
               </div>
             </div>
 
-            {/* Languages */}
-            <div className="space-y-4 pt-4 border-t border-zinc-50">
-              <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] text-zinc-400">Languages</h3>
-              <div className="flex gap-6">
-                <p className="text-xs text-zinc-600"><span className="font-bold text-zinc-900">Persian/Dari:</span> Native</p>
-                <p className="text-xs text-zinc-600"><span className="font-bold text-zinc-900">English:</span> Intermediate</p>
-              </div>
-            </div>
+           
           </div>
 
           {/* RIGHT COLUMN: HISTORY & SURGICAL */}
@@ -87,9 +79,6 @@ export default function DoctorProfileCompact() {
             
             {/* Work History */}
             <div className="space-y-6">
-              <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] text-zinc-400 flex items-center gap-2">
-                <Calendar size={14}/> Experience (01/2020 — 01/2025)
-              </h3>
               <div className="space-y-2">
                 <h4 className="text-xl font-medium text-zinc-900">Aesthetic & Dermatology Doctor</h4>
                 <p className="text-xs font-bold uppercase text-zinc-400 tracking-widest">Private Aesthetic Centres, Afghanistan</p>

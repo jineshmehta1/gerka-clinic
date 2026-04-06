@@ -5,33 +5,49 @@ import { Award, GraduationCap } from "lucide-react"
 
 const specialists = [
   {
-  name: "Giselle Gerka",
-  role: "Founder | Aesthetic & Regenerative Practitioner | Skin Lesion Specialist",
-  image: "/gerka.jpeg",
-  credentials: "University of Seville",
-  specialties: "Aesthetic Medicine • Regenerative Treatments • Skin Lesion Care • Pelvic Floor Health",
-  bio: [
-    "Giselle Gerka is the founder of Gerka Clinic and has over 17 years of experience in aesthetic medicine.",
-    
-    "She began her training in Venezuela with a technical degree in physiotherapy, and later specialised in pelvic floor rehabilitation and women’s health in Spain. This background supports her structured and functional approach to patient care.",
-    
-    "Giselle has completed formal training in minor surgery in Spain and holds an international certification in laser technologies. She works with a range of advanced aesthetic and energy-based treatments.",
-    
-    "Her clinical focus includes dermatology, particularly the assessment and treatment of skin lesions. She has trained in dermoscopy and skin biopsy techniques through programmes associated with King’s College Hospital London.",
-    
-    "She also undertakes continuous training in anatomy, with hands-on practical sessions in Spain, ensuring a high level of precision and safety in her procedures.",
-    
-    "She is currently continuing her professional development with further studies in aesthetic surgery in Barcelona.",
-    
-    "At Gerka Clinic, Giselle focuses on delivering safe, effective treatments with a combination of medical and aesthetic expertise."
-  ]
-},
+    name: "Giselle Gerka",
+    role: "Founder | Aesthetic & Regenerative Practitioner | Skin Lesion Specialist",
+    image: "/gerka.jpeg",
+    credentials: "University of Seville",
+    specialties: "Aesthetic Medicine • Regenerative Treatments • Skin Lesion Care • Pelvic Floor Health",
+    bio: [
+      "Giselle Gerka is the founder of Gerka Clinic and has over 17 years of experience in aesthetic medicine.",
+      "She began her training in Venezuela with a technical degree in physiotherapy, and later specialised in pelvic floor rehabilitation and women’s health in Spain. This background supports her structured and functional approach to patient care.",
+      "Giselle has completed formal training in minor surgery in Spain and holds an international certification in laser technologies. She works with a range of advanced aesthetic and energy-based treatments.",
+      "Her clinical focus includes dermatology, particularly the assessment and treatment of skin lesions. She has trained in dermoscopy and skin biopsy techniques through programmes associated with King’s College Hospital London.",
+      "She also undertakes continuous training in anatomy, with hands-on practical sessions in Spain, ensuring a high level of precision and safety in her procedures.",
+      "She is currently continuing her professional development with further studies in aesthetic surgery in Barcelona.",
+      "At Gerka Clinic, Giselle focuses on delivering safe, effective treatments with a combination of medical and aesthetic expertise."
+    ]
+  },
   {
     name: "Dr. Evelyn Alba",
     role: "Gynaecology & Obstetrics Specialist",
     image: "/1.webp",
     credentials: "Universitat de Barcelona",
-    specialties: "Gynaecological Oncology • Breast Pathology",
+    specialties: (
+      <div className="space-y-4 text-left">
+        <p className="text-zinc-500 font-normal normal-case">Dr Alba specialises in the following areas of women’s health and advanced gynaecology:</p>
+        <div className="space-y-3">
+          <div>
+            <p className="text-zinc-900 font-bold uppercase tracking-widest text-[10px] mb-1">• Aesthetic & Cosmetic Gynaecological Surgery</p>
+            <p className="text-zinc-500 font-light normal-case text-xs leading-relaxed tracking-normal">Advanced surgical techniques to enhance both function and appearance of the intimate area, with a strong focus on precision, safety and natural results.</p>
+          </div>
+          <div>
+            <p className="text-zinc-900 font-bold uppercase tracking-widest text-[10px] mb-1">• Regenerative Gynaecology</p>
+            <p className="text-zinc-500 font-light normal-case text-xs leading-relaxed tracking-normal">Innovative treatments using PRP, cellular therapies and energy-based devices to restore tissue health, improve function and support intimate wellbeing.</p>
+          </div>
+          <div>
+            <p className="text-zinc-900 font-bold uppercase tracking-widest text-[10px] mb-1">• Hormonal Health & Functional Medicine</p>
+            <p className="text-zinc-500 font-light normal-case text-xs leading-relaxed tracking-normal">Personalised assessment and treatment of hormonal imbalances affecting energy, mood, sexual health and overall wellbeing.</p>
+          </div>
+          <div>
+            <p className="text-zinc-900 font-bold uppercase tracking-widest text-[10px] mb-1">• Menopause & Perimenopause Care</p>
+            <p className="text-zinc-500 font-light normal-case text-xs leading-relaxed tracking-normal">Comprehensive, evidence-based support for women navigating menopause, including symptom management, hormonal optimisation and intimate health restoration.</p>
+          </div>
+        </div>
+      </div>
+    ),
     bio: [
       "Specialist in Gynaecology and Obstetrics, Dr Alba holds advanced postgraduate training from the Universitat de Barcelona. She is a dedicated member of SEGERF and AEEM.",
       "Her approach combines scientific rigour with compassionate care, addressing sexual dysfunction, urinary incontinence and menopausal symptoms through innovative, personalised treatments.",
@@ -43,7 +59,7 @@ const specialists = [
 export function SpecialistsSection() {
   return (
     <section className="py-16 md:py-24 lg:py-32 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-10">
         
         {/* SECTION HEADER */}
         <div className="text-center mb-16 md:mb-24">
@@ -87,7 +103,7 @@ export function SpecialistsSection() {
                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                   />
                   
-                  {/* Floating Info Tag - Visible on hover (desktop) and tap (mobile) */}
+                  {/* Floating Info Tag */}
                   <div className="absolute bottom-4 left-4 right-4 md:bottom-8 md:left-8 md:right-8 bg-white/95 backdrop-blur-md p-4 md:p-6 rounded-2xl md:rounded-3xl border border-white/20 shadow-lg lg:translate-y-4 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100 transition-all duration-500">
                     <div className="flex items-center gap-2 md:gap-3 text-zinc-800">
                       <GraduationCap size={16} className="text-zinc-400 md:w-5 md:h-5" />
@@ -100,7 +116,7 @@ export function SpecialistsSection() {
               {/* TEXT SIDE */}
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: true }}
                 className="w-full lg:w-1/2 space-y-6 md:space-y-8"
@@ -134,9 +150,9 @@ export function SpecialistsSection() {
                 {/* Technical Skills Row */}
                 <div className="pt-6 border-t border-zinc-100 text-center lg:text-left">
                    <p className="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.3em] text-zinc-400 mb-2 md:mb-3">Core Expertise</p>
-                   <p className="text-xs md:text-sm text-zinc-900 font-medium tracking-wide">
+                   <div className="text-xs md:text-sm text-zinc-900 font-medium tracking-wide">
                      {pro.specialties}
-                   </p>
+                   </div>
                 </div>
               </motion.div>
             </div>
