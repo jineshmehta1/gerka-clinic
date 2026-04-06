@@ -12,6 +12,7 @@ import { PlanningVisit} from "@/components/visit"
 import { ContactSection } from "@/components/contact"
 import { GerkaHeroBanner } from "@/components/aboutBanner"
 import ClinicIntro from "@/components/features"
+import DoctorAboutPage from "@/components/profile"
 
 export default function AboutPage() {
   return (
@@ -19,6 +20,7 @@ export default function AboutPage() {
       <GerkaHeroBanner/>
       <AboutIntro/>
       <SpecialistsSection/>
+      <DoctorAboutPage/>
       <ClinicIntro/>
       <PlanningVisit/>
       <ContactSection/>

@@ -67,6 +67,7 @@ const navItems = [
         items: [
           { label: "Emsella® Chair Pelvic Floor Treatment", href: "/womens-health/emsella" },
           { label: "Vaginal PRP Treatment", href: "/womens-health/prp" },
+          { label: "O-Shot® & P-Shot® (Sexual Wellness)", href: "/womens-health/oshot-pshot" }, // New Page Added
           { label: "Vaginismus: Advanced Specialist Treatment", href: "/womens-health/vaginismus" }
         ]
       },
@@ -74,7 +75,6 @@ const navItems = [
         title: "Aesthetic / Surgical",
         items: [
           { label: "Postpartum Scar Treatment", href: "/womens-health/postpartum-scar" },
-          // { label: "Skin Lesion Removal", href: "/womens-health/skin-lesion-removal" },
           { label: "Exilis Ultra Femme® Vaginal Tightening", href: "/womens-health/exilis-ultra-femme" },
           { label: "Hymenoplasty (Surgical)", href: "/womens-health/hymenoplasty" },
           { label: "Labiaplasty (Surgical)", href: "/womens-health/labiaplasty" },
