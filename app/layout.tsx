@@ -4,7 +4,10 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 
-// Import your components (ensure these paths match your file structure)
+// Import Providers
+import { CartProvider } from '@/context/CartContext';
+
+// Import your components
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 
@@ -45,7 +48,7 @@ export const metadata: Metadata = {
     siteName: 'Gerka Clinic',
     images: [
       {
-        url: 'https://www.gerkaclinic.com/og-image.jpg', // Ensure you have an OG image
+        url: 'https://www.gerkaclinic.com/og-image.jpg', 
         width: 1200,
         height: 630,
         alt: 'Gerka Clinic Reception',
@@ -64,7 +67,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        {/* Favicons - Ensure these exist in your public folder */}
+        {/* Favicons */}
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
@@ -105,16 +108,20 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} bg-white antialiased`}>
-        {/* Navbar appears on all pages */}
-        <Navbar />
-        
-        {/* Main Content Area */}
-        <main className="min-h-screen">
-          {children}
-        </main>
-        
-        {/* Footer appears on all pages */}
-        <Footer />
+        {/* 
+            We wrap the entire body content in CartProvider. 
+            This allows Navbar, the Product page, and any future Cart sidebar 
+            to share the same state.
+        */}
+        <CartProvider>
+          <Navbar />
+          
+          <main className="min-h-screen">
+            {children}
+          </main>
+          
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );

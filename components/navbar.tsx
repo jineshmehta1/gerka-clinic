@@ -5,7 +5,8 @@ import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X, ChevronDown, ChevronRight } from "lucide-react"
+import { Menu, X, ChevronDown, ChevronRight, ShoppingBag } from "lucide-react"
+import { useCart } from "@/context/CartContext"
 
 const navItems = [
   { href: "/about", label: "About Us" },
@@ -40,16 +41,24 @@ const navItems = [
     ]
   },
   { 
-  href: "#", 
-  label: "Hair & Nail Health",
-  dropdown: [
-    { label: "Hair Loss Restoration", href: "/hair-loss-treatments" },
-    { label: "Hydrafacial Scalp", href: "/hydrafacial-scalp" },
-    { label: "Nail Disorders Treatments", href: "/nail" }
-  ]
-},
-  { href: "/hand-rejuvenation", label: "Hand Rejuvenation" },
-  { href: "/earlobe-rejuvenation-lobuloplasty", label: "Earlobe Rejuvenation" },
+    href: "#", 
+    label: "Hair & Nail Health",
+    dropdown: [
+      { label: "Hair Loss Restoration", href: "/hair-loss-treatments" },
+      { label: "Hydrafacial Scalp", href: "/hydrafacial-scalp" },
+      { label: "Nail Disorders Treatments", href: "/nail" }
+    ]
+  },
+  // GROUPED FOR DESKTOP - FLATTENED FOR MOBILE
+  { 
+    href: "#", 
+    label: "Rejuvenation",
+    isRejuvenationGroup: true,
+    dropdown: [
+      { label: "Hand Rejuvenation", href: "/hand-rejuvenation" },
+      { label: "Earlobe Rejuvenation", href: "/earlobe-rejuvenation-lobuloplasty" },
+    ]
+  },
   { 
     href: "#", 
     label: "Women's Health",
@@ -67,7 +76,7 @@ const navItems = [
         items: [
           { label: "Emsella® Chair Pelvic Floor Treatment", href: "/womens-health/emsella" },
           { label: "Vaginal PRP Treatment", href: "/womens-health/prp" },
-          { label: "O-Shot® & P-Shot® (Sexual Wellness)", href: "/womens-health/oshot-pshot" }, // New Page Added
+          { label: "O-Shot® & P-Shot® (Sexual Wellness)", href: "/womens-health/oshot-pshot" },
           { label: "Vaginismus: Advanced Specialist Treatment", href: "/womens-health/vaginismus" }
         ]
       },
@@ -83,6 +92,7 @@ const navItems = [
       }
     ]
   },
+  { href: "/shop", label: "Shop" },
   { href: "/clinical-outcomes", label: "Clinical Outcomes" },
 ]
 
@@ -92,6 +102,7 @@ export function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null)
   const pathname = usePathname()
+  const { cartCount } = useCart()
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20)
@@ -117,12 +128,7 @@ export function Navbar() {
         {/* LOGO AREA */}
         <Link href="/" className="flex items-center gap-2 group shrink-0 relative z-[101]">
           <div className="relative w-8 h-8 md:w-8 md:h-8 lg:w-11 lg:h-11">
-            <Image
-              src="/icon2.png"
-              alt="Gerka Clinic"
-              fill
-              className="object-contain"
-            />
+            <Image src="/icon2.png" alt="Gerka Clinic" fill className="object-contain" />
           </div>
           <div className="flex flex-col">
             <span className="text-[13px] md:text-sm lg:text-base font-light tracking-[0.1em] text-zinc-800 uppercase leading-tight">
@@ -134,8 +140,7 @@ export function Navbar() {
           </div>
         </Link>
 
-        {/* DESKTOP NAV - Responsive logic to prevent overlap */}
-        {/* Hidden below 1360px to prevent the "Contact" button from going off frame */}
+        {/* DESKTOP NAV (Center) */}
         <div className="hidden min-[1360px]:flex items-center gap-x-1 2xl:gap-x-4">
           {navItems.map((item) => {
             const hasDropdown = item.dropdown || item.sections
@@ -207,9 +212,21 @@ export function Navbar() {
           })}
         </div>
 
-        {/* ACTION BUTTONS */}
-        <div className="flex items-center gap-3 shrink-0 relative z-[101]">
-          <div className="hidden min-[1360px]:block lg:block">
+        {/* ACTION BUTTONS (Right Side) */}
+        <div className="flex items-center gap-2 md:gap-4 shrink-0 relative z-[101]">
+          
+          {/* SHOPPING BAG ICON (Near Contact) */}
+          <Link href="/shop/cart" className="relative p-2 text-zinc-800 hover:text-zinc-500 transition-colors">
+            <ShoppingBag size={20} strokeWidth={1.5} />
+            {cartCount > 0 && (
+              <span className="absolute top-0 right-0 bg-[#002D40] text-white text-[8px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
+                {cartCount}
+              </span>
+            )}
+          </Link>
+
+          {/* CONTACT BUTTON */}
+          <div className="hidden min-[1360px]:block ml-1">
             <Link href="/#contact">
               <button className="bg-zinc-900 hover:bg-zinc-800 text-white text-[9px] 2xl:text-[10px] font-bold tracking-[0.2em] uppercase px-4 py-2.5 2xl:px-7 2xl:py-3.5 rounded-full transition-all shadow-md active:scale-95 whitespace-nowrap">
                 Contact
@@ -217,6 +234,7 @@ export function Navbar() {
             </Link>
           </div>
 
+          {/* MOBILE HAMBURGER */}
           <button 
             onClick={() => setIsOpen(!isOpen)} 
             className="min-[1360px]:hidden p-2 text-zinc-800 hover:bg-zinc-50 rounded-lg transition-colors"
@@ -238,6 +256,19 @@ export function Navbar() {
           >
             <div className="p-6 space-y-2 pb-32">
               {navItems.map((item) => {
+                // LOGIC: FLATTEN REJUVENATION FOR MOBILE (NO DROPDOWN)
+                if (item.isRejuvenationGroup && item.dropdown) {
+                  return item.dropdown.map((sub) => (
+                    <Link 
+                      key={sub.label} 
+                      href={sub.href} 
+                      className="block py-4 border-b border-zinc-50 text-sm font-medium tracking-widest text-zinc-900 uppercase"
+                    >
+                      {sub.label}
+                    </Link>
+                  ))
+                }
+
                 const hasSub = item.dropdown || item.sections
                 const isExpanded = mobileExpanded === item.label
 
@@ -274,7 +305,7 @@ export function Navbar() {
                                   <p className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">{sec.title}</p>
                                   <div className="flex flex-col gap-3 border-l border-zinc-200 pl-3">
                                     {sec.items.map(sub => (
-                                      <Link key={sub.label} href={sub.href} className="text-xs text-zinc-600">
+                                      <Link key={sub.label} href={sub.href} className="text-xs text-zinc-600 active:text-zinc-900">
                                         {sub.label}
                                       </Link>
                                     ))}
@@ -284,7 +315,7 @@ export function Navbar() {
                             ) : (
                               <div className="flex flex-col gap-4 border-l border-zinc-200 pl-3">
                                 {item.dropdown?.map(sub => (
-                                  <Link key={sub.label} href={sub.href} className="text-xs text-zinc-600">
+                                  <Link key={sub.label} href={sub.href} className="text-xs text-zinc-600 active:text-zinc-900">
                                     {sub.label}
                                   </Link>
                                 ))}
