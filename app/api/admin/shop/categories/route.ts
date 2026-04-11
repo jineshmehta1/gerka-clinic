@@ -2,7 +2,6 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 
 // GET: Fetch all categories with product counts
-// GET: Fetch all categories with product counts
 export async function GET() {
   try {
     const categories = await prisma.category.findMany({
@@ -15,7 +14,8 @@ export async function GET() {
     });
     return NextResponse.json(categories);
   } catch (error) {
-    return NextResponse.json({ error: "Failed to fetch categories" }, { status: 500 });
+    console.error("CATEGORY ERROR:", error);
+    return NextResponse.json({ error: String(error) }, { status: 500 });
   }
 }
 
