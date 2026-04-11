@@ -51,10 +51,16 @@ export default function ShopPage() {
           fetch("/api/admin/shop/products"),
           fetch("/api/admin/shop/categories")
         ])
-        setProducts(await prodRes.json())
-        setCategories(await catRes.json())
+        
+        const prodData = await prodRes.json()
+        const catData = await catRes.json()
+
+        // Defensive check: Ensure we are setting arrays
+        // If your API wraps data (e.g., { products: [] }), this handles it
+        setProducts(Array.isArray(prodData) ? prodData : (prodData.products || []))
+        setCategories(Array.isArray(catData) ? catData : (catData.categories || []))
       } catch (err) {
-        console.error("Error loading shop data")
+        console.error("Error loading shop data:", err)
       } finally {
         setLoading(false)
       }
@@ -62,11 +68,17 @@ export default function ShopPage() {
     fetchData()
   }, [])
 
-  const filteredProducts = products.filter(product => {
-    const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                         product.brand.toLowerCase().includes(searchQuery.toLowerCase())
+  // Safely compute filtered products
+  const filteredProducts = (Array.isArray(products) ? products : []).filter(product => {
+    const matchesSearch = 
+      product.name?.toLowerCase().includes(searchQuery.toLowerCase()) || 
+      product.brand?.toLowerCase().includes(searchQuery.toLowerCase())
+    
     const matchesCategory = selectedCategory === "All" || product.categoryId === selectedCategory
-    const matchesSkin = selectedSkinType === "All" || product.skinTypes.includes(selectedSkinType)
+    
+    // Safety check for skinTypes array
+    const matchesSkin = selectedSkinType === "All" || 
+      (Array.isArray(product.skinTypes) && product.skinTypes.includes(selectedSkinType))
     
     return matchesSearch && matchesCategory && matchesSkin
   }).sort((a, b) => {
@@ -111,7 +123,7 @@ export default function ShopPage() {
                   >
                     All Formulations {selectedCategory === "All" && <div className="w-1 h-1 bg-zinc-900 rounded-full" />}
                   </button>
-                  {categories.map(cat => (
+                  {Array.isArray(categories) && categories.map(cat => (
                     <button 
                       key={cat.id}
                       onClick={() => setSelectedCategory(cat.id)}
@@ -204,7 +216,7 @@ export default function ShopPage() {
 
                           <div className="flex justify-between items-end pt-4">
                             <div className="space-y-1">
-                               <p className="text-lg font-bold text-zinc-900">€{product.price.toFixed(2)}</p>
+                               <p className="text-lg font-bold text-zinc-900">€{product.price?.toFixed(2)}</p>
                                <p className="text-[9px] font-medium text-zinc-400 uppercase tracking-widest leading-none">{product.size}</p>
                             </div>
                             <div className="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center text-white shadow-lg group-hover:bg-[#002D40] transition-colors">
