@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 
 // GET: Fetch all categories with product counts
+// GET: Fetch all categories with product counts
 export async function GET() {
   try {
     const categories = await prisma.category.findMany({
