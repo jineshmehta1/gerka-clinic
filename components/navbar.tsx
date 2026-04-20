@@ -70,6 +70,7 @@ const navItems = [
       {
         title: "Medical / Vulval Health",
         items: [
+           { label: "Private Smear Test Dublin", href: "/womens-health/private-smear-test-dublin" },
           { label: "Vulval Lichen Specialist Care", href: "/womens-health/vulval-lichen" },
           { label: "Vaginal Dryness & Genitourinary Syndrome Support", href: "/womens-health/vaginal-dryness" }
         ]

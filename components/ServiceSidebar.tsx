@@ -47,6 +47,7 @@ const womensHealthServices: ServiceSection[] = [
   {
     title: "MEDICAL / VULVAL HEALTH",
     items: [
+       { name: "Private Smear Test Dublin", href: "/womens-health/private-smear-test-dublin" },
       { name: "Vulval Lichen Specialist Care", href: "/womens-health/vulval-lichen" },
       { name: "Vaginal Dryness & Genitourinary Syndrome Support", href: "/womens-health/vaginal-dryness" },
     ]
