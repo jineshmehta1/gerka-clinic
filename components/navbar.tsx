@@ -42,13 +42,16 @@ const navItems = [
   },
   { 
     href: "#", 
-    label: "Hair & Nail Health",
+    label: "Hair & Nail",
     dropdown: [
       { label: "Hair Loss Restoration", href: "/hair-loss-treatments" },
       { label: "Hydrafacial Scalp", href: "/hydrafacial-scalp" },
       { label: "Nail Disorders Treatments", href: "/nail" }
     ]
   },
+  // NEW ITEM: NATURAL AESTHETICS
+  { href: "/natural-regenerative-aesthetics", label: "Natural Aesthetics" },
+  
   // GROUPED FOR DESKTOP - FLATTENED FOR MOBILE
   { 
     href: "#", 
@@ -112,6 +115,7 @@ export function Navbar() {
 
   useEffect(() => {
     setIsOpen(false)
+    setActiveDropdown(null) // Ensure highlight clears on route change
   }, [pathname])
 
   return (
@@ -120,31 +124,32 @@ export function Navbar() {
       className={`fixed top-0 w-full z-[100] transition-all duration-500 ${
         scrolled || activeDropdown || isOpen
           ? "bg-white border-b border-zinc-100 py-3 shadow-md" 
-          : "bg-white/95 backdrop-blur-md py-4 md:py-5"
+          : "bg-white/95 backdrop-blur-md py-4 md:py-6"
       }`}
     >
-      <div className="max-w-[1600px] mx-auto px-4 md:px-6 flex items-center justify-between gap-2">
+      <div className="max-w-[1700px] mx-auto px-4 md:px-6 flex items-center justify-between gap-1">
         
         {/* LOGO AREA */}
         <Link href="/" className="flex items-center gap-2 group shrink-0 relative z-[101]">
-          <div className="relative w-8 h-8 md:w-8 md:h-8 lg:w-11 lg:h-11">
+          <div className="relative w-8 h-8 md:w-8 md:h-8 lg:w-10 lg:h-10">
             <Image src="/icon2.png" alt="Gerka Clinic" fill className="object-contain" />
           </div>
           <div className="flex flex-col">
-            <span className="text-[13px] md:text-sm lg:text-base font-light tracking-[0.1em] text-zinc-800 uppercase leading-tight">
+            <span className="text-[12px] md:text-sm font-light tracking-[0.1em] text-zinc-800 uppercase leading-tight">
               Gerka Clinic
             </span>
-            <span className="text-[7px] md:text-[7px] lg:text-[8px] tracking-[0.2em] text-zinc-400 uppercase font-medium">
+            <span className="text-[6px] md:text-[7px] tracking-[0.1em] text-zinc-400 uppercase font-medium">
               Aesthetic & Intimate Health
             </span>
           </div>
         </Link>
 
-        {/* DESKTOP NAV (Center) */}
-        <div className="hidden min-[1360px]:flex items-center gap-x-1 2xl:gap-x-4">
+        {/* DESKTOP NAV - Enhanced Spacing to prevent overlap */}
+        <div className="hidden min-[1380px]:flex items-center gap-x-0.5 2xl:gap-x-2">
           {navItems.map((item) => {
             const hasDropdown = item.dropdown || item.sections
-            const isActive = pathname === item.href
+            // Strict equality check for highlight to prevent "always highlighted" issue
+            const isActive = item.href !== "#" && pathname === item.href
 
             return (
               <div 
@@ -154,14 +159,14 @@ export function Navbar() {
               >
                 <Link
                   href={item.href}
-                  className="group flex items-center gap-0.5 whitespace-nowrap px-1.5 2xl:px-3"
+                  className="group flex items-center gap-0.5 whitespace-nowrap px-1.5 2xl:px-2.5"
                 >
-                  <span className={`text-[10px] 2xl:text-[11px] font-semibold tracking-wider transition-colors duration-300 uppercase ${
-                    isActive || activeDropdown === item.label ? "text-zinc-900" : "text-zinc-500 hover:text-zinc-900"
+                  <span className={`text-[10px] 2xl:text-[11px] font-semibold tracking-normal transition-colors duration-300 uppercase ${
+                    isActive || activeDropdown === item.label ? "text-zinc-900 underline underline-offset-4 decoration-zinc-300" : "text-zinc-500 hover:text-zinc-900"
                   }`}>
                     {item.label}
                   </span>
-                  {hasDropdown && <ChevronDown size={10} className="text-zinc-300" />}
+                  {hasDropdown && <ChevronDown size={10} className={`text-zinc-300 transition-transform ${activeDropdown === item.label ? "rotate-180 text-zinc-900" : ""}`} />}
                 </Link>
 
                 <AnimatePresence>
@@ -170,7 +175,7 @@ export function Navbar() {
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
-                      className="absolute top-full left-1/2 -translate-x-1/2 pt-4"
+                      className="absolute top-full left-0 pt-4"
                     >
                       <div className="bg-white border border-zinc-100 shadow-2xl rounded-2xl p-6 min-w-[280px] max-h-[70vh] overflow-y-auto custom-scrollbar">
                         {item.isSectioned ? (
@@ -212,12 +217,11 @@ export function Navbar() {
           })}
         </div>
 
-        {/* ACTION BUTTONS (Right Side) */}
-        <div className="flex items-center gap-2 md:gap-4 shrink-0 relative z-[101]">
-          
-          {/* SHOPPING BAG ICON (Near Contact) */}
+        {/* ACTION BUTTONS (Bag near Contact) */}
+        <div className="flex items-center gap-2 shrink-0 relative z-[101]">
+          {/* DESKTOP/MOBILE CART */}
           <Link href="/shop/cart" className="relative p-2 text-zinc-800 hover:text-zinc-500 transition-colors">
-            <ShoppingBag size={20} strokeWidth={1.5} />
+            <ShoppingBag size={18} strokeWidth={1.5} />
             {cartCount > 0 && (
               <span className="absolute top-0 right-0 bg-[#002D40] text-white text-[8px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
                 {cartCount}
@@ -225,19 +229,17 @@ export function Navbar() {
             )}
           </Link>
 
-          {/* CONTACT BUTTON */}
-          <div className="hidden min-[1360px]:block ml-1">
+          <div className="hidden min-[1380px]:block ml-1">
             <Link href="/#contact">
-              <button className="bg-zinc-900 hover:bg-zinc-800 text-white text-[9px] 2xl:text-[10px] font-bold tracking-[0.2em] uppercase px-4 py-2.5 2xl:px-7 2xl:py-3.5 rounded-full transition-all shadow-md active:scale-95 whitespace-nowrap">
+              <button className="bg-zinc-900 hover:bg-zinc-800 text-white text-[9px] 2xl:text-[10px] font-bold tracking-[0.2em] uppercase px-5 py-3 rounded-full transition-all shadow-md active:scale-95 whitespace-nowrap">
                 Contact
               </button>
             </Link>
           </div>
 
-          {/* MOBILE HAMBURGER */}
           <button 
             onClick={() => setIsOpen(!isOpen)} 
-            className="min-[1360px]:hidden p-2 text-zinc-800 hover:bg-zinc-50 rounded-lg transition-colors"
+            className="min-[1380px]:hidden p-2 text-zinc-800 hover:bg-zinc-50 rounded-lg transition-colors"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -252,11 +254,11 @@ export function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed inset-0 top-0 bg-white z-[100] min-[1360px]:hidden flex flex-col pt-24 overflow-y-auto no-scrollbar"
+            className="fixed inset-0 top-0 bg-white z-[100] min-[1380px]:hidden flex flex-col pt-24 overflow-y-auto no-scrollbar"
           >
             <div className="p-6 space-y-2 pb-32">
               {navItems.map((item) => {
-                // LOGIC: FLATTEN REJUVENATION FOR MOBILE (NO DROPDOWN)
+                // FLATTEN REJUVENATION FOR MOBILE
                 if (item.isRejuvenationGroup && item.dropdown) {
                   return item.dropdown.map((sub) => (
                     <Link 
@@ -296,16 +298,16 @@ export function Navbar() {
                           initial={{ height: 0, opacity: 0 }}
                           animate={{ height: "auto", opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
-                          className="overflow-hidden"
+                          className="overflow-hidden bg-zinc-50/50 px-4 rounded-xl mt-1 mb-4"
                         >
-                          <div className="pb-4 pl-4 space-y-4 bg-zinc-50 p-4 rounded-xl mt-2">
+                          <div className="py-4 space-y-4">
                             {item.isSectioned ? (
                               item.sections?.map(sec => (
-                                <div key={sec.title} className="space-y-3">
+                                <div key={sec.title} className="space-y-2">
                                   <p className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">{sec.title}</p>
-                                  <div className="flex flex-col gap-3 border-l border-zinc-200 pl-3">
+                                  <div className="flex flex-col gap-2 border-l border-zinc-200 pl-3">
                                     {sec.items.map(sub => (
-                                      <Link key={sub.label} href={sub.href} className="text-xs text-zinc-600 active:text-zinc-900">
+                                      <Link key={sub.label} href={sub.href} className="text-xs text-zinc-600 active:text-zinc-900 py-1">
                                         {sub.label}
                                       </Link>
                                     ))}
@@ -315,7 +317,7 @@ export function Navbar() {
                             ) : (
                               <div className="flex flex-col gap-4 border-l border-zinc-200 pl-3">
                                 {item.dropdown?.map(sub => (
-                                  <Link key={sub.label} href={sub.href} className="text-xs text-zinc-600 active:text-zinc-900">
+                                  <Link key={sub.label} href={sub.href} className="text-xs text-zinc-600 active:text-zinc-900 py-1">
                                     {sub.label}
                                   </Link>
                                 ))}
@@ -331,7 +333,7 @@ export function Navbar() {
               
               <div className="pt-8">
                 <Link href="/#contact">
-                  <button className="w-full bg-zinc-900 text-white py-4 rounded-full tracking-[0.2em] uppercase text-xs font-bold shadow-lg">
+                  <button className="w-full bg-zinc-900 text-white py-5 rounded-full tracking-[0.2em] uppercase text-[11px] font-bold shadow-lg">
                     Book Consultation
                   </button>
                 </Link>
