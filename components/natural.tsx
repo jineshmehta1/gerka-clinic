@@ -1,12 +1,11 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Home, ChevronRight } from "lucide-react"
+import { Home, ChevronRight, Dna } from "lucide-react"
 import Link from "next/link"
 
-export function NaturalAestheticsHeroBanner() {
-  // Filenames optimized for the Natural Regenerative department
-  // Reflecting clean skin, hydration, and cellular science
+export function PeptideHeroBanner() {
+  // Filenames curated for Cellular Science & Skin Quality
   const backgroundImages = [
     "/nat1.webp",
     "/nat2.jpg",
@@ -31,13 +30,12 @@ export function NaturalAestheticsHeroBanner() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: i * 0.1 }}
               className={`aspect-square rounded-2xl md:rounded-3xl bg-zinc-100 overflow-hidden ${
-                // Hide specific images on mobile to keep the layout tight
                 i > 5 ? "hidden lg:block" : i > 3 ? "hidden sm:block" : ""
               }`}
             >
               <img 
                 src={src} 
-                alt="Natural Regenerative Detail" 
+                alt="Peptide Regeneration Detail" 
                 className="w-full h-full object-cover" 
               />
             </motion.div>
@@ -55,20 +53,20 @@ export function NaturalAestheticsHeroBanner() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-4xl md:text-5xl lg:text-7xl font-light text-zinc-900 tracking-tighter leading-[0.9] mb-6 md:mb-8 uppercase"
         >
-          NATURAL <br className="sm:hidden" />
-          <span className="italic font-serif text-zinc-900 font-light lowercase">& Regenerative Aesthetics</span>
+          PEPTIDE <br className="sm:hidden" />
+          <span className="italic font-serif text-zinc-900 font-light lowercase">& Skin Regeneration Therapy™</span>
         </motion.h1>
 
-        {/* Updated Sub-description */}
+        {/* Updated Description with Cellgenic & GHK-Cu Data */}
         <motion.p 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
           className="text-zinc-600 text-sm md:text-lg lg:text-xl font-light max-w-4xl leading-relaxed mb-10 md:mb-12 uppercase tracking-[0.15em] px-4"
         >
-          Prevent, Restore, Evolve. <br className="hidden md:block" />
-          Advanced <span className="font-medium text-zinc-900">PRP & Biostimulation</span> designed to support <br className="hidden md:block" />
-          your body’s own <span className="font-medium text-zinc-900">natural regeneration.</span>
+          Healthy skin is the <span className="font-medium text-zinc-900">foundation</span> of aesthetics. <br className="hidden md:block" />
+          Advanced <span className="font-medium text-zinc-900">Cellgenic GHK-Cu Peptides</span> designed to <br className="hidden md:block" />
+          evolve your skin health at a <span className="font-medium text-zinc-900">cellular level.</span>
         </motion.p>
 
         {/* Breadcrumb Navigation Pill */}
@@ -82,10 +80,24 @@ export function NaturalAestheticsHeroBanner() {
             <Home size={14} className="w-3 h-3 md:w-3.5 md:h-3.5" /> Home
           </Link>
           <ChevronRight size={12} className="text-zinc-300" />
+          <Link href="/natural-regenerative" className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-zinc-400 hover:text-zinc-900 transition-colors">
+            Regenerative
+          </Link>
+          <ChevronRight size={12} className="text-zinc-300" />
           <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-zinc-900">
-            Regenerative Aesthetics
+            Peptide Therapy
           </span>
         </motion.div>
+
+        {/* Tagline Addition */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.7 }}
+          className="mt-8 text-[9px] md:text-[10px] font-bold uppercase tracking-[0.4em] text-zinc-400"
+        >
+          Not an alternative — <span className="italic">it is an evolution.</span>
+        </motion.p>
       </div>
 
     </section>

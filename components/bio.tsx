@@ -8,13 +8,14 @@ const specialists = [
     name: "Giselle Gerka",
     role: "Founder | Aesthetic & Regenerative Practitioner | Skin Lesion Specialist",
     image: "/gerka.jpeg",
-    credentials: "University of Seville",
+    // Added AICAD to credentials for the floating image tag
+    credentials: "University of Seville • AICAD",
     specialties: "Aesthetic Medicine • Regenerative Treatments • Skin Lesion Care • Pelvic Floor Health",
     bio: [
       "Giselle Gerka is the founder of Gerka Clinic and has over 17 years of experience in aesthetic medicine.",
       "She began her training in Venezuela with a technical degree in physiotherapy, and later specialised in pelvic floor rehabilitation and women’s health in Spain. This background supports her structured and functional approach to patient care.",
       "Giselle has completed formal training in minor surgery in Spain and holds an international certification in laser technologies. She works with a range of advanced aesthetic and energy-based treatments.",
-      "Her clinical focus includes dermatology, particularly the assessment and treatment of skin lesions. She has trained in dermoscopy and skin biopsy techniques through programmes associated with King’s College Hospital London.",
+      "Her clinical focus includes dermatology, particularly the assessment and treatment of skin lesions. She holds an Advanced Diploma in Dermatology from AICAD and has trained in dermoscopy and skin biopsy techniques through programmes associated with King’s College Hospital London.",
       "She also undertakes continuous training in anatomy, with hands-on practical sessions in Spain, ensuring a high level of precision and safety in her procedures.",
       "She is currently continuing her professional development with further studies in aesthetic surgery in Barcelona.",
       "At Gerka Clinic, Giselle focuses on delivering safe, effective treatments with a combination of medical and aesthetic expertise."

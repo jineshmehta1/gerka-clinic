@@ -50,7 +50,7 @@ const navItems = [
     ]
   },
   // NEW ITEM: NATURAL AESTHETICS
-  { href: "/natural-regenerative-aesthetics", label: "Natural Aesthetics" },
+  { href: "/peptide-skin-regeneration-therapy", label: "Peptide Skin Regeneration Therapy" },
   
   // GROUPED FOR DESKTOP - FLATTENED FOR MOBILE
   { 
