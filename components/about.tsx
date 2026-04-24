@@ -109,7 +109,7 @@ export function AboutIntro() {
                 </p>
 
                 <p className="text-base md:text-lg text-zinc-500 font-light leading-relaxed">
-                  At Gerka Clinic, we combine <span className="text-zinc-900 font-medium">innovation, safety and compassion</span> 
+                  At Gerka Clinic, we combine <span className="text-zinc-900 font-medium">innovation, safety and compassion</span> {" "}
                   to enhance natural beauty, restore intimate health and support overall wellbeing.
                 </p>
               </div>

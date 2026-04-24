@@ -7,17 +7,12 @@ const visitSteps = [
   {
     icon: <MapPin size={20} />,
     title: "Arrival & Parking",
-    desc: "Located in the quiet Priory Office Park. We offer complimentary private parking directly at our entrance for a stress-free arrival."
-  },
-  {
-    icon: <Clock size={20} />,
-    title: "Timely Reception",
-    desc: "We value your time. Please arrive 5 minutes early to settle in. Our reception team will be ready to welcome you immediately."
+    desc: "Located in the quiet Priory Office Park. Parking is available in the surrounding area, and clients may also use parking at the Talbot Hotel with prior permission."
   },
   {
     icon: <Coffee size={20} />,
     title: "The Environment",
-    desc: "Wait in our refined, calming lounge. Enjoy a selection of refreshments while you prepare for your personalised consultation."
+    desc: "You are welcome to wait in our private waiting room, where refreshments are available while you prepare for your personalised consultation."
   },
   {
     icon: <ShieldCheck size={20} />,
