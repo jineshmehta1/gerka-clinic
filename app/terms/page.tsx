@@ -107,7 +107,7 @@ export default function TermsAndConditionsPage() {
                 <AlertTriangle size={18} className="text-zinc-400" /> 4. Cancellations and Late Arrivals
               </h2>
               <div className="p-8 rounded-[2rem] bg-zinc-50 border border-zinc-100 space-y-4 text-zinc-600 font-light">
-                <p>• Patients are kindly requested to provide at least <span className="text-zinc-900 font-medium">24 hours notice</span> for appointment cancellations or rescheduling.</p>
+                <p>• Patients are kindly requested to provide at least <span className="text-zinc-900 font-medium">48 hours notice</span> for appointment cancellations or rescheduling.</p>
                 <p>• Late arrivals may result in a shortened appointment or rescheduling.</p>
                 <p>• Missed appointments or late cancellations may incur a cancellation fee.</p>
               </div>

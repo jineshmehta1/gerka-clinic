@@ -22,6 +22,7 @@ const services = [
   { name: "Hand Rejuvenation", color: "bg-[#E2E2E2]", href: "/hand-rejuvenation" },
   { name: "Hair Loss", color: "bg-[#C9D6C9]", href: "/hair-loss-treatments" },
   { name: "Earlobe Rejuvenation", color: "bg-[#E8D7CF]", href: "/earlobe-rejuvenation-lobuloplasty" },
+  { name: "Peptide Skin Regeneration", color: "bg-[#D9D9D2]", href: "/peptide-skin-regeneration-therapy" }
 ]
 
 const navLinks = {
@@ -76,7 +77,7 @@ export function Footer() {
                 Gerka Clinic
               </span>
               <span className="text-[9px] md:text-[10px] tracking-[0.4em] md:tracking-[0.5em] text-zinc-500 uppercase font-medium mt-1">
-                Women&apos;s Wellness
+                Aesthetic & Intimate Health
               </span>
             </Link>
 

@@ -17,7 +17,7 @@ const specialists = [
       "Giselle has completed formal training in minor surgery in Spain and holds an international certification in laser technologies. She works with a range of advanced aesthetic and energy-based treatments.",
       "Her clinical focus includes dermatology, particularly the assessment and treatment of skin lesions. She holds an Advanced Diploma in Dermatology from AICAD and has trained in dermoscopy and skin biopsy techniques through programmes associated with King’s College Hospital London.",
       "She also undertakes continuous training in anatomy, with hands-on practical sessions in Spain, ensuring a high level of precision and safety in her procedures.",
-      "She is currently continuing her professional…. Studies in minor surgery and dermatology in Spain",
+      "She is currently continuing her professional studies in minor surgery and dermatology in Spain",
       "At Gerka Clinic, Giselle focuses on delivering safe, effective treatments with a combination of medical and aesthetic expertise."
     ]
   },
