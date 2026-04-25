@@ -24,7 +24,8 @@ const navItems = [
       { label: "HydraFacial – Deep Cleansing & Skin Renewal", href: "/face/hydrafacial" },
       { label: "Chemical Peels – Medical Skin Resurfacing", href: "/face/peels" },
       { label: "PRP Facial Rejuvenation", href: "/face/prp-facial" },
-      { label: "Anti-Wrinkle Neuromodulator Treatments", href: "/face/anti-wrinkle" }
+      { label: "Anti-Wrinkle Neuromodulator Treatments", href: "/face/anti-wrinkle" },
+      { label: "Acne & Rosacea", href: "/face/acne-rosacea" },
     ]
   },
   { 

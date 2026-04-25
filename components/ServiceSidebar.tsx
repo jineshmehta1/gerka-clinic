@@ -30,6 +30,7 @@ const faceServices: Service[] = [
   { name: "Medical Skin Resurfacing", href: "/face/peels" },
   { name: "PRP Facial Rejuvenation", href: "/face/prp-facial" },
   { name: "Anti-Wrinkle Treatments", href: "/face/anti-wrinkle" },
+  { name: "Acne & Rosacea", href: "/face/acne-rosacea" },
 ]
 
 const bodyServices: Service[] = [
