@@ -120,7 +120,7 @@ export default function VulvalLichenServicePage() {
                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6 border-t border-zinc-50">
                   <div className="flex gap-4">
                      <ShieldCheck size={24} className="text-zinc-300 shrink-0" />
-                     <p className="text-sm text-zinc-600 font-light">Stabilizing chronic inflammatory progression.</p>
+                     <p className="text-sm text-zinc-600 font-light">Stabilising chronic inflammatory progression.</p>
                   </div>
                   <div className="flex gap-4">
                      <Stethoscope size={24} className="text-zinc-300 shrink-0" />

@@ -229,7 +229,7 @@ export default function VaginalDrynessGSMPage() {
                   <div className="space-y-4">
                     <h3 className="text-2xl font-light text-zinc-900">Expert Care & Safety</h3>
                     <p className="text-[15px] text-zinc-500 font-light leading-relaxed">
-                      All treatments for GSM and vaginal health are conducted by medical professionals in a safe, clinical environment. We prioritize non-surgical, minimally invasive methods to ensure comfort and recovery.
+                      All treatments for GSM and vaginal health are conducted by medical professionals in a safe, clinical environment. We prioritise non-surgical, minimally invasive methods to ensure comfort and recovery.
                     </p>
                   </div>
                   <div className="p-6 bg-white rounded-2xl border border-zinc-200 flex items-center gap-4 min-w-[280px]">

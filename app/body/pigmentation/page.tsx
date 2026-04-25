@@ -114,7 +114,7 @@ export default function BodyPigmentationPage() {
                 <div className="space-y-6 text-zinc-600 font-light leading-relaxed text-[16px]">
                   <h3 className="text-2xl font-light text-zinc-900">What Is Body Pigmentation Treatment?</h3>
                   <p>
-                    Body pigmentation refers to the localized darkening of skin caused by hormonal shifts, chronic friction, inflammation, or post-acne scarring. It often appears in areas such as the inner thighs, underarms, groin, and buttocks.
+                    Body pigmentation refers to the localised darkening of skin caused by hormonal shifts, chronic friction, inflammation, or post-acne scarring. It often appears in areas such as the inner thighs, underarms, groin, and buttocks.
                   </p>
                   <p>
                     At Gerka Clinic, we use industry-leading depigmentation protocols like <strong>Dermamelan®</strong> and <strong>Happy Intim®</strong>. Our approach is purely medical, focusing on regulating melanin production while improving overall skin texture and health.

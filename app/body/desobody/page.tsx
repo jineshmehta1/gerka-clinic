@@ -19,7 +19,7 @@ const treatmentAreas = [
 ]
 
 const steps = [
-  { title: "Assessment", desc: "A thorough medical assessment of the localized fat pockets." },
+  { title: "Assessment", desc: "A thorough medical assessment of the localised fat pockets." },
   { title: "Mapping", desc: "Precise mapping of the treatment area for symmetrical results." },
   { title: "Application", desc: "A series of precise injections into the fat layer." },
   { title: "Reaction", desc: "Mild swelling is expected for 24–72 hours." },
@@ -132,7 +132,7 @@ export default function DesoBodyServicePage() {
             <section className="space-y-12">
                <div className="space-y-4">
                   <h3 className="text-3xl font-light text-zinc-900">Areas That <span className="italic font-serif text-zinc-500">Can Be Treated</span></h3>
-                  <p className="text-zinc-500 font-light">DesoBody is suitable for most localized fat pockets:</p>
+                  <p className="text-zinc-500 font-light">DesoBody is suitable for most localised fat pockets:</p>
                </div>
                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-12">
                   {treatmentAreas.map(area => (
@@ -183,7 +183,7 @@ export default function DesoBodyServicePage() {
                 <div className="space-y-4">
                    <h3 className="text-2xl font-light text-zinc-900">Who Is Suitable?</h3>
                    <p className="text-sm text-zinc-600 font-light leading-relaxed">
-                     DesoBody is ideal for clients with localized fat pockets near their ideal weight but needing contouring.
+                     DesoBody is ideal for clients with localised fat pockets near their ideal weight but needing contouring.
                    </p>
                 </div>
                 <ul className="space-y-4">
