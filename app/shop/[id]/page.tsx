@@ -57,12 +57,7 @@ export default async function ProductDetailPage({ params }: { params: { id: stri
                 <span className="text-[9px] font-bold uppercase tracking-widest text-zinc-900">Clinically Tested</span>
               </div>
 
-              {/* Optional Offer Sticker (as seen in your screenshot) */}
-              <div className="absolute bottom-8 right-8 bg-[#E31E53] text-white w-20 h-20 rounded-full flex flex-col items-center justify-center -rotate-12 shadow-xl border-4 border-white/20 uppercase leading-none">
-                <span className="text-[8px] font-bold">Extra</span>
-                <span className="text-lg font-black tracking-tighter">20%</span>
-                <span className="text-[8px] font-bold">Off</span>
-              </div>
+             
             </div>
 
             {/* Thumbnail Gallery (Placeholder) */}
