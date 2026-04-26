@@ -51,7 +51,7 @@ const navItems = [
     ]
   },
   // NEW ITEM: NATURAL AESTHETICS
-  { href: "/peptide-skin-regeneration-therapy", label: "Peptide Skin Regeneration Therapy" },
+  // { href: "/peptide-skin-regeneration-therapy", label: "Peptide Skin Regeneration Therapy" },
   
   // GROUPED FOR DESKTOP - FLATTENED FOR MOBILE
   { 
